@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -387,7 +388,7 @@ public class WebUtil {
 	    for (WebElement webEle : listOfWebEle) {
 	        String textList = webEle.getText();
 	        extentTest.log(Status.INFO, textList+" List of Element Fetch successfully");
-	        System.out.println(" List of Element Details Fetch successfully - " + textList);
+	        System.out.println("List of Element Details Fetch successfully - " + textList);
 	        strList.add(textList);
 	    }
       } catch (Exception e) {
@@ -395,6 +396,20 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	    return strList;
+	}
+	
+	public void validateListOfText(List<String> actualList,Map<String, List<String>> expectedList) {
+		if (actualList.equals(expectedList)) {
+			extentTest.pass(" List matched successfully");
+			extentTest.pass(" Actual: " + actualList);
+			extentTest.pass(" Expected: " + expectedList);
+		} else {
+			extentTest.fail(" List mismatch");
+			extentTest.fail(" Actual: " + actualList);
+			extentTest.fail(" Expected: " + expectedList);
+		}
+
+		Assert.assertEquals(actualList, expectedList);
 	}
 	
 	public void validateListOfText(List<String> actualList,List<String> expectedList) {

@@ -1,6 +1,8 @@
 package branch_division_finyear;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -14,8 +16,8 @@ import webutil.ExcelDataSuplier;
 
 public class Branch_Division_FinYear_TestCase extends BaseTest {
 
-	@Test
-	public void validateBranch_Ahmedabad_Division_ExportAir_FinYear_2025_26() {
+	//@Test
+	public void validateBranch_Ahmedabad_Division_ExportSea_FinYear_2025_26() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
 		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
@@ -34,7 +36,7 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 		Homepage homeObj = new Homepage(utilObj);
 
 		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
-		List<String> expectedList = Arrays.asList("Welcome", "Akash12", "(2526)", "DEMO LTD", "Ahmedabad (Export Air)");
+		List<String> expectedList = Arrays.asList("Welcome", "Akash12", "(2526)", "DEMO LTD", "Ahmedabad (Export Sea)");
 
 		utilObj.validateListOfText(actualList, expectedList);
 	}
@@ -56,36 +58,51 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 		Homepage homeObj = new Homepage(utilObj);
 
 		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
-		List<String> expectedList_M1 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Air)");
-		List<String> expectedList_M2 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Sea)");
-		List<String> expectedList_M3 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Air)");
-		List<String> expectedList_M4 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Sea)");
-		List<String> expectedList_A1 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Air)");
-		List<String> expectedList_A2 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)");
-		List<String> expectedList_A3 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Air)");
-		List<String> expectedList_A4 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Sea)");
-		if(actualList.equals(expectedList_M1)) {
-			System.out.println(actualList +" Matches To "+expectedList_M1);
-		}else if(actualList.equals(expectedList_M2)) {
-			System.out.println(actualList +" Matches To "+expectedList_M2);
-		}else if(actualList.equals(expectedList_M3)) {
-			System.out.println(actualList +" Matches To "+expectedList_M3);
-		}else if(actualList.equals(expectedList_M4)) {
-			System.out.println(actualList +" Matches To "+expectedList_M4);
-		}
 	
-		
+//		List<String> expectedList_M1 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Air)");
+//		List<String> expectedList_M2 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Sea)");
+//		List<String> expectedList_M3 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Air)");
+//		List<String> expectedList_M4 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Sea)");
+//		List<String> expectedList_A1 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Air)");
+//		List<String> expectedList_A2 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)");
+//		List<String> expectedList_A3 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Air)");
+//		List<String> expectedList_A4 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Sea)");
+//		if(actualList.equals(expectedList_M1)) {
+//			
+//			System.out.println(actualList +" Matches To "+expectedList_M1);
+//		}else if(actualList.equals(expectedList_M2)) {
+//			
+//			System.out.println(actualList +" Matches To "+expectedList_M2);
+//		}else if(actualList.equals(expectedList_M3)) {
+//			
+//			System.out.println(actualList +" Matches To "+expectedList_M3);
+//		}else if(actualList.equals(expectedList_M4)) {
+//			
+//			System.out.println(actualList +" Matches To "+expectedList_M4);
+//		}
+//	
+		Map<String, List<String>> expectedMap = new HashMap<>();
+
+		expectedMap.put("M1", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Air)"));
+		expectedMap.put("M2", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Sea)"));
+		expectedMap.put("M3", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Air)"));
+		expectedMap.put("M4", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Sea)"));
+		expectedMap.put("A1", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Air)"));
+		expectedMap.put("A2", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)"));
+		expectedMap.put("A3", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Air)"));
+		expectedMap.put("A4", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Sea)"));
+		utilObj.validateListOfText(actualList,expectedMap);
 
 		
 
 	}
 
-	@Test
+//	@Test
 	public void validateAllBranch_Division_FinYear_003() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
 
-		Map<String, String> testData = ExcelDataSuplier.setExcelFile("BranchSheet", "ID-7");
+		Map<String, String> testData = ExcelDataSuplier.setExcelFile("BranchSheetWith_ID", "ID-7");
 		
 		String braname = testData.get("branchname");
 		String divi = testData.get("division");

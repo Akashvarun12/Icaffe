@@ -31,7 +31,7 @@ public class ExcelDataSuplier {
 	    if (method.getName().equals("validateLoginCredential_001")) {
 	        sheetName = "LoginSheet";
 	    } else if (method.getName().equals("validateAllBranch_Division_FinYear_fromDataProvider_002")) {
-	        sheetName = "BranchSheet";
+	        sheetName = "All_BranchSheet";
 	    }
 
 	    File excelFile = new File("./src/test/resources/TestByDataprovider.xlsx");

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="branch_division_finyear.Branch_Division_FinYear">
+      <class name="branch_division_finyear.Branch_Division_FinYear_TestCase">
         <methods>
           <include name="takeScreenShot"/>
           <include name="generatReport"/>
           <include name="login"/>
-          <include name="validateAllBranch_Division_FinYear_fromDataProvider_002"/>
+          <include name="validateAllBranch_Division_FinYear_fromDataProvider_002" invocation-numbers="0 1 2 3 4 5 6 7"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- branch_division_finyear.Branch_Division_FinYear -->
+      </class> <!-- branch_division_finyear.Branch_Division_FinYear_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
