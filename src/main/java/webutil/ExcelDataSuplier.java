@@ -33,6 +33,9 @@ public class ExcelDataSuplier {
 	    } else if (method.getName().equals("validateBranch_Division_FinYear_fromDataProvider")) {
 	        sheetName = "BranchSheet";
 	    }
+	    else if(method.getName().equals("cfsMasterData")) {
+	    	 sheetName = "CFSMasterSheet";
+	    }
 	    
 
 	    

@@ -246,7 +246,7 @@ public class CFS_Master {
     }
     
     
-    
+    /*
     // Sending CFS Master Data by using properties file
     public void enterCFSMasterDataByPropertiesFile() {
 		Properties pr = utilobj.propertiFile("CFS_Master_data.properties");
@@ -325,7 +325,25 @@ public class CFS_Master {
 		utilobj.implicitlyWait();
 	
 	}
-     
+     */
+   
+    
+    
+    
+    // sending CFS Master Data By using DataProvider(Excel)
+   
+    public void cfsMasterDataByDataProvider(String name, String portCode) {
+    	utilobj.clear(enterName);
+		utilobj.sendKeys(enterName, name);
+		utilobj.click(enterPortCode);
+		utilobj.selectAutoSuggest(enterPortCode, portCode, portCode);
+		
+		
+		
+		utilobj.click(enterSaveBtn);
+		utilobj.implicitlyWait();
+    	
+    }
 	
 
 }

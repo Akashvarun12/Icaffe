@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\user\AppData\Local\Temp\testng-eclipse--662232909\testng-customsuite.xml</span>
+                    <span>C:\Users\hans-\AppData\Local\Temp\testng-eclipse-816594701\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="logintestcase.LoginTestCase" class="method navigator-link" hash-for-method="validateLoginWithValidCredential_002">validateLoginWithValidCredential_002</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="masters.CFS_MasterTestCase" class="method navigator-link" hash-for-method="cfsMasterData(ABC BY Excel Automation, ZAZDV)">cfsMasterData(ABC BY Excel Automation, ZAZDV)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="masters.CFS_MasterTestCase" class="method navigator-link" hash-for-method="cfsMasterData(xyz By shivam, ZAZDV)">cfsMasterData(xyz By shivam, ZAZDV)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +126,23 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">logintestcase.LoginTestCase</span>
+              <span class="class-name">masters.CFS_MasterTestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateLoginWithValidCredential_002">
-                  </a> <!-- validateLoginWithValidCredential_002 -->
-                  <span class="method-name">validateLoginWithValidCredential_002</span>
+                  <a name="cfsMasterData(ABC BY Excel Automation, ZAZDV)">
+                  </a> <!-- cfsMasterData(ABC BY Excel Automation, ZAZDV) -->
+                  <span class="method-name">cfsMasterData</span>
+                  <span class="parameters">(ABC BY Excel Automation,ZAZDV)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="cfsMasterData(xyz By shivam, ZAZDV)">
+                  </a> <!-- cfsMasterData(xyz By shivam, ZAZDV) -->
+                  <span class="method-name">cfsMasterData</span>
+                  <span class="parameters">(xyz By shivam,ZAZDV)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +150,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user\AppData\Local\Temp\testng-eclipse--662232909\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\hans-\AppData\Local\Temp\testng-eclipse-816594701\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +159,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;logintestcase.LoginTestCase&quot;&gt;
+      &lt;class name=&quot;masters.CFS_MasterTestCase&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;validateLoginWithValidCredential_002&quot;/&gt;
+          &lt;include name=&quot;cfsMasterData&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- logintestcase.LoginTestCase --&gt;
+      &lt;/class&gt; &lt;!-- masters.CFS_MasterTestCase --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,16 +203,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateLoginWithValidCredential_002')
-data.setCell(0, 2, 'logintestcase.LoginTestCase')
-data.setCell(0, 3, 1295);
+data.setCell(0, 1, 'cfsMasterData')
+data.setCell(0, 2, 'masters.CFS_MasterTestCase')
+data.setCell(0, 3, 4002);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'cfsMasterData')
+data.setCell(1, 2, 'masters.CFS_MasterTestCase')
+data.setCell(1, 3, 3841);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -213,16 +231,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">logintestcase.LoginTestCase</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">validateLoginCredential_001</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -231,30 +242,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">logintestcase.LoginTestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">masters.CFS_MasterTestCase</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">generatReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">importFileFromExcel</span>
-                <span class="method-start">491 ms</span>
-              </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">login(public void logintestcase.LoginTestCase.validateLoginWithValidCredential_002())</span>
-                <span class="method-start">536 ms</span>
+                <span class="method-name">login(public void masters.CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String))</span>
+                <span class="method-start">599 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validateLoginWithValidCredential_002</span>
-                <span class="method-start">10968 ms</span>
+                <span class="method-name">cfsMasterData(ABC BY Excel Automation, ZAZDV)</span>
+                <span class="method-start">6389 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">takeScreenShot([TestResult name=validateLoginWithValidCredential_002 status=SUCCESS method=LoginTestCase.validateLo...)</span>
-                <span class="method-start">12269 ms</span>
+                <span class="method-name">takeScreenShot([TestResult name=cfsMasterData status=SUCCESS method=CFS_MasterTestCase.cfsMasterData(java.lang.Stri...)</span>
+                <span class="method-start">10393 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">login(public void masters.CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String))</span>
+                <span class="method-start">11722 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">cfsMasterData(xyz By shivam, ZAZDV)</span>
+                <span class="method-start">17738 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShot([TestResult name=cfsMasterData status=SUCCESS method=CFS_MasterTestCase.cfsMasterData(java.lang.Stri...)</span>
+                <span class="method-start">21581 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">14112 ms</span>
+                <span class="method-start">22771 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

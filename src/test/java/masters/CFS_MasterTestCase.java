@@ -19,9 +19,12 @@ import webutil.WebUtil;
 public class CFS_MasterTestCase extends BaseTest {
 	
 	
-//	@Test
+
+	/*
+	@Test
 	public void validateBranch_Division_FinYear() {
 
+		
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
 		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
 		String branchName = pr.getProperty("branch");
@@ -65,7 +68,37 @@ public class CFS_MasterTestCase extends BaseTest {
 		 		 
 	}
 	
+	*/
+	
+	
+	
+	@Test(dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+	public void cfsMasterData(String name, String portCode) {
+
+
+		Homepage homeObj = new Homepage(utilObj);
+		
+		
+		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
+		List<String> expectedList = Arrays.asList("Welcome", "Shivam220", "(2627)", "DEMO LTD",
+				"Ahmedabad (Export Sea)");
+
+		utilObj.validateListOfText(actualList, expectedList);
+
+		homeObj.Goto_Masters_PartyCFSMaster();
+		utilObj.validateGetTitle("CFS Master"); 
+		
+		CFS_Master cfs_Master = new CFS_Master(utilObj);
+		cfs_Master.cfsMasterDataByDataProvider(name, portCode);
+		utilObj.validateAlertMessage();
+
+		
+		
+		 
+		 
+	}
+
+		 
+}
 	
 
-	
-}
