@@ -28,8 +28,11 @@ public class Homepage {
 	@FindBy(xpath = "//a[text()='Party ']")
 	private WebElement goToParty;
 
-	@FindBy(xpath = "//a[text()='Exporter']")
-	private WebElement clickOnExporter;
+//	@FindBy(xpath = "//a[text()='Exporter']")
+//	private WebElement clickOnExporter;
+	
+	@FindBy(xpath = "//a[text() = 'CFS Master']")
+	private WebElement cfsmaster ;
 	
 	@FindBys(@FindBy(xpath = "// label[@id='UserTag']//span"))
 	private List<WebElement> listOfWebEle;
@@ -39,17 +42,30 @@ public class Homepage {
 	public List<String> verifyLoginBranchDivision_OnHomePage() {
 
 		 List<String> actualList = utilobj.getListOfText(listOfWebEle);
-		 
      return actualList;
 	}
 	
 	
-	public void Goto_Masters_PartyExporter() {
+//	public void Goto_Masters_PartyExporter() {
+//
+//		utilobj.mouseOver(goToMasters);
+//		utilobj.mouseOver(goToParty);
+//		//CFS MAster Page
+//		utilobj.clickByAction(cfsmaster);
+//
+//		utilobj.clickByAction(clickOnExporter)
+//		
+//	}
+	
+	
+	public void Goto_Masters_PartyCFSMaster() {
 
 		utilobj.mouseOver(goToMasters);
 		utilobj.mouseOver(goToParty);
+		//CFS MAster Page
+		utilobj.clickByAction(cfsmaster);
 
-		utilobj.clickByAction(clickOnExporter);
+
 
 		
 	}

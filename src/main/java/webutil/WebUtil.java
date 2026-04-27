@@ -11,6 +11,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +21,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -292,7 +296,7 @@ public class WebUtil {
 
 	public void implicitlyWait() {
 		try {
-			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			System.out.println("Implicit wait applied");
 			extentTest.log(Status.INFO, "Implicit wait applied");
 		} catch (Exception e) {
@@ -361,9 +365,9 @@ public class WebUtil {
 		Actions actbj = new Actions(driver);
 		try {
 		actbj.click().build().perform();
-		extentTest.log(Status.INFO, " Clicked Succsessfully on Element by Action");
+		extentTest.log(Status.INFO, "Clicked Succsessfully on Element by Action");
 		} catch (Exception e) {
-			extentTest.log(Status.FAIL, " Clicked Fail on Element by Action");
+			extentTest.log(Status.FAIL, "Clicked Fail on Element by Action");
 			e.printStackTrace();
 		}
 
@@ -375,7 +379,7 @@ public class WebUtil {
 		actbj.sendKeys(input).build().perform();
 		extentTest.log(Status.INFO, input+" Send Succsessfully on Element by Action");
 		} catch (Exception e) {
-			extentTest.log(Status.FAIL, " Send Fail on Element by Action");
+			extentTest.log(Status.FAIL, "Send Fail on Element by Action");
 			e.printStackTrace();
 		}
 
@@ -386,12 +390,12 @@ public class WebUtil {
       try {
 	    for (WebElement webEle : listOfWebEle) {
 	        String textList = webEle.getText();
-	        extentTest.log(Status.INFO, textList+" List of Element Fetch successfully");
-	        System.out.println(" List of Element Details Fetch successfully - " + textList);
+	        extentTest.log(Status.INFO, textList+"List of Element Fetch successfully");
+	        System.out.println("List of Element Details Fetch successfully - " + textList);
 	        strList.add(textList);
 	    }
       } catch (Exception e) {
-    	  extentTest.log(Status.INFO, " List of Element not Fetch successfully");
+    	  extentTest.log(Status.INFO, "List of Element not Fetch successfully");
 			e.printStackTrace();
 		}
 	    return strList;
@@ -399,15 +403,87 @@ public class WebUtil {
 	
 	public void validateListOfText(List<String> actualList,List<String> expectedList) {
 		if (actualList.equals(expectedList)) {
-			extentTest.pass(" List matched successfully");
-			extentTest.pass(" Actual: " + actualList);
-			extentTest.pass(" Expected: " + expectedList);
+			extentTest.pass("List matched successfully");
+			extentTest.pass("Actual: " + actualList);
+			extentTest.pass("Expected: " + expectedList);
 		} else {
-			extentTest.fail(" List mismatch");
-			extentTest.fail(" Actual: " + actualList);
-			extentTest.fail(" Expected: " + expectedList);
+			extentTest.fail("List mismatch");
+			extentTest.fail("Actual: " + actualList);
+			extentTest.fail("Expected: " + expectedList);
 		}
 
 		Assert.assertEquals(actualList, expectedList);
 	}
+
+	
+	
+	public void selectAutoSuggest(WebElement input, String textToType, String valueToSelect) {
+	    try {
+	        input.clear();
+	        input.sendKeys(textToType);
+
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	        List<WebElement> allOptions = wait.until(
+	            ExpectedConditions.visibilityOfAllElementsLocatedBy(
+	                By.xpath("//ul[contains(@class,'ui-autocomplete')]/li")
+	            )
+	        );
+
+	        for (WebElement option : allOptions) {
+	            String text = option.getText().trim();
+
+	            System.out.println("Option: " + text); // Debug
+
+	            if (text.equalsIgnoreCase(valueToSelect)) {
+	                option.click();
+	                System.out.println("Selected: " + valueToSelect);
+	                return;
+	            }
+	        }
+
+	        System.out.println("Value not found: " + valueToSelect);
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	
+	
+	// Handle Alert Method
+	
+	// Wait, capture text, accept alert and return text
+    public String handleAlert(int timeout) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+            String alertText = alert.getText();
+            System.out.println("Alert Message: " + alertText);
+
+            alert.accept();
+
+            return alertText;
+
+        } catch (Exception e) {
+            throw new RuntimeException("Alert not present or failed to handle alert");
+        }
+    }
+	
+	
+    public void validateAlertMessage() {
+		 String alertText = handleAlert(10);
+
+		   if (alertText.contains("Record Saved successfully.")) {
+			   System.out.println("Alert Handled Successfully");
+			   extentTest.log(Status.PASS, alertText+ " Test Passes Successfully");
+//			    System.out.println("Test Passed");
+		    } else {
+		        System.out.println("Test Failed");
+		    }
+		 
+	 }
+
+	
 }

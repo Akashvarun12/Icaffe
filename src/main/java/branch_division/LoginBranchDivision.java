@@ -1,13 +1,9 @@
 package branch_division;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-
 
 import webutil.WebUtil;
 
@@ -31,7 +27,6 @@ public class LoginBranchDivision {
 	private WebElement loginBranchOkButon;
 
 	public void SelectBranch(String BraName) {
-		
 		utilobj.clear(enterBranch);
 		utilobj.sendKeys(enterBranch, "%");
 		utilobj.getDriver()
