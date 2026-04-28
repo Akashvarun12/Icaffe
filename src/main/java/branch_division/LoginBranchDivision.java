@@ -33,7 +33,7 @@ public class LoginBranchDivision {
 	public void SelectBranch(String BraName) {
 		
 		utilobj.clear(enterBranch);
-		utilobj.sendKeys(enterBranch, "%");
+		utilobj.sendKeys(enterBranch, "%","Branch Name");
 		utilobj.getDriver()
 				.findElement(By.xpath("//ul[contains(@class,'ui-autocomplete')]//div[text()='" + BraName + "']"))
 				.click();
@@ -47,7 +47,7 @@ public class LoginBranchDivision {
 	public void SelectFinYear(String finYear) {
 
 		utilobj.clear(enterFinancialYr);
-		utilobj.sendKeys(enterFinancialYr, "202");
+		utilobj.sendKeys(enterFinancialYr, "202","Financial Year");
 
 		utilobj.getDriver()
 				.findElement(By.xpath("//ul[contains(@class,'ui-autocomplete')]//div[text()='" + finYear + "']"))

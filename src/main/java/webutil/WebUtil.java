@@ -155,14 +155,14 @@ public class WebUtil {
 		}
 	}
 
-	public void sendKeys(WebElement we, String value) {
+	public void sendKeys(WebElement we, String value,String eleName) {
 		try {
 			we.sendKeys(value);
 			System.out.println(value + " entered successfully");
-			extentTest.log(Status.INFO, value + " entered successfully");
+			extentTest.log(Status.INFO, value + " entered successfully in "+ eleName);
 
 		} catch (Exception e) {
-			extentTest.log(Status.FAIL, "Failed to send keys: " + value);
+			extentTest.log(Status.FAIL, value+" send in " + eleName);
 			extentTest.addScreenCaptureFromPath(takeScreenShot("SendKeys"));
 			e.printStackTrace();
 		}
@@ -204,22 +204,42 @@ public class WebUtil {
 		return elementText;
 	}
 
-	public void validateGetTitle(String expTitle) {
-		try {
-			String actTitle = getDriver().getTitle();
-			if (expTitle.equalsIgnoreCase(actTitle)) {
-				System.out.println("Passed: Title matches");
-				extentTest.log(Status.PASS, expTitle + " Title matches: " + actTitle);
-			} else {
-				System.out.println("Failed: Title mismatch");
-				extentTest.log(Status.FAIL, expTitle + " Title Not matches: " + actTitle);
-				extentTest.addScreenCaptureFromPath(takeScreenShot("TitleMismatch"));
-			}
-		} catch (Exception e) {
-			extentTest.log(Status.FAIL, "Exception in verifyGetTitle");
-			e.printStackTrace();
-		}
+	// validation of get title with valid and invalid data...
+	public void validateGetTitle(String expTitle, String type,String elemName) {
+
+	    try {
+	        String actTitle = getDriver().getTitle();
+
+	        if (type.equalsIgnoreCase("valid")) {
+
+	            if (expTitle.equalsIgnoreCase(actTitle)) {
+	                System.out.println("Passed: Title matches");
+	                extentTest.log(Status.PASS,"Expected: "+ expTitle+" "+elemName+" Title matches: " + actTitle);
+	            } else {
+	                System.out.println("Failed: Title mismatch");
+	                extentTest.log(Status.FAIL,
+	                		"Expected: "+ expTitle+" "+elemName+" Title not matches: " + actTitle);
+	                extentTest.addScreenCaptureFromPath(takeScreenShot("TitleMismatch"));
+	            }
+
+	        } else { 
+	            // invalid case
+	            if (expTitle.equalsIgnoreCase(actTitle)) {
+	                extentTest.log(Status.PASS,
+	                		"Expected: "+ expTitle+" "+elemName+" Title matches and User stayed on "+ elemName +" page " + actTitle);
+	                
+	            } else {
+	                extentTest.log(Status.FAIL,"Expected: "+ expTitle+" "+elemName+" Title mismatches:and user redirected " + actTitle);
+	                extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidCaseFailure"));
+	            }
+	        }
+
+	    } catch (Exception e) {
+	        extentTest.log(Status.FAIL, "Exception in validateGetTitle: " + e.getMessage());
+	        e.printStackTrace();
+	    }
 	}
+	
 
 	public void validateCurrentURL(String expURL) {
 		try {

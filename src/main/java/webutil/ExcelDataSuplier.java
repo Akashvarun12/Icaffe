@@ -19,47 +19,57 @@ import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class ExcelDataSuplier {
 
+	// Read All Data from Excel.... 
 	
 	@DataProvider(name = "ReadDataFromExcel")
-	public static String[][] readAllData(Method method) throws IOException {
+	public static Object[][] readAllData(Method method) throws IOException {
 
-	    String sheetName = "";
+	    Test test = method.getAnnotation(Test.class);
 
-	    if (method.getName().equals("validateLoginCredential_001")) {
-	        sheetName = "LoginSheet";
-	    } else if (method.getName().equals("validateAllBranch_Division_FinYear_fromDataProvider_002")) {
-	        sheetName = "All_BranchSheet";
+	    if (test == null || test.description().isEmpty()) {
+	        throw new RuntimeException("Please provide sheet name in @Test(description=...) for method: " + method.getName());
 	    }
 
-	    File excelFile = new File("./src/test/resources/TestByDataprovider.xlsx");
-	    FileInputStream fInputStreamObj = new FileInputStream(excelFile);
+	    String sheetName = test.description();
 
-	    XSSFWorkbook workBook = new XSSFWorkbook(fInputStreamObj);
+	    File excelFile = new File("src/test/resources/TestByDataprovider.xlsx");
+	    FileInputStream fis = new FileInputStream(excelFile);
+
+	    XSSFWorkbook workBook = new XSSFWorkbook(fis);
 	    XSSFSheet sheet = workBook.getSheet(sheetName);
 
-	    int noOfRows = sheet.getPhysicalNumberOfRows();
-	    int noOfCoulmn = sheet.getRow(0).getLastCellNum();
+	    if (sheet == null) {
+	        throw new RuntimeException("Sheet not found: " + sheetName);
+	    }
 
-	    String[][] arrData = new String[noOfRows - 1][noOfCoulmn];
+	    int noOfRows = sheet.getPhysicalNumberOfRows();
+	    int noOfColumn = sheet.getRow(0).getLastCellNum();
+
+	    Object[][] arrData = new Object[noOfRows - 1][noOfColumn];
+
+	    DataFormatter df = new DataFormatter();
 
 	    for (int i = 0; i < noOfRows - 1; i++) {
-	        for (int j = 0; j < noOfCoulmn; j++) {
-	            DataFormatter df = new DataFormatter();
-	            arrData[i][j] = df.formatCellValue(sheet.getRow(i + 1).getCell(j));
+	        Row row = sheet.getRow(i + 1);
+
+	        for (int j = 0; j < noOfColumn; j++) {
+	            Cell cell = (row != null) ? row.getCell(j) : null;
+	            arrData[i][j] = df.formatCellValue(cell);
 	        }
 	    }
 
 	    workBook.close();
-	    fInputStreamObj.close();
+	    fis.close();
 
 	    return arrData;
 	}
 	
 	
-
+// Read data Dynamically in Excel with Row wise...using ID
 	
 	public static Map<String, String> setExcelFile(String sheetName, String expDataId) {
 	    Map<String, String> dataMap = new HashMap<>();
@@ -108,6 +118,8 @@ public class ExcelDataSuplier {
 
 	    return dataMap;
 	}
+	
+	//  Read data Dynamically in Excel with using List or Map Logic
 	
 	public static List<Map<String,String>> setExcelFile(String sheetName) {
 		FileInputStream fls;

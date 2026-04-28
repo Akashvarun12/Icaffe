@@ -36,26 +36,26 @@ public class IcaffeLogin {
 
 
 
-	public void enterLoginCreadential() {
+	public void enterLoginCreadential(String userNamevalue,String Passwordvalue) {
 		Properties pr = utilobj.propertiFile("browser_url_and_credential.properties");
 		String userName = pr.getProperty("username");
 		String password = pr.getProperty("password");
 		
 		utilobj.clear(usernameTB);
-		utilobj.sendKeys(usernameTB, userName);
+		utilobj.sendKeys(usernameTB, userName,userNamevalue);
 		utilobj.clear(passwordTB);
-		utilobj.sendKeys(passwordTB, password);
+		utilobj.sendKeys(passwordTB, password,Passwordvalue);
 		
 	}
 	
 
 
-	public void enterLoginCreadentialFromDataProvider(String userName, String password) {
+	public void enterLoginCreadentialFromDataProvider(String userName, String password,String usernamevalue,String passwordvalue) {
 
 		utilobj.clear(usernameTB);
-		utilobj.sendKeys(usernameTB, userName);
+		utilobj.sendKeys(usernameTB, userName,usernamevalue);
 		utilobj.clear(passwordTB);
-		utilobj.sendKeys(passwordTB, password);
+		utilobj.sendKeys(passwordTB, password,passwordvalue);
 	}
 	
 	public void clickOnLoginBT() {

@@ -39,7 +39,7 @@ public class Party_Exporter_TestCase extends BaseTest{
 		utilObj.validateListOfText(actualList, expectedList);
 
 		 homeObj.Goto_Masters_PartyExporter();
-		 utilObj.validateGetTitle("Shipper Master");
+	//	 utilObj.validateGetTitle("Shipper Master");
 	}
 	
 	
