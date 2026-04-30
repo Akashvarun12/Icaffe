@@ -36,15 +36,15 @@ public class IcaffeLogin {
 
 
 
-	public void enterLoginCreadential(String userNamevalue,String Passwordvalue) {
+	public void enterLoginCreadential() {
 		Properties pr = utilobj.propertiFile("browser_url_and_credential.properties");
 		String userName = pr.getProperty("username");
 		String password = pr.getProperty("password");
 		
-		utilobj.clear(usernameTB);
-		utilobj.sendKeys(usernameTB, userName,userNamevalue);
-		utilobj.clear(passwordTB);
-		utilobj.sendKeys(passwordTB, password,Passwordvalue);
+		utilobj.clear(usernameTB,"User Name Textbox");
+		utilobj.sendKeys(usernameTB, userName,"User Name Textbox");
+		utilobj.clear(passwordTB,"Password Textbox");
+		utilobj.sendKeys(passwordTB, password,"Password Textbox");
 		
 	}
 	
@@ -52,15 +52,15 @@ public class IcaffeLogin {
 
 	public void enterLoginCreadentialFromDataProvider(String userName, String password,String usernamevalue,String passwordvalue) {
 
-		utilobj.clear(usernameTB);
-		utilobj.sendKeys(usernameTB, userName,usernamevalue);
-		utilobj.clear(passwordTB);
-		utilobj.sendKeys(passwordTB, password,passwordvalue);
+		utilobj.clear(usernameTB,"User Name Textbox");
+		utilobj.sendKeys(usernameTB, userName,"User Name Textbox");
+		utilobj.clear(passwordTB,"Password Textbox");
+		utilobj.sendKeys(passwordTB, password,"Password Textbox");
 	}
 	
 	public void clickOnLoginBT() {
 
-		utilobj.click(signinBT);
+		utilobj.click(signinBT,"Login Button");
 	}
 
 

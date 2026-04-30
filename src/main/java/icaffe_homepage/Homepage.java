@@ -31,25 +31,27 @@ public class Homepage {
 	@FindBy(xpath = "//a[text()='Exporter']")
 	private WebElement clickOnExporter;
 	
-	@FindBys(@FindBy(xpath = "// label[@id='UserTag']//span"))
+	@FindBys(@FindBy(xpath = "//label[@id='UserTag']//span[not(contains(text(),'Welcome'))]"))
 	private List<WebElement> listOfWebEle;
 	
 
 
-	public List<String> verifyLoginBranchDivision_OnHomePage() {
+	public void getText_LoginBranchDivision_OnHomePage(List<String> expectedList) {
 
-		 List<String> actualList = utilobj.getListOfText(listOfWebEle);
+		utilobj.validateListOfText(listOfWebEle,expectedList);
 		 
-     return actualList;
+     
 	}
 	
 	
 	public void Goto_Masters_PartyExporter() {
 
-		utilobj.mouseOver(goToMasters);
-		utilobj.mouseOver(goToParty);
-
-		utilobj.clickByAction(clickOnExporter);
+	
+		
+		utilobj.mouseOver(goToMasters,"Masters");
+		utilobj.mouseOver(goToParty,"Party");
+		utilobj.explicitlyWait(goToParty);
+		utilobj.clickByAction(clickOnExporter,"Exporter");
 
 		
 	}

@@ -14,7 +14,7 @@ public class Party_Exporter_TestCase extends BaseTest{
 
 	
 	@Test
-	public void validateBranch_Division_FinYear() {
+	public void validate_ShipperPageWith_Title() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
 		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
@@ -31,19 +31,36 @@ public class Party_Exporter_TestCase extends BaseTest{
 		logBranchDiv.clickOnOKButton();
 
 		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyExporter();
 		
-		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
-		List<String> expectedList = Arrays.asList("Welcome", "Akash12", "(2526)", "DEMO LTD",
-				"Ahmedabad (Export Air)");
-
-		utilObj.validateListOfText(actualList, expectedList);
-
-		 homeObj.Goto_Masters_PartyExporter();
-	//	 utilObj.validateGetTitle("Shipper Master");
+		utilObj.validateGetTitle("Shipper Master", "valid", "Masters Page");
+	
 	}
 	
 	
+	@Test
+	public void validate_NewShipperAccount_CreationWith_MandadatoryField() {
+
+		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
+		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
+		String branchName = pr.getProperty("branch");
+		String divisionCheckbox = pr.getProperty("division");
+		String finYear = pr.getProperty("year");
+
+		logBranchDiv.SelectBranch(branchName);
+
+		logBranchDiv.SelectDevision(divisionCheckbox);
+
+		logBranchDiv.SelectFinYear(finYear);
+
+		logBranchDiv.clickOnOKButton();
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyExporter();
+		
+		
 	
+	}
 	
 	
 }

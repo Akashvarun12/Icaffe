@@ -32,8 +32,8 @@ public class LoginBranchDivision {
 
 	public void SelectBranch(String BraName) {
 		
-		utilobj.clear(enterBranch);
-		utilobj.sendKeys(enterBranch, "%","Branch Name");
+		utilobj.clear(enterBranch,"Branch Textbox");
+		utilobj.sendKeys(enterBranch, "%","Branch Name Textbox");
 		utilobj.getDriver()
 				.findElement(By.xpath("//ul[contains(@class,'ui-autocomplete')]//div[text()='" + BraName + "']"))
 				.click();
@@ -46,8 +46,8 @@ public class LoginBranchDivision {
 
 	public void SelectFinYear(String finYear) {
 
-		utilobj.clear(enterFinancialYr);
-		utilobj.sendKeys(enterFinancialYr, "202","Financial Year");
+		utilobj.clear(enterFinancialYr,"Financial Year");
+		utilobj.sendKeys(enterFinancialYr, "202","Financial Year Textbox");
 
 		utilobj.getDriver()
 				.findElement(By.xpath("//ul[contains(@class,'ui-autocomplete')]//div[text()='" + finYear + "']"))
@@ -57,7 +57,7 @@ public class LoginBranchDivision {
 
 	public void clickOnOKButton() {
 
-		utilobj.click(loginBranchOkButon);
+		utilobj.click(loginBranchOkButon,"Login_Branch_Division Ok Button");
 
 	}
 }

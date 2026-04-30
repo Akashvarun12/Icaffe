@@ -1,5 +1,6 @@
 package branch_division_finyear;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.testng.annotations.Test;
 
 import basetest.BaseTest;
@@ -15,7 +17,7 @@ import icaffe_homepage.Homepage;
 import webutil.ExcelDataSuplier;
 
 public class Branch_Division_FinYear_TestCase extends BaseTest {
-	
+
 	// Validation Branch_Division_FinYear_with_PropertyFile...
 
 	@Test
@@ -37,21 +39,18 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 
 		Homepage homeObj = new Homepage(utilObj);
 
-		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
-		List<String> expectedList = Arrays.asList("Welcome", "Akash12", "(2526)", "DEMO LTD", "Ahmedabad (Export Sea)");
-
-		utilObj.validateListOfText(actualList, expectedList);
+		List<String> expectedList = Arrays.asList("Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)");
+		homeObj.getText_LoginBranchDivision_OnHomePage(expectedList);
 	}
 
-
-	// Validate Branch_Division_FinYear_with_ID (DYNAMICALLY)...
+	// Validate Branch_Division_FinYear_with_ID from Excel sheet (DYNAMICALLY)...
 	@Test
 	public void validateAll_Branch_Division_FinYear_with_ID() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
 
 		Map<String, String> testData = ExcelDataSuplier.setExcelFile("BranchSheetWith_ID", "ID-7");
-		
+
 		String braname = testData.get("branchname");
 		String divi = testData.get("division");
 		String year = testData.get("finYear");
@@ -66,19 +65,18 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 
 		Homepage homeObj = new Homepage(utilObj);
 
-		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
-		List<String> expectedList = Arrays.asList("Welcome", "Akash12", "(2425)", "DEMO LTD", "Ahmedabad (Import Air)");
+		List<String> expectedList = Arrays.asList("Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Air)");
+		homeObj.getText_LoginBranchDivision_OnHomePage(expectedList);
 
-		utilObj.validateListOfText(actualList, expectedList);
 	}
 
 	// Validate AllBranch_Division_FinYear_with_DataProvider...
-	
-	@Test(description = "All_BranchSheet",dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
-	public void validate_AllBranch_Division_FinYear_with_DataProvider(String branchname, String division,String finYear) {
+
+	@Test(description = "All_BranchSheet", dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+	public void validate_AllBranch_Division_FinYear_with_DataProvider(String branchname, String division,
+			String finYear, String exp_1, String exp_2, String exp_3, String exp_4) {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
-	
 
 		logBranchDiv.SelectBranch(branchname);
 
@@ -88,48 +86,12 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 
 		logBranchDiv.clickOnOKButton();
 
+		List<String> expectedList = Arrays.asList(exp_1, exp_2, exp_3, exp_4);
+
 		Homepage homeObj = new Homepage(utilObj);
 
-		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
-	
-//		List<String> expectedList_M1 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Air)");
-//		List<String> expectedList_M2 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Sea)");
-//		List<String> expectedList_M3 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Air)");
-//		List<String> expectedList_M4 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Sea)");
-//		List<String> expectedList_A1 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Air)");
-//		List<String> expectedList_A2 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)");
-//		List<String> expectedList_A3 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Air)");
-//		List<String> expectedList_A4 = Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Sea)");
-//		if(actualList.equals(expectedList_M1)) {
-//			
-//			System.out.println(actualList +" Matches To "+expectedList_M1);
-//		}else if(actualList.equals(expectedList_M2)) {
-//			
-//			System.out.println(actualList +" Matches To "+expectedList_M2);
-//		}else if(actualList.equals(expectedList_M3)) {
-//			
-//			System.out.println(actualList +" Matches To "+expectedList_M3);
-//		}else if(actualList.equals(expectedList_M4)) {
-//			
-//			System.out.println(actualList +" Matches To "+expectedList_M4);
-//		}
-//	
-//		Map<String, List<String>> expectedMap = new HashMap<>();
-//
-//		expectedMap.put("M1", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Air)"));
-//		expectedMap.put("M2", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Export Sea)"));
-//		expectedMap.put("M3", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Air)"));
-//		expectedMap.put("M4", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Mumbai (Import Sea)"));
-//		expectedMap.put("A1", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Air)"));
-//		expectedMap.put("A2", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)"));
-//		expectedMap.put("A3", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Air)"));
-//		expectedMap.put("A4", Arrays.asList("Welcome", "Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Sea)"));
-//		utilObj.validateListOfText(actualList,expectedMap);
+		homeObj.getText_LoginBranchDivision_OnHomePage(expectedList);
 
-		
-
-
-		
 	}
 
 }

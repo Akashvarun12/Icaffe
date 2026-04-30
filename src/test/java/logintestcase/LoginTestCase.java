@@ -13,14 +13,14 @@ public class LoginTestCase extends BaseTestForLogin {
 	// Login with Excel using multiple credentials (VALID & INVALID)
 	
 	@Test(description = "LoginSheet",dataProvider = "ReadDataFromExcel" ,dataProviderClass = ExcelDataSuplier.class)
-	public void validateLoginPageTitleAfterLogin(String username,String password,String type ,String expectedTitle) {
+	public void validateLoginPage(String username,String password,String type ,String expectedTitle) {
 		
 		
 		IcaffeLogin logObj=	new IcaffeLogin(utilObj);
-		logObj.enterLoginCreadentialFromDataProvider(username,password,"Login","Password");
+		logObj.enterLoginCreadentialFromDataProvider(username,password,"UserName","Password");
 		
 		logObj.clickOnLoginBT();
-		utilObj.validateGetTitle(expectedTitle,type,"Login");
+		utilObj.validateGetTitle(expectedTitle,type,"Credential");
 		 
 	}
 	
@@ -31,10 +31,10 @@ public class LoginTestCase extends BaseTestForLogin {
 		
 		
 		IcaffeLogin logObj=	new IcaffeLogin(utilObj);
-		logObj.enterLoginCreadential("Login","Passowrd");	
+		logObj.enterLoginCreadential();	
 		logObj.clickOnLoginBT();
 		
-		utilObj.validateGetTitle("Login Branch Division","valid","Login");
+		utilObj.validateGetTitle("Login Branch Division","valid","Credential");
 	}
 	
 	

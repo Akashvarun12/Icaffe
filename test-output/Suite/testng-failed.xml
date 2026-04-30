@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Test Login and Branch Division FinYear(failed)">
     <classes>
-      <class name="masters.Party_Eporter_Testcase$Exporter_Testcase">
+      <class name="branch_division_finyear.Branch_Division_FinYear_TestCase">
         <methods>
+          <include name="validateAll_Branch_Division_FinYear_with_ID"/>
           <include name="takeScreenShot"/>
           <include name="generatReport"/>
-          <include name="verifyMasterPartyExporter"/>
           <include name="login"/>
           <include name="closeBrowser"/>
+          <include name="validate_Branch_Division_FinYear_with_PropertyFile"/>
         </methods>
-      </class> <!-- masters.Party_Eporter_Testcase$Exporter_Testcase -->
+      </class> <!-- branch_division_finyear.Branch_Division_FinYear_TestCase -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test Login and Branch Division FinYear(failed) -->
 </suite> <!-- Failed suite [Suite] -->

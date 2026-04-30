@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="logintestcase.LoginTestCase">
+      <class name="masters.Party_Exporter_TestCase">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="importFileFromExcel"/>
-          <include name="takeScreenShot"/>
           <include name="generatReport"/>
-          <include name="validateLoginPageTitleAfterLogin"/>
+          <include name="takeScreenShot"/>
           <include name="login"/>
+          <include name="validateBranch_Division_FinYear"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- logintestcase.LoginTestCase -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

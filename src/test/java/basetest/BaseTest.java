@@ -55,7 +55,7 @@ public class BaseTest {
 		utilObj.openURL(urlName);
 
 		IcaffeLogin logObj = new IcaffeLogin(utilObj);
-		logObj.enterLoginCreadential("UserName","Password");
+		logObj.enterLoginCreadential();
 		logObj.clickOnLoginBT();
 	}
 
