@@ -20,7 +20,6 @@ public class CFS_Master {
         this.utilobj = webUtil;
         PageFactory.initElements(webUtil.getDriver(), this);
     }
-
    
     // Name Field
     @FindBy(id = "txtName")
@@ -55,7 +54,8 @@ public class CFS_Master {
     
     
     //State Field
-    @FindBy(xpath = "//input[@id='txtState']")
+    @FindBy(xpath = "//input[@class='form-control input-sm-EDI input-sm-Auto ui-autocomplete-input']")
+//    @FindBy(xpath = "//input[@id='txtState']")
     private WebElement selectState;
     
     
@@ -136,10 +136,10 @@ public class CFS_Master {
 
     
     // Send CFS Master Data manually
-    public void save_CFS_Master() throws Exception   {
+    public void CFS_Master_Manually() throws Exception   {
 
         // Name Field Value
-    	utilobj.sendKeys(enterName, "CFS Master Testing By Automation");
+    	utilobj.sendKeys(enterName, "CFS Master Testing By Automation 10","Name" );
         Thread.sleep(2000);
         
         // PORT CODE Auto-suggest
@@ -147,24 +147,24 @@ public class CFS_Master {
         Thread.sleep(2000);
        
         // Address Filed Value
-        utilobj.sendKeys(enterAddress, "D-105");
+        utilobj.sendKeys(enterAddress, "D-105", "Address");
         Thread.sleep(2000);
         
         //Address1 Field Value
-        utilobj.sendKeys(enterAddress1, "Noida Sector-63");
+        utilobj.sendKeys(enterAddress1, "Noida Sector-63", "Address1" );
         Thread.sleep(2000);
         
         // Display Status Value
-        utilobj.click(selectDisplayStatus);
+        utilobj.click(selectDisplayStatus, "Display Status");
         Thread.sleep(2000);
         
         
         // Address2 Field Value
-        utilobj.sendKeys(enterAddress2, "Uttar Pradesh");
+        utilobj.sendKeys(enterAddress2, "Uttar Pradesh", "Address2");
         Thread.sleep(2000);
         
         // City Field Value
-        utilobj.sendKeys(enterCity, "Noida"); 
+        utilobj.sendKeys(enterCity, "Noida", "City"); 
         Thread.sleep(2000);
 
         // State Field Value
@@ -181,74 +181,76 @@ public class CFS_Master {
         System.out.println("Selected State: " + selectState.getAttribute("value"));   
         
         // Zip Code Field Value
-        utilobj.sendKeys(enterZipCode, "201301");
+        utilobj.sendKeys(enterZipCode, "201301", "Zip Code");
         Thread.sleep(2000);
         
         // Contact Field Value
-        utilobj.sendKeys(enterContact, "1230456789");
+        utilobj.sendKeys(enterContact, "1230456789", "Contact");
         Thread.sleep(2000);
         
         // Phone Field Value
-        utilobj.sendKeys(enterPhone, "123-456789");
+        utilobj.sendKeys(enterPhone, "123-456789", "Phone");
         Thread.sleep(2000);
         
         // Fax Field Value
-        utilobj.sendKeys(enterFax, "1234567890");
+        utilobj.sendKeys(enterFax, "1234567890", "Fax");
         Thread.sleep(2000);
         
         // Email Field Value
-        utilobj.sendKeys(enterEmail, "Test12@gmail.com");
+        utilobj.sendKeys(enterEmail, "Test12@gmail.com", "Email");
         Thread.sleep(2000);
         
         // Pan Field Value
-        utilobj.sendKeys(enterPan, "ABCDE1234F");
+        utilobj.sendKeys(enterPan, "ABCDE1234F", "Pan");
         Thread.sleep(2000);
         
         // EDI Group Code Field Value
-        utilobj.sendKeys(enterEDIGroupCode, "ABCD12345");
+        utilobj.sendKeys(enterEDIGroupCode, "ABCD12345", "EDI Group Code");
         Thread.sleep(2000);
         
         // Bond Value Field Value
-        utilobj.sendKeys(enterBondValue, "12345");
+        utilobj.sendKeys(enterBondValue, "12345", "Bond Value");
         Thread.sleep(2000);
         
         // Rail Transhipper Bond Code Field Value
-        utilobj.sendKeys(railTranshipperBondCode, "Rail123");
+        utilobj.sendKeys(railTranshipperBondCode, "Rail123", "Rail Transhipper Bond Code");
         Thread.sleep(2000);
 
         
         // Transhipper Bond No Field Value
-        utilobj.sendKeys(enterTranshipperBondNo, "123456");
+        utilobj.sendKeys(enterTranshipperBondNo, "123456", "Transhipper Bond No");
         Thread.sleep(2000);
         
         // Transhipper Bond Code Field Value
-        utilobj.sendKeys(enterTranshipperBondCode, "XYZ123");
+        utilobj.sendKeys(enterTranshipperBondCode, "XYZ123", "Transhipper Bond Code");
         Thread.sleep(2000);
         
         // Road Transhipper Bond Code
-        utilobj.sendKeys(roadTranshipperBondCode, "ABCD1234");
+        utilobj.sendKeys(roadTranshipperBondCode, "ABCD1234", "Road Transhipper Bond Code");
         Thread.sleep(2000);
         
         // Delivery Hours Text Field Value
-        utilobj.sendKeys(enterDeliveryHoursText, "12");
+        utilobj.sendKeys(enterDeliveryHoursText, "12", "Delivery Hours Text");
         Thread.sleep(2000);
         
         // Segment Group Code Field Value
-        utilobj.sendKeys(enterSegmentGroupCode, "XYZ1235");
+        utilobj.sendKeys(enterSegmentGroupCode, "XYZ1235", "Segment Group Code");
         Thread.sleep(2000);
         
         
         // Save button
-        utilobj.click(enterSaveBtn);
-        utilobj.close();
-        Thread.sleep(20000);
+        utilobj.click(enterSaveBtn, "Save button");
+        utilobj.implicitlyWait();
+        // Validating Alert
+        utilobj.validateAlertMessage("Record Saved successfully.");
       
     }
     
     
-    /*
+    
     // Sending CFS Master Data by using properties file
-    public void enterCFSMasterDataByPropertiesFile() {
+    public void CFSMasterDataByPropertiesFile() {
+    	
 		Properties pr = utilobj.propertiFile("CFS_Master_data.properties");
 		String name = pr.getProperty("name");
 		String PortCode = pr.getProperty("portCode");
@@ -257,7 +259,7 @@ public class CFS_Master {
 		//String displayStatus = pr.getProperty("displayStatus");
 		String address2 = pr.getProperty("address2");
 		String city = pr.getProperty("city");
-		String state = pr.getProperty("state");
+		String State = pr.getProperty("state");
 		String zipCode = pr.getProperty("zipCode");
 		String contact = pr.getProperty("contact");
 		String phone =  pr.getProperty("phone");
@@ -275,73 +277,56 @@ public class CFS_Master {
 		
 //****************************************************************	
 		
-		utilobj.clear(enterName);
-		utilobj.sendKeys(enterName, name);
+		utilobj.clear(enterName, "Name textbox");
+		utilobj.sendKeys(enterName, name, "Name");
 		//utilobj.sendKeys(enterPortCode, PortCode);
-		utilobj.click(enterPortCode);
-		utilobj.selectAutoSuggest(enterPortCode, PortCode, PortCode);
-		
+		utilobj.click(enterPortCode, "Port Code");
+		utilobj.selectAutoSuggest(enterPortCode, PortCode, PortCode);		
 //		enterPortCode.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-	
-		
-		
-		utilobj.sendKeys(enterAddress, address);
-		utilobj.sendKeys(enterAddress1, address1);
-		
-		
-		
-		
+		utilobj.sendKeys(enterAddress, address, "Address");
+		utilobj.sendKeys(enterAddress1, address1, "Address1");	
 //		utilobj.sendKeys(selectDisplayStatus, displayStatus);
-//		selectDisplayStatus.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-
-		
-		utilobj.sendKeys(enterAddress2, address2);
-		utilobj.sendKeys(enterCity, city);
-		
-		
-//		utilobj.sendKeys(selectState, selectStateValue);
-		utilobj.click(selectState);
-		utilobj.selectAutoSuggest(selectState, state, state);
-		selectState.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);		
-		
-		
-		utilobj.sendKeys(enterZipCode, zipCode);
-		utilobj.sendKeys(enterContact, contact);
-		utilobj.sendKeys(enterPhone, phone);
-		utilobj.sendKeys(enterFax, fax);
-		utilobj.sendKeys(enterEmail, email);
-		utilobj.sendKeys(enterPan, panNumber);
-		utilobj.sendKeys(enterEDIGroupCode, ediGroupCode);
-		utilobj.sendKeys(enterBondValue, bondValue);
-		utilobj.sendKeys(railTranshipperBondCode, railTranshipperBondCodeValue);
-		utilobj.sendKeys(enterTranshipperBondNo, enterTranshipperBondNoValue);
-		utilobj.sendKeys(enterTranshipperBondCode, enterTranshipperBondCodeValue);
-		utilobj.sendKeys(roadTranshipperBondCode, roadTranshipperBondCodeValue);
-		utilobj.sendKeys(enterDeliveryHoursText, enterDeliveryHoursTextValue);
-		utilobj.sendKeys(enterSegmentGroupCode, enterSegmentGroupCodeValue);
+//		selectDisplayStatus.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);	
+		utilobj.sendKeys(enterAddress2, address2, "Address2");
+		utilobj.sendKeys(enterCity, city, "City");
+		utilobj.selectAutoSuggestUsingKeys(selectState, State);	
+		utilobj.sendKeys(enterZipCode, zipCode, "Zip Code");
+		utilobj.sendKeys(enterContact, contact, "Contact");
+		utilobj.sendKeys(enterPhone, phone, "Phone");
+		utilobj.sendKeys(enterFax, fax, "Fax");
+		utilobj.sendKeys(enterEmail, email, "Email");
+		utilobj.sendKeys(enterPan, panNumber, "Pan Number");
+		utilobj.sendKeys(enterEDIGroupCode, ediGroupCode, "EDI Group Code");
+		utilobj.sendKeys(enterBondValue, bondValue, "Bond Value");
+		utilobj.sendKeys(railTranshipperBondCode, railTranshipperBondCodeValue, "Rail Transhipper Bond Code Value");
+		utilobj.sendKeys(enterTranshipperBondNo, enterTranshipperBondNoValue, "Transhipper Bond No Value");
+		utilobj.sendKeys(enterTranshipperBondCode, enterTranshipperBondCodeValue, "Transhipper Bond Code Value");
+		utilobj.sendKeys(roadTranshipperBondCode, roadTranshipperBondCodeValue, "Transhipper Bond Code Value");
+		utilobj.sendKeys(enterDeliveryHoursText, enterDeliveryHoursTextValue, "Delivery Hours Text Value");
+		utilobj.sendKeys(enterSegmentGroupCode, enterSegmentGroupCodeValue, "Segment Group Code Value");
 		
 		
-		utilobj.click(enterSaveBtn);
+		utilobj.click(enterSaveBtn, "Save button");
 		utilobj.implicitlyWait();
+        utilobj.validateAlertMessage("Record Saved successfully.");
 	
 	}
-     */
+     
+    
+    
    
-    
-    
     
     // sending CFS Master Data By using DataProvider(Excel)
-   
-    public void cfsMasterDataByDataProvider(String name, String portCode) {
-    	utilobj.clear(enterName);
-		utilobj.sendKeys(enterName, name);
-		utilobj.click(enterPortCode);
+    public void cfsMasterDataByDataProvider(String name, String portCode, String state) {
+    	utilobj.clear(enterName, "Name textox");
+		utilobj.sendKeys(enterName, name, "Name Field");
+		utilobj.click(enterPortCode, "Port Code");
 		utilobj.selectAutoSuggest(enterPortCode, portCode, portCode);
+		utilobj.selectAutoSuggestUsingKeys(selectState, state);
 		
-		
-		
-		utilobj.click(enterSaveBtn);
+		utilobj.click(enterSaveBtn, "Save button");
 		utilobj.implicitlyWait();
+		utilobj.validateAlertMessage("Record Saved successfully.");
     	
     }
 	

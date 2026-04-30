@@ -31,8 +31,25 @@ public class Homepage {
 //	@FindBy(xpath = "//a[text()='Exporter']")
 //	private WebElement clickOnExporter;
 	
+	// Bank BRO Page opening
+	@FindBy(xpath = "//a[text() = 'Bank BRO']")
+	private WebElement bankBRO ;
+	
+	
+	// CFS Master Page opening 
 	@FindBy(xpath = "//a[text() = 'CFS Master']")
 	private WebElement cfsmaster ;
+	
+	
+	// Going To Shipment Info page.
+	@FindBy(xpath = "//a[text()= 'Shipment Info '] ")
+	WebElement goToshipmentInfo ;
+	
+	
+	// Going To IMO Master Page
+	@FindBy(xpath = "//a[text()='IMO Master']")
+	WebElement goToIMOMaster ;
+	
 	
 	@FindBys(@FindBy(xpath = "// label[@id='UserTag']//span"))
 	private List<WebElement> listOfWebEle;
@@ -56,19 +73,33 @@ public class Homepage {
 //		utilobj.clickByAction(clickOnExporter)
 //		
 //	}
+
 	
+	// Bank BRO Page opening 
+	public void Go_To_Master_BankBRO() {
+		utilobj.mouseOver(goToMasters);
+		utilobj.mouseOver(goToParty);
+		utilobj.clickByAction(bankBRO);
+	}
 	
+	// CFS Master Page opening
 	public void Goto_Masters_PartyCFSMaster() {
 
 		utilobj.mouseOver(goToMasters);
 		utilobj.mouseOver(goToParty);
 		//CFS MAster Page
 		utilobj.clickByAction(cfsmaster);
-
-
-
 		
 	}
+	
+	
+	// IMO Master Page Opening Under Shipment Info
+	public void GoTo_IMOMaster() {
+		utilobj.mouseOver(goToMasters);
+		utilobj.mouseOver(goToshipmentInfo);
+		utilobj.clickByAction(goToIMOMaster);
+	}
+		
 
 
 

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -27,6 +28,20 @@ import webutil.WebUtil;
 
 public class BaseTest {
 	protected static WebUtil utilObj;
+	
+	
+//	@DataProvider()
+//	public Object[][] getData() {
+//
+//		 Map<String,String> testData = ExcelDataSuplier.setExcelFile("BranchSheet","Mumbai");
+//		 int dataMapCount=testData.size();
+//		 Object[][] allData= new Object[dataMapCount][1];
+//		 for(int i=0;i<=dataMapCount-1;i++) {
+//			allData[i][0] = testData.get(i);
+//		 }
+//		 
+//	return allData;    
+//	}
 
 
 	@BeforeSuite
@@ -37,6 +52,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void login(Method testName) throws InterruptedException {
 
+		// Login
 		utilObj = new WebUtil();
 		utilObj.generateExtentTest(testName.getName());
 		Properties pr = utilObj.propertiFile("browser_url_and_credential.properties");
@@ -46,12 +62,12 @@ public class BaseTest {
 		utilObj.openURL(urlName);
 
 		IcaffeLogin logObj = new IcaffeLogin(utilObj);
-		logObj.enterLoginCreadential();
+		logObj.enterLoginCreadential("UserName","Password");
 		logObj.clickOnLoginBT();
 		
 		
 		
-		
+	//  Branch, Division and Financial Year Selection
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
 		Properties properties = utilObj.propertiFile("Branch_Division_Year.properties");
 		String branchName = properties.getProperty("branch");
@@ -65,8 +81,8 @@ public class BaseTest {
 		logBranchDiv.SelectFinYear(finYear);
 
 		logBranchDiv.clickOnOKButton();
-
 		
+			
 		
 	}
 	

@@ -1,10 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+
+  <!-- LOGIN TEST -->
+  <test name="Login Test">
+    <parameter name="sheetName" value="LoginSheet"/>
     <classes>
-      <class name="logintestcase.LoginTestCase"/>
-      <class name="masters.Party_Eporter_Testcase"/>
+      
+      <!-- ✅ FIXED CLASS NAME -->
+      <class name="logintestcase.LoginTestCase">
+        <methods>
+          <include name="validateLoginPageTitleAfterLogin"/>
+        </methods>
+      </class>
+
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>
+
+  <!-- BRANCH TEST -->
+  <test name="Branch Test">
+    <parameter name="sheetName" value="BranchSheet"/>
+    <classes>
+
+      <class name="branch_division_finyear.Branch_Division_FinYear_TestCase">
+        <methods>
+          <include name="validate_AllBranch_Division_FinYear_with_DataProvider"/>
+        </methods>
+      </class>
+
+    </classes>
+  </test>
+
+</suite>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-27T15:39:01 IST" name="Default suite" finished-at="2026-04-27T15:39:23 IST" duration-ms="22595">
+  <suite started-at="2026-04-30T17:04:09 IST" name="Default suite" finished-at="2026-04-30T17:04:51 IST" duration-ms="41520">
     <groups>
     </groups>
-    <test started-at="2026-04-27T15:39:01 IST" name="Default test" finished-at="2026-04-27T15:39:23 IST" duration-ms="22595">
+    <test started-at="2026-04-30T17:04:09 IST" name="Default test" finished-at="2026-04-30T17:04:51 IST" duration-ms="41520">
       <class name="masters.CFS_MasterTestCase">
-        <test-method is-config="true" signature="generatReport()[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:01 IST" name="generatReport" finished-at="2026-04-27T15:39:01 IST" duration-ms="155" status="PASS">
+        <test-method is-config="true" signature="generatReport()[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:09 IST" name="generatReport" finished-at="2026-04-30T17:04:09 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generatReport -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:01 IST" name="login" finished-at="2026-04-27T15:39:07 IST" duration-ms="5789" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:10 IST" name="login" finished-at="2026-04-30T17:04:16 IST" duration-ms="6327" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="cfsMasterData(java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:07 IST" name="cfsMasterData" data-provider="ReadDataFromExcel" finished-at="2026-04-27T15:39:11 IST" duration-ms="4002" status="PASS">
+        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:16 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-04-30T17:04:24 IST" duration-ms="7724" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ABC BY Excel Automation]]>
+                <![CDATA[Automation Testing 30 1]]>
               </value>
             </param>
             <param index="1">
@@ -34,70 +34,128 @@
                 <![CDATA[ZAZDV]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kerala]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cfsMasterData -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:11 IST" name="takeScreenShot" finished-at="2026-04-27T15:39:12 IST" duration-ms="1328" status="PASS">
+        </test-method> <!-- cfsMasterData_ByDataProvider -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:24 IST" name="takeScreenShot" finished-at="2026-04-30T17:04:25 IST" duration-ms="1313" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cfsMasterData status=SUCCESS method=CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9] output={null}]]]>
+                <![CDATA[[TestResult name=cfsMasterData_ByDataProvider status=SUCCESS method=CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:12 IST" name="login" finished-at="2026-04-27T15:39:18 IST" duration-ms="6016" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:25 IST" name="login" finished-at="2026-04-30T17:04:32 IST" duration-ms="6710" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="cfsMasterData(java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:18 IST" name="cfsMasterData" data-provider="ReadDataFromExcel" finished-at="2026-04-27T15:39:22 IST" duration-ms="3841" status="PASS">
+        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:32 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-04-30T17:04:37 IST" duration-ms="5051" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[xyz By shivam]]>
+                <![CDATA[Automation Testing 30 2]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[ZAZDV]]>
+                <![CDATA[CZLOB]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rajasthan]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cfsMasterData -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:22 IST" name="takeScreenShot" finished-at="2026-04-27T15:39:23 IST" duration-ms="1168" status="PASS">
+        </test-method> <!-- cfsMasterData_ByDataProvider -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:37 IST" name="takeScreenShot" finished-at="2026-04-30T17:04:38 IST" duration-ms="1192" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cfsMasterData status=SUCCESS method=CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@f5958c9] output={null}]]]>
+                <![CDATA[[TestResult name=cfsMasterData_ByDataProvider status=SUCCESS method=CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masters.CFS_MasterTestCase@f5958c9]" started-at="2026-04-27T15:39:23 IST" name="closeBrowser" finished-at="2026-04-27T15:39:23 IST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:38 IST" name="login" finished-at="2026-04-30T17:04:45 IST" duration-ms="6347" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:45 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-04-30T17:04:50 IST" duration-ms="5170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Automation Testing 30 3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[FRC3S]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cfsMasterData_ByDataProvider -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:50 IST" name="takeScreenShot" finished-at="2026-04-30T17:04:51 IST" duration-ms="1203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cfsMasterData_ByDataProvider status=SUCCESS method=CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:51 IST" name="closeBrowser" finished-at="2026-04-30T17:04:51 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

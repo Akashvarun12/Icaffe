@@ -20,11 +20,11 @@ public class CFS_MasterTestCase extends BaseTest {
 	
 	
 
-	/*
+	// Sending CFS Master Data By using Manually
 	@Test
-	public void validateBranch_Division_FinYear() {
+	public void sendCFS_Master_Manually() throws Exception {
 
-		
+		/*
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
 		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
 		String branchName = pr.getProperty("branch");
@@ -38,6 +38,7 @@ public class CFS_MasterTestCase extends BaseTest {
 		logBranchDiv.SelectFinYear(finYear);
 
 		logBranchDiv.clickOnOKButton();
+		*/
 
 		Homepage homeObj = new Homepage(utilObj);
 		
@@ -49,31 +50,63 @@ public class CFS_MasterTestCase extends BaseTest {
 		utilObj.validateListOfText(actualList, expectedList);
 
 		 homeObj.Goto_Masters_PartyCFSMaster();
-		 utilObj.validateGetTitle("CFS Master");
+		 utilObj.validateGetTitle("CFS Master", "Page Title", "CFS Title");
 		 
-
-		 //CFS Master  sending data manual
-		 CFS_Master cfs_Master = new CFS_Master(utilObj);
-		 try {
-			 // send CFS Master Data Manually
-//			cfs_Master.save_CFS_Master();
-			
-//			 Send CFS Master Data By using Properties file
-			cfs_Master.enterCFSMasterDataByPropertiesFile();
-			utilObj.validateAlertMessage();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		CFS_Master cfs_Master = new CFS_Master(utilObj);
+		cfs_Master.CFS_Master_Manually();
+		
 		 		 
 	}
 	
-	*/
+	
+
+	
+	
+	// Sending CFS Master Data By using Properties Files
+	
+	@Test
+	public void sendCFS_Master_PropertiesFile() {
+		/*
+		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
+		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
+		String branchName = pr.getProperty("branch");
+		String divisionCheckbox = pr.getProperty("division");
+		String finYear = pr.getProperty("year");
+
+		logBranchDiv.SelectBranch(branchName);
+
+		logBranchDiv.SelectDevision(divisionCheckbox);
+
+		logBranchDiv.SelectFinYear(finYear);
+
+		logBranchDiv.clickOnOKButton();
+		*/
+
+		Homepage homeObj = new Homepage(utilObj);
+		
+		
+		List<String> actualList = homeObj.verifyLoginBranchDivision_OnHomePage();
+		List<String> expectedList = Arrays.asList("Welcome", "Shivam220", "(2627)", "DEMO LTD",
+				"Ahmedabad (Export Sea)");
+
+		utilObj.validateListOfText(actualList, expectedList);
+
+		 homeObj.Goto_Masters_PartyCFSMaster();
+		 utilObj.validateGetTitle("CFS Master", "Page Title", "CFS Title");
+		 
+		 CFS_Master cfs_Master = new CFS_Master(utilObj);
+		cfs_Master.CFSMasterDataByPropertiesFile();
+		 		 
+	}
+	
+
 	
 	
 	
-	@Test(dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
-	public void cfsMasterData(String name, String portCode) {
+	// Sending Data By using DataProvider (Excel File)
+	
+	@Test(description = "CFSMasterSheet", dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+	public void cfsMasterData_ByDataProvider(String name, String portCode, String state) {
 
 
 		Homepage homeObj = new Homepage(utilObj);
@@ -86,16 +119,12 @@ public class CFS_MasterTestCase extends BaseTest {
 		utilObj.validateListOfText(actualList, expectedList);
 
 		homeObj.Goto_Masters_PartyCFSMaster();
-		utilObj.validateGetTitle("CFS Master"); 
+		utilObj.validateGetTitle("CFS Master", "", "Page"); 
+		
 		
 		CFS_Master cfs_Master = new CFS_Master(utilObj);
-		cfs_Master.cfsMasterDataByDataProvider(name, portCode);
-		utilObj.validateAlertMessage();
-
-		
-		
-		 
-		 
+		cfs_Master.cfsMasterDataByDataProvider(name, portCode, state);
+	 
 	}
 
 		 

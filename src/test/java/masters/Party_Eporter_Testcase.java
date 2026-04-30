@@ -46,7 +46,7 @@ public class Party_Eporter_Testcase {
 			utilObj.validateListOfText(actualList, expectedList);
 
 			 homeObj.Goto_Masters_PartyCFSMaster();
-			 utilObj.validateGetTitle("Shipper Master");
+			 utilObj.validateGetTitle("Shipper Master", "Shipper Master", "PAge Title");
 			 
 			 
 		}
@@ -73,7 +73,7 @@ public class Party_Eporter_Testcase {
 			utilObj.validateListOfText(actualList, expectedList);
 
 			 homeObj.Goto_Masters_PartyCFSMaster();
-			 utilObj.validateGetTitle("Shipper Master");
+			 utilObj.validateGetTitle("Shipper Master", "Shipper Master", "PAge Title");
 			 
 			 
 		}
