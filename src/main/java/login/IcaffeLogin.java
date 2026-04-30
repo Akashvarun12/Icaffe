@@ -41,26 +41,26 @@ public class IcaffeLogin {
 		String userName = pr.getProperty("username");
 		String password = pr.getProperty("password");
 		
-		utilobj.clear(usernameTB);
-		utilobj.sendKeys(usernameTB, userName);
-		utilobj.clear(passwordTB);
-		utilobj.sendKeys(passwordTB, password);
+		utilobj.clear(usernameTB,"User Name Textbox");
+		utilobj.sendKeys(usernameTB, userName,"User Name Textbox");
+		utilobj.clear(passwordTB,"Password Textbox");
+		utilobj.sendKeys(passwordTB, password,"Password Textbox");
 		
 	}
 	
 
 
-	public void enterLoginCreadentialFromDataProvider(String userName, String password) {
+	public void enterLoginCreadentialFromDataProvider(String userName, String password,String usernamevalue,String passwordvalue) {
 
-		utilobj.clear(usernameTB);
-		utilobj.sendKeys(usernameTB, userName);
-		utilobj.clear(passwordTB);
-		utilobj.sendKeys(passwordTB, password);
+		utilobj.clear(usernameTB,"User Name Textbox");
+		utilobj.sendKeys(usernameTB, userName,"User Name Textbox");
+		utilobj.clear(passwordTB,"Password Textbox");
+		utilobj.sendKeys(passwordTB, password,"Password Textbox");
 	}
 	
 	public void clickOnLoginBT() {
 
-		utilobj.click(signinBT);
+		utilobj.click(signinBT,"Login Button");
 	}
 
 
