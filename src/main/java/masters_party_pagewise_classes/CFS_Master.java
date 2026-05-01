@@ -317,13 +317,27 @@ public class CFS_Master {
    
     
     // sending CFS Master Data By using DataProvider(Excel)
-    public void cfsMasterDataByDataProvider(String name, String portCode, String state) {
+    public void cfsMasterDataByDataProvider(String name, String portCode, String address, String address1, String address2, String city, String state, String zipcode,
+    		String contact, String phone, String fax, String email, String pan, String ediGroupCode, String bondValue) {
+    	
     	utilobj.clear(enterName, "Name textox");
-		utilobj.sendKeys(enterName, name, "Name Field");
+		utilobj.sendKeys(enterName, name, "Name textox");
 		utilobj.click(enterPortCode, "Port Code");
 		utilobj.selectAutoSuggest(enterPortCode, portCode, portCode);
+		utilobj.sendKeys(enterAddress, address, "Address textox");
+		utilobj.sendKeys(enterAddress1, address1, "Address1 textox");
+		utilobj.sendKeys(enterAddress2, address2, "Address2 textox");
+		utilobj.sendKeys(enterCity, city, "City textbox");
 		utilobj.selectAutoSuggestUsingKeys(selectState, state);
-		
+		utilobj.sendKeys(enterZipCode, zipcode, "Zip Code textbox");
+		utilobj.sendKeys(enterContact, contact, "Contact textbox");
+		utilobj.sendKeys(enterPhone, phone, "Phone textbox");
+		utilobj.sendKeys(enterFax, fax, "Fax textbox");
+		utilobj.sendKeys(enterEmail, email, "Email textbox");
+		utilobj.sendKeys(enterPan, pan, "PAN textbox");
+		utilobj.sendKeys(enterEDIGroupCode, ediGroupCode, "EDI Group Code textbox");
+		utilobj.sendKeys(enterBondValue, bondValue, "Bond Value textbox");
+
 		utilobj.click(enterSaveBtn, "Save button");
 		utilobj.implicitlyWait();
 		utilobj.validateAlertMessage("Record Saved successfully.");

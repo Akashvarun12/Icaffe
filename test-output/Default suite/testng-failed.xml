@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="masters.BankBRO_TestCase">
+      <class name="masters.CFS_MasterTestCase">
         <methods>
-          <include name="generatReport"/>
           <include name="takeScreenShot"/>
+          <include name="generatReport"/>
           <include name="login"/>
-          <include name="bankBRO_ExcelFile"/>
+          <include name="cfsMasterData_ByDataProvider"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- masters.BankBRO_TestCase -->
+      </class> <!-- masters.CFS_MasterTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

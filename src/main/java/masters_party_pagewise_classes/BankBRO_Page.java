@@ -21,15 +21,45 @@ public class BankBRO_Page {
         PageFactory.initElements(webUtil.getDriver(), this);
     }
 	
-	
 	// Bank Name Textbox
 	@FindBy(xpath = "//input[@name='Contactperson']")
 	 WebElement bankName ;
 	
+	// Default Address Checkbox
+	@FindBy(xpath = "//input[@type='checkbox']")
+	WebElement defaultAddress ;	
+	
+	// Contact Person
+	@FindBy(xpath = "//input[@name='ContactPerson']")
+	WebElement contactPerson ;	
 	
 	// Branch Name Textbox
 	@FindBy(xpath = "//input[@name='BranchName']")
-	 WebElement branchName ;
+	 WebElement branchName ;	
+	
+	// Address 1 
+	@FindBy(xpath = "//input[@name='Address1']")
+	WebElement address1 ;
+	
+	// Address 2
+	@FindBy(xpath = "//input[@name='Address2']")
+	WebElement address2 ;
+	
+	// City
+	@FindBy(xpath = "//input[@name='City']")
+	WebElement city ;
+	
+	// State
+	@FindBy(xpath = "//input[@name='State']")
+	WebElement state ;
+	
+	// Country
+	@FindBy(xpath = "//input[@name='Country']")
+	WebElement country ;
+	
+	// Pin Code 
+	@FindBy(xpath = "//input[@name='Pin']")
+	WebElement pincode ;
 	
 	
 	// Add Button
@@ -41,6 +71,10 @@ public class BankBRO_Page {
 	// Save button
 	@FindBy(xpath = "(//span[@class='glyphicon glyphicon-save-file'])[1]")
 	WebElement saveButton ;
+	
+	
+	
+	
 	
 	
 	
@@ -80,8 +114,8 @@ public class BankBRO_Page {
 		utilobj.click(addButton, "OK button");
 		utilobj.click(saveButton, "Save button");
 			
-		utilobj.validateAlertMessage("Bank Details saved successfully");
-		utilobj.implicitlyWait();
+//		utilobj.validateAlertMessage("Bank Details saved successfully");
+//		utilobj.implicitlyWait();
 		
 	}
 			

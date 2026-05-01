@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-30T17:04:09 IST" name="Default suite" finished-at="2026-04-30T17:04:51 IST" duration-ms="41520">
+  <suite started-at="2026-05-01T11:47:26 IST" name="Default suite" finished-at="2026-05-01T11:50:54 IST" duration-ms="208084">
     <groups>
     </groups>
-    <test started-at="2026-04-30T17:04:09 IST" name="Default test" finished-at="2026-04-30T17:04:51 IST" duration-ms="41520">
+    <test started-at="2026-05-01T11:47:26 IST" name="Default test" finished-at="2026-05-01T11:50:54 IST" duration-ms="208084">
       <class name="masters.CFS_MasterTestCase">
-        <test-method is-config="true" signature="generatReport()[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:09 IST" name="generatReport" finished-at="2026-04-30T17:04:09 IST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="generatReport()[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:47:26 IST" name="generatReport" finished-at="2026-05-01T11:47:26 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generatReport -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:10 IST" name="login" finished-at="2026-04-30T17:04:16 IST" duration-ms="6327" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:47:27 IST" name="login" finished-at="2026-05-01T11:48:43 IST" duration-ms="76069" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:16 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-04-30T17:04:24 IST" duration-ms="7724" status="PASS">
+        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:48:43 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-05-01T11:49:54 IST" duration-ms="71075" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Automation Testing 30 1]]>
+                <![CDATA[Sending Data By Excel 1]]>
               </value>
             </param>
             <param index="1">
@@ -36,45 +36,180 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Kerala]]>
+                <![CDATA[A-01]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sector-01]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Noida]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Noida]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Uttar Pradesh]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[201301]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[123-456789]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[test1@gmail.com]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[ABCDE1234L]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[EGV01]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[BV01]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cfsMasterData_ByDataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:24 IST" name="takeScreenShot" finished-at="2026-04-30T17:04:25 IST" duration-ms="1313" status="PASS">
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:49:54 IST" name="takeScreenShot" finished-at="2026-05-01T11:49:55 IST" duration-ms="1397" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cfsMasterData_ByDataProvider status=SUCCESS method=CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb] output={null}]]]>
+                <![CDATA[[TestResult name=cfsMasterData_ByDataProvider status=SUCCESS method=CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:25 IST" name="login" finished-at="2026-04-30T17:04:32 IST" duration-ms="6710" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:49:55 IST" name="login" finished-at="2026-05-01T11:50:54 IST" duration-ms="59070" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f91fabefbc63ae02fa4f2ed0e3b7f2f, findElement {value=//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\hans-\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, goog:processID: 8268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f91fabefbc63ae02fa4f2ed0e3b7f2f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f91fabefbc63ae02fa4f2ed0e3b7f2f, findElement {value=//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\hans-\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, goog:processID: 8268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f91fabefbc63ae02fa4f2ed0e3b7f2f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at branch_division.LoginBranchDivision.SelectBranch(LoginBranchDivision.java:40)
+at basetest.BaseTest.login(BaseTest.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:32 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-04-30T17:04:37 IST" duration-ms="5051" status="PASS">
+        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:50:54 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-05-01T11:50:54 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Automation Testing 30 2]]>
+                <![CDATA[Sending Data By Excel 2]]>
               </value>
             </param>
             <param index="1">
@@ -84,45 +219,157 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Rajasthan]]>
+                <![CDATA[A-02]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sector-02]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[200300]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[456-789012]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[7890123]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[test2@gmail.com]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[FGHIJ1234T]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[EGV02]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[BV02]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f91fabefbc63ae02fa4f2ed0e3b7f2f, findElement {value=//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\hans-\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, goog:processID: 8268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f91fabefbc63ae02fa4f2ed0e3b7f2f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f91fabefbc63ae02fa4f2ed0e3b7f2f, findElement {value=//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\hans-\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, goog:processID: 8268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f91fabefbc63ae02fa4f2ed0e3b7f2f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at branch_division.LoginBranchDivision.SelectBranch(LoginBranchDivision.java:40)
+at basetest.BaseTest.login(BaseTest.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cfsMasterData_ByDataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:37 IST" name="takeScreenShot" finished-at="2026-04-30T17:04:38 IST" duration-ms="1192" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=cfsMasterData_ByDataProvider status=SUCCESS method=CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:50:54 IST" name="takeScreenShot" finished-at="2026-05-01T11:50:54 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:38 IST" name="login" finished-at="2026-04-30T17:04:45 IST" duration-ms="6347" status="PASS">
+        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:50:54 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-05-01T11:50:54 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:45 IST" name="cfsMasterData_ByDataProvider" description="CFSMasterSheet" data-provider="ReadDataFromExcel" finished-at="2026-04-30T17:04:50 IST" duration-ms="5170" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Automation Testing 30 3]]>
+                <![CDATA[Sending Data By Excel 3]]>
               </value>
             </param>
             <param index="1">
@@ -132,30 +379,157 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Delhi]]>
+                <![CDATA[A-03]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sector-03]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Noida]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Noida]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Uttar Pradesh]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[201301]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[789-123456]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[3698520]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[test3@gmail.com]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[XYZAS1234F]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[EGV03]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[BV03]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f91fabefbc63ae02fa4f2ed0e3b7f2f, findElement {value=//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\hans-\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, goog:processID: 8268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f91fabefbc63ae02fa4f2ed0e3b7f2f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f91fabefbc63ae02fa4f2ed0e3b7f2f, findElement {value=//ul[contains(@class,'ui-autocomplete')]//div[text()='ahmedabad'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\hans-\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60697}, goog:processID: 8268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60697/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f91fabefbc63ae02fa4f2ed0e3b7f2f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at branch_division.LoginBranchDivision.SelectBranch(LoginBranchDivision.java:40)
+at basetest.BaseTest.login(BaseTest.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cfsMasterData_ByDataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:50 IST" name="takeScreenShot" finished-at="2026-04-30T17:04:51 IST" duration-ms="1203" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=cfsMasterData_ByDataProvider status=SUCCESS method=CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void masters.CFS_MasterTestCase.cfsMasterData_ByDataProvider(java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:50:54 IST" name="login" finished-at="2026-05-01T11:50:54 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:50:54 IST" name="takeScreenShot" finished-at="2026-05-01T11:50:54 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masters.CFS_MasterTestCase@3eb738bb]" started-at="2026-04-30T17:04:51 IST" name="closeBrowser" finished-at="2026-04-30T17:04:51 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masters.CFS_MasterTestCase@3eb25e1a]" started-at="2026-05-01T11:50:54 IST" name="closeBrowser" finished-at="2026-05-01T11:50:54 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

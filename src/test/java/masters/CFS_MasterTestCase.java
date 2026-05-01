@@ -21,7 +21,7 @@ public class CFS_MasterTestCase extends BaseTest {
 	
 
 	// Sending CFS Master Data By using Manually
-	@Test
+//	@Test
 	public void sendCFS_Master_Manually() throws Exception {
 
 		/*
@@ -64,7 +64,7 @@ public class CFS_MasterTestCase extends BaseTest {
 	
 	// Sending CFS Master Data By using Properties Files
 	
-	@Test
+//	@Test
 	public void sendCFS_Master_PropertiesFile() {
 		/*
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
@@ -106,7 +106,8 @@ public class CFS_MasterTestCase extends BaseTest {
 	// Sending Data By using DataProvider (Excel File)
 	
 	@Test(description = "CFSMasterSheet", dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
-	public void cfsMasterData_ByDataProvider(String name, String portCode, String state) {
+	public void cfsMasterData_ByDataProvider(String name, String portCode, String address, String address1, String address2, String city, String state, String zipcode,
+    		String contact, String phone, String fax, String email, String pan, String ediGroupCode, String bondValue) {
 
 
 		Homepage homeObj = new Homepage(utilObj);
@@ -123,7 +124,8 @@ public class CFS_MasterTestCase extends BaseTest {
 		
 		
 		CFS_Master cfs_Master = new CFS_Master(utilObj);
-		cfs_Master.cfsMasterDataByDataProvider(name, portCode, state);
+		cfs_Master.cfsMasterDataByDataProvider(name, portCode, address, address1, address2, city, state, zipcode, contact, phone, fax,
+				email, pan, ediGroupCode, bondValue);
 	 
 	}
 

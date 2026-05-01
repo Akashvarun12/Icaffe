@@ -77,8 +77,7 @@ public class BankBRO_TestCase extends BaseTest{
 		
 		BankBRO_Page bankBRO_Page = new BankBRO_Page(utilObj);
 		bankBRO_Page.send_BankBRO_Data_Excel(bankName, branchName);
-
-		
+	
 	}
 	
 	
