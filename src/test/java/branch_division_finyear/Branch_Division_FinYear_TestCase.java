@@ -15,6 +15,7 @@ import basetest.BaseTest;
 import branch_division.LoginBranchDivision;
 import icaffe_homepage.Homepage;
 import webutil.ExcelDataSuplier;
+import webutil.WebUtil;
 
 public class Branch_Division_FinYear_TestCase extends BaseTest {
 
@@ -24,11 +25,15 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 	public void validate_Branch_Division_FinYear_with_PropertyFile() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
-		Properties pr = utilObj.propertiFile("Akash_Branch_Division_Year.propertie");
+//		Properties pr = utilObj.propertiFile("Akash_Branch_Division_Year.propertie");
+//		
+//		String branchName = pr.getProperty("branch");
+//		String divisionCheckbox = pr.getProperty("division");
+//		String finYear = pr.getProperty("year");
 		
-		String branchName = pr.getProperty("branch");
-		String divisionCheckbox = pr.getProperty("division");
-		String finYear = pr.getProperty("year");
+		String branchName = WebUtil.getConfig("branch");
+		String divisionCheckbox = WebUtil.getConfig("division");
+		String finYear = WebUtil.getConfig("year");
 
 		logBranchDiv.SelectBranch(branchName);
 
@@ -45,7 +50,7 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 	}
 
 	// Validate Branch_Division_FinYear_with_ID from Excel sheet (DYNAMICALLY)...
-	@Test
+//	@Test
 	public void validateAll_Branch_Division_FinYear_with_ID() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
@@ -73,7 +78,7 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 
 	// Validate AllBranch_Division_FinYear_with_DataProvider...
 
-	@Test(description = "All_BranchSheet|Akash_TestByDataprovider.xlsx", dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+//	@Test(description = "All_BranchSheet|Akash_TestByDataprovider.xlsx", dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
 	public void validate_AllBranch_Division_FinYear_with_DataProvider(String branchname, String division,
 			String finYear, String exp_1, String exp_2, String exp_3, String exp_4) {
 

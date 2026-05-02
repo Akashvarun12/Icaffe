@@ -25,29 +25,18 @@ import org.testng.annotations.Test;
 
 public class ExcelDataSuplier {
 	
-
-	
-	
 	@DataProvider(name = "ReadDataFromExcel")
-	public static Object[][] readAllData(Method method) throws IOException {
+	public static Object[][] readAllData() throws IOException {
 
-	    Test test = method.getAnnotation(Test.class);
+	    // properties load
+	    
 
-	    if (test == null || test.description().isEmpty()) {
-	        throw new RuntimeException("Please provide sheetName|fileName in @Test(description)");
-	    }
+	    String fileName = WebUtil.getConfig("excel.file");
+	    String sheetName = WebUtil.getConfig("excel.sheet");
 
-	    String[] data = test.description().split("\\|");
+	  String path=  System.getProperty("user.dir") + "/src/test/resources/" + fileName;
 
-	    String sheetName = data[0];
-	    String fileName = data[1];
-
-	    String path = System.getProperty("user.dir")
-	            + "/src/test/resources/" + fileName;
-
-	    File excelFile = new File(path);
-	    FileInputStream fis = new FileInputStream(excelFile);
-
+	    FileInputStream fis = new FileInputStream(path);
 	    XSSFWorkbook workBook = new XSSFWorkbook(fis);
 	    XSSFSheet sheet = workBook.getSheet(sheetName);
 
@@ -76,6 +65,56 @@ public class ExcelDataSuplier {
 
 	    return arrData;
 	}
+	
+	
+//	@DataProvider(name = "ReadDataFromExcel")
+//	public static Object[][] readAllData(Method method) throws IOException {
+//
+//	    Test test = method.getAnnotation(Test.class);
+//
+//	    if (test == null || test.description().isEmpty()) {
+//	        throw new RuntimeException("Please provide sheetName|fileName in @Test(description)");
+//	    }
+//
+//	    String[] data = test.description().split("\\|");
+//
+//	    String sheetName = data[0];
+//	    String fileName = data[1];
+//
+//	    String path = System.getProperty("user.dir")
+//	            + "/src/test/resources/" + fileName;
+//
+//	    File excelFile = new File(path);
+//	    FileInputStream fis = new FileInputStream(excelFile);
+//
+//	    XSSFWorkbook workBook = new XSSFWorkbook(fis);
+//	    XSSFSheet sheet = workBook.getSheet(sheetName);
+//
+//	    if (sheet == null) {
+//	        throw new RuntimeException("Sheet not found: " + sheetName);
+//	    }
+//
+//	    int noOfRows = sheet.getPhysicalNumberOfRows();
+//	    int noOfColumn = sheet.getRow(0).getLastCellNum();
+//
+//	    Object[][] arrData = new Object[noOfRows - 1][noOfColumn];
+//
+//	    DataFormatter df = new DataFormatter();
+//
+//	    for (int i = 0; i < noOfRows - 1; i++) {
+//	        Row row = sheet.getRow(i + 1);
+//
+//	        for (int j = 0; j < noOfColumn; j++) {
+//	            Cell cell = (row != null) ? row.getCell(j) : null;
+//	            arrData[i][j] = df.formatCellValue(cell);
+//	        }
+//	    }
+//
+//	    workBook.close();
+//	    fis.close();
+//
+//	    return arrData;
+//	}
 
 	
 	// Read All Data from Excel....

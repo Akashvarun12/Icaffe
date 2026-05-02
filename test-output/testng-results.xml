@@ -1,183 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-02T14:25:49 IST" name="Default suite" finished-at="2026-05-02T14:26:24 IST" duration-ms="34537">
+  <suite started-at="2026-05-02T17:29:41 IST" name="Default suite" finished-at="2026-05-02T17:30:13 IST" duration-ms="31260">
     <groups>
     </groups>
-    <test started-at="2026-05-02T14:25:49 IST" name="Default test" finished-at="2026-05-02T14:26:24 IST" duration-ms="34537">
-      <class name="masters.Party_Exporter_TestCase">
-        <test-method is-config="true" signature="generatReport()[pri:0, instance:masters.Party_Exporter_TestCase@bcec361]" started-at="2026-05-02T14:25:49 IST" name="generatReport" finished-at="2026-05-02T14:25:49 IST" duration-ms="391" status="PASS">
+    <test started-at="2026-05-02T17:29:41 IST" name="Default test" finished-at="2026-05-02T17:30:13 IST" duration-ms="31260">
+      <class name="logintestcase.LoginTestCase">
+        <test-method is-config="true" signature="generatReport()[pri:0, instance:logintestcase.LoginTestCase@302552ec]" started-at="2026-05-02T17:29:41 IST" name="generatReport" finished-at="2026-05-02T17:29:41 IST" duration-ms="401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generatReport -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@bcec361]" started-at="2026-05-02T14:25:49 IST" name="login" finished-at="2026-05-02T14:26:23 IST" duration-ms="34243" status="PASS">
+        <test-method is-config="true" signature="importFileFromExcel()[pri:0, instance:logintestcase.LoginTestCase@302552ec]" started-at="2026-05-02T17:29:41 IST" name="importFileFromExcel" finished-at="2026-05-02T17:29:41 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- importFileFromExcel -->
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:logintestcase.LoginTestCase@302552ec]" started-at="2026-05-02T17:29:41 IST" name="login" finished-at="2026-05-02T17:30:00 IST" duration-ms="18377" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masters.Party_Exporter_TestCase.validate_ShipperPageWith_Title()]]>
+                <![CDATA[public void logintestcase.LoginTestCase.validateLoginWithValidCredential()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="validate_ShipperPageWith_Title()[pri:0, instance:masters.Party_Exporter_TestCase@bcec361]" started-at="2026-05-02T14:26:23 IST" name="validate_ShipperPageWith_Title" finished-at="2026-05-02T14:26:24 IST" duration-ms="226" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [09cddf25febefdb6c17eee8588ab98b6, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 147.0.3912.98, fedcm:accounts: true, goog:processID: 12568, ms:edgeOptions: {debuggerAddress: localhost:52461}, msedge: {msedgedriverVersion: 147.0.3912.98 (6cae4df1a4ff..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52461/devtoo..., se:cdpVersion: 147.0.3912.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 09cddf25febefdb6c17eee8588ab98b6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [09cddf25febefdb6c17eee8588ab98b6, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 147.0.3912.98, fedcm:accounts: true, goog:processID: 12568, ms:edgeOptions: {debuggerAddress: localhost:52461}, msedge: {msedgedriverVersion: 147.0.3912.98 (6cae4df1a4ff..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52461/devtoo..., se:cdpVersion: 147.0.3912.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 09cddf25febefdb6c17eee8588ab98b6
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:630)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:346)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:353)
-at webutil.WebUtil.sendKeys(WebUtil.java:176)
-at branch_division.LoginBranchDivision.SelectBranch(LoginBranchDivision.java:36)
-at masters.Party_Exporter_TestCase.validate_ShipperPageWith_Title(Party_Exporter_TestCase.java:25)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        <test-method signature="validateLoginWithValidCredential()[pri:0, instance:logintestcase.LoginTestCase@302552ec]" started-at="2026-05-02T17:30:00 IST" name="validateLoginWithValidCredential" finished-at="2026-05-02T17:30:11 IST" duration-ms="11015" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validate_ShipperPageWith_Title -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@bcec361]" started-at="2026-05-02T14:26:24 IST" name="takeScreenShot" finished-at="2026-05-02T14:26:24 IST" duration-ms="10" status="FAIL">
+        </test-method> <!-- validateLoginWithValidCredential -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:logintestcase.LoginTestCase@302552ec]" started-at="2026-05-02T17:30:11 IST" name="takeScreenShot" finished-at="2026-05-02T17:30:13 IST" duration-ms="1812" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validate_ShipperPageWith_Title status=FAILURE method=Party_Exporter_TestCase.validate_ShipperPageWith_Title()[pri:0, instance:masters.Party_Exporter_TestCase@bcec361] output={null}]]]>
+                <![CDATA[[TestResult name=validateLoginWithValidCredential status=SUCCESS method=LoginTestCase.validateLoginWithValidCredential()[pri:0, instance:logintestcase.LoginTestCase@302552ec] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void masters.Party_Exporter_TestCase.validate_ShipperPageWith_Title()]]>
+                <![CDATA[public void logintestcase.LoginTestCase.validateLoginWithValidCredential()]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[invalid session id
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [09cddf25febefdb6c17eee8588ab98b6, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 147.0.3912.98, fedcm:accounts: true, goog:processID: 12568, ms:edgeOptions: {debuggerAddress: localhost:52461}, msedge: {msedgedriverVersion: 147.0.3912.98 (6cae4df1a4ff..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52461/devtoo..., se:cdpVersion: 147.0.3912.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 09cddf25febefdb6c17eee8588ab98b6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [09cddf25febefdb6c17eee8588ab98b6, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 147.0.3912.98, fedcm:accounts: true, goog:processID: 12568, ms:edgeOptions: {debuggerAddress: localhost:52461}, msedge: {msedgedriverVersion: 147.0.3912.98 (6cae4df1a4ff..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52461/devtoo..., se:cdpVersion: 147.0.3912.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 09cddf25febefdb6c17eee8588ab98b6
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:630)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:346)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:353)
-at basetest.BaseTest.takeScreenShot(BaseTest.java:54)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masters.Party_Exporter_TestCase@bcec361]" started-at="2026-05-02T14:26:24 IST" name="closeBrowser" finished-at="2026-05-02T14:26:24 IST" duration-ms="607" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:logintestcase.LoginTestCase@302552ec]" started-at="2026-05-02T17:30:13 IST" name="closeBrowser" finished-at="2026-05-02T17:30:13 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- masters.Party_Exporter_TestCase -->
+      </class> <!-- logintestcase.LoginTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -364,44 +364,56 @@ public class WebUtil {
 		return path;
 	}
 
-	public static Properties propertiFile(String propFile) {
-		Properties properties = null;
-		try {
-			properties = new Properties();
-			String path = System.getProperty("user.dir") + "/src/test/resources/" + propFile + "";
-			FileInputStream fis = new FileInputStream(path);
-			properties.load(fis);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return properties;
-	}
-	
-//	public class ConfigReader {
-//	    public String getConfig(String key) {
-//	        return configProps.getProperty(key);
-//	    }
+//	public static Properties propertiFile(String propFile) {
+//		Properties properties = null;
+//		try {
+//			properties = new Properties();
+//			String path = System.getProperty("user.dir") + "/src/test/resources/" + propFile + "";
+//			FileInputStream fis = new FileInputStream(path);
+//			properties.load(fis);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		return properties;
 //	}
 //	
-//
-//	    private static Properties configProps = new Properties();
-//
-//	    static {
-//	        try (InputStream is = ConfigReader.class
-//	                .getClassLoader()
-//	                .getResourceAsStream("config.properties")) {
-//
-//	            configProps.load(is);
-//
-//	        } catch (Exception e) {
-//	            throw new RuntimeException(e);
-//	        }
-//	    }
-//
-//	    public static String getConfig(String key) {
-//	        return configProps.getProperty(key);
-//	    }
-//	
+	
+	// ...............THIS CODE CHNANGE AFTER PUSH 02-05-26...............
+	
+	
+	public class ConfigReader {
+	    public String getConfig(String key) {
+	        return configProps.getProperty(key);
+	    }
+	}
+	
+
+
+	    private static Properties configProps = new Properties();
+
+	    static {
+	        String fileName = System.getProperty("config.file", "config.properties");
+
+	        try (InputStream is = ConfigReader.class
+	                .getClassLoader()
+	                .getResourceAsStream(fileName)) {
+
+	            if (is == null) {
+	                throw new RuntimeException("Config file not found: " + fileName);
+	            }
+
+	            configProps.load(is);
+
+	        } catch (Exception e) {
+	            throw new RuntimeException(e);
+	        }
+	    }
+
+	    public static String getConfig(String key) {
+	        return configProps.getProperty(key);
+	    }
+	
+	
 
 
 	public void mouseOver(WebElement weEle, String eleName) {

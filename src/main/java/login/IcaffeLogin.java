@@ -39,10 +39,12 @@ public class IcaffeLogin {
 	public void enterLoginCreadential() {
 		
 		
-		Properties pr = utilobj.propertiFile("Akash_browser_url_and_credential.properties");
-		String userName = pr.getProperty("username");
-		String password = pr.getProperty("password");
+//		Properties pr = utilobj.propertiFile("Akash_browser_url_and_credential.properties");
+//		String userName = pr.getProperty("username");
+//		String password = pr.getProperty("password");
 		
+		String userName = WebUtil.getConfig("userName");
+		String password = WebUtil.getConfig("password");
 		
 		utilobj.clear(usernameTB,"User Name Textbox");
 		utilobj.sendKeys(usernameTB, userName,"User Name Textbox");

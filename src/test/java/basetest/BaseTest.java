@@ -24,7 +24,6 @@ import webutil.WebUtil;
 
 public class BaseTest {
 	protected static WebUtil utilObj;
-    
 
 	@BeforeSuite
 	public void generatReport() {
@@ -36,11 +35,16 @@ public class BaseTest {
 
 		utilObj = new WebUtil();
 		utilObj.generateExtentTest(testName.getName());
-		Properties pr = utilObj.propertiFile("Akash_browser_url_and_credential.properties");
-		String browsername = pr.getProperty("browser");
-		String urlName = pr.getProperty("url");
+//		Properties pr = utilObj.propertiFile("Akash_browser_url_and_credential.properties");
+//		String browsername = pr.getProperty("browser");
+//		String urlName = pr.getProperty("url");
+
+		String browsername = WebUtil.getConfig("browser");
+		String urlName = WebUtil.getConfig("url");
 		utilObj.launchBrowser(browsername);
 		utilObj.openURL(urlName);
+		WebUtil.getConfig("username");
+		WebUtil.getConfig("password");
 
 		IcaffeLogin logObj = new IcaffeLogin(utilObj);
 		logObj.enterLoginCreadential();
