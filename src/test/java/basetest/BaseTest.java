@@ -25,18 +25,6 @@ import webutil.WebUtil;
 public class BaseTest {
 	protected static WebUtil utilObj;
     
-//	@DataProvider()
-//	public Object[][] getData() {
-//
-//		 Map<String,String> testData = ExcelDataSuplier.setExcelFile("BranchSheet","Mumbai");
-//		 int dataMapCount=testData.size();
-//		 Object[][] allData= new Object[dataMapCount][1];
-//		 for(int i=0;i<=dataMapCount-1;i++) {
-//			allData[i][0] = testData.get(i);
-//		 }
-//		 
-//	return allData;    
-//	}
 
 	@BeforeSuite
 	public void generatReport() {
@@ -48,7 +36,7 @@ public class BaseTest {
 
 		utilObj = new WebUtil();
 		utilObj.generateExtentTest(testName.getName());
-		Properties pr = utilObj.propertiFile("browser_url_and_credential.properties");
+		Properties pr = utilObj.propertiFile("Akash_browser_url_and_credential.properties");
 		String browsername = pr.getProperty("browser");
 		String urlName = pr.getProperty("url");
 		utilObj.launchBrowser(browsername);

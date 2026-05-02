@@ -23,14 +23,29 @@ public class Exporter {
 	@FindBy(xpath="//input[@name='IecNumber']")
 	WebElement IecNumber;
 	
+	@FindBy(xpath="//select[@ID='txtClass']")
+	WebElement classField;
+	
+	@FindBy(xpath="//select[@ID='txtClass']//option[text()='Private']")
+	WebElement dropDownClass;
+	
+	@FindBy(xpath="//select[@name='MercManuf']")
+	WebElement mercManuf;
+	
+	@FindBy(xpath="//select[@name='MercManuf']//option[text='Merchant']")
+	WebElement dropDownOption_MercManuf;
 	
 	
 	
-	
-	
-	
-	
-	
+	public void enterShipperDetailsMandatoryFields() {
+		
+		utilobj.sendKeys(shipperName, "Test1", "Shipper Name Textbox");
+		utilobj.sendKeys(IecNumber, "9987654321", "IEC No Textbox");
+		utilobj.click(classField, "Class");
+		utilobj.selectDropDownByText(dropDownClass,"Private option");
+		utilobj.click(mercManuf, "Merc/Manuf Dropdown Field");
+		utilobj.selectDropDownByText(dropDownOption_MercManuf,"Merchant option");
+	}
 	
 	
 	

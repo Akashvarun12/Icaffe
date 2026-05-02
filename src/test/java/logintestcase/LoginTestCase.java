@@ -12,7 +12,7 @@ public class LoginTestCase extends BaseTestForLogin {
 
 	// Login with Excel using multiple credentials (VALID & INVALID)
 	
-	@Test(description = "LoginSheet",dataProvider = "ReadDataFromExcel" ,dataProviderClass = ExcelDataSuplier.class)
+	//@Test(description = "LoginSheet|Akash_TestByDataprovider.xlsx",dataProvider = "ReadDataFromExcel" ,dataProviderClass = ExcelDataSuplier.class)
 	public void validateLoginPage(String username,String password,String type ,String expectedTitle) {
 		
 		

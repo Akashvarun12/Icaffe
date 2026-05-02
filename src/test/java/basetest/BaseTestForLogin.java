@@ -25,19 +25,7 @@ public class BaseTestForLogin {
 
 		protected WebUtil utilObj ;
 	
-		
-//		@DataProvider()
-//		public Object[][] provideLoginData() {
-//
-//			 List<Map<String,String>> testData = ExcelDataSuplier.setExcelFile("TestSheet");
-//			 int dataMapCount=testData.size();
-//			 Object[][] allData= new Object[dataMapCount][1];
-//			 for(int i=0;i<=dataMapCount-1;i++) {
-//				allData[i][0] = testData.get(i);
-//			 }
-//			 
-//		return allData;    
-//		}
+
 
 
 		@BeforeSuite
@@ -55,9 +43,11 @@ public class BaseTestForLogin {
 		public void login( Method testName) {
 			utilObj = new WebUtil();
 			utilObj.generateExtentTest(testName.getName());
-			Properties pr = utilObj.propertiFile("browser_and_url.properties");
+			Properties pr = utilObj.propertiFile("Akash_browser_url_and_credential.properties");
 			String browsername = pr.getProperty("browser");
 			String urlName = pr.getProperty("url");
+			
+			
 			utilObj.launchBrowser(browsername);
 			utilObj.openURL(urlName);
 

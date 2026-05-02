@@ -24,7 +24,8 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 	public void validate_Branch_Division_FinYear_with_PropertyFile() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
-		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
+		Properties pr = utilObj.propertiFile("Akash_Branch_Division_Year.propertie");
+		
 		String branchName = pr.getProperty("branch");
 		String divisionCheckbox = pr.getProperty("division");
 		String finYear = pr.getProperty("year");
@@ -72,7 +73,7 @@ public class Branch_Division_FinYear_TestCase extends BaseTest {
 
 	// Validate AllBranch_Division_FinYear_with_DataProvider...
 
-	@Test(description = "All_BranchSheet", dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+	@Test(description = "All_BranchSheet|Akash_TestByDataprovider.xlsx", dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
 	public void validate_AllBranch_Division_FinYear_with_DataProvider(String branchname, String division,
 			String finYear, String exp_1, String exp_2, String exp_3, String exp_4) {
 
