@@ -17,7 +17,7 @@ public class Party_Exporter_TestCase extends BaseTest{
 	public void validate_ShipperPageWith_Title() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
-		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
+		Properties pr = utilObj.propertiFile("Akash_Branch_Division_Year.properties");
 		String branchName = pr.getProperty("branch");
 		String divisionCheckbox = pr.getProperty("division");
 		String finYear = pr.getProperty("year");
@@ -42,7 +42,7 @@ public class Party_Exporter_TestCase extends BaseTest{
 	public void validate_NewShipperAccount_CreationWith_MandadatoryField() {
 
 		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj);
-		Properties pr = utilObj.propertiFile("Branch_Division_Year.properties");
+		Properties pr = utilObj.propertiFile("Akash_Branch_Division_Year.properties");
 		String branchName = pr.getProperty("branch");
 		String divisionCheckbox = pr.getProperty("division");
 		String finYear = pr.getProperty("year");

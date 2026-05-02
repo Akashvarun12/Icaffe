@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Login and Branch Division FinYear</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 30 14:47:42 IST 2026</td>
+<td>Started on:</td><td>Sat May 02 12:49:44 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>127 seconds (127730 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (72 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,75 +76,124 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: Mumbai, optExportAir, 2026-27, Akash12, (2627), DEMO LTD, Mumbai (Export Air)</td>
-<td></td>
-<td>4</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
+<td title='logintestcase.LoginTestCase.generatReport()'><b>generatReport</b><br>Test class: logintestcase.LoginTestCase</td>
+<td><div><pre>java.lang.ExceptionInInitializerError
+	at basetest.BaseTestForLogin.generatReport(BaseTestForLogin.java:45)
+Caused by: java.lang.RuntimeException: java.lang.NullPointerException: inStream parameter is null
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:397)
+	... 18 more
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:394)
+	... 18 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1982787818", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1982787818'><pre>java.lang.ExceptionInInitializerError
+	at basetest.BaseTestForLogin.generatReport(BaseTestForLogin.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.RuntimeException: java.lang.NullPointerException: inStream parameter is null
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:397)
+	... 18 more
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:394)
+	... 18 more
+</pre></div></td>
+<td>0</td>
+<td>logintestcase.LoginTestCase@5bda8e08</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: ahmedabad, optImportAir, 2026-27, Akash12, (2627), DEMO LTD, Ahmedabad (Import Air)</td>
-<td></td>
-<td>4</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
-<tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_Branch_Division_FinYear_with_PropertyFile()'><b>validate_Branch_Division_FinYear_with_PropertyFile</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase</td>
-<td></td>
-<td>4</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
-<tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: Mumbai, optImportAir, 2026-27, Akash12, (2627), DEMO LTD, Mumbai (Import Air)</td>
-<td></td>
-<td>5</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
-<tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: Mumbai, optExportSea, 2026-27, Akash12, (2627), DEMO LTD, Mumbai (Export Sea)</td>
-<td></td>
-<td>5</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
-<tr>
-<td title='logintestcase.LoginTestCase.validateLoginPage()'><b>validateLoginPage</b><br>Test class: logintestcase.LoginTestCase<br>Test method: LoginSheet<br>Parameters: akash12, akash@123, Valid, Login Branch Division</td>
+<td title='logintestcase.LoginTestCase.importFileFromExcel()'><b>importFileFromExcel</b><br>Test class: logintestcase.LoginTestCase</td>
 <td></td>
 <td>0</td>
-<td>logintestcase.LoginTestCase@179ece50</td></tr>
+<td>logintestcase.LoginTestCase@5bda8e08</td></tr>
 <tr>
-<td title='logintestcase.LoginTestCase.validateLoginPage()'><b>validateLoginPage</b><br>Test class: logintestcase.LoginTestCase<br>Test method: LoginSheet<br>Parameters: Akash, Varun, Invalid, iCaffe</td>
+<td title='logintestcase.LoginTestCase.login()'><b>login</b><br>Test class: logintestcase.LoginTestCase</td>
 <td></td>
 <td>0</td>
-<td>logintestcase.LoginTestCase@179ece50</td></tr>
+<td>logintestcase.LoginTestCase@5bda8e08</td></tr>
 <tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validateAll_Branch_Division_FinYear_with_ID()'><b>validateAll_Branch_Division_FinYear_with_ID</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase</td>
+<td title='logintestcase.LoginTestCase.takeScreenShot()'><b>takeScreenShot</b><br>Test class: logintestcase.LoginTestCase</td>
 <td></td>
-<td>4</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
+<td>0</td>
+<td>logintestcase.LoginTestCase@5bda8e08</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
 <td title='logintestcase.LoginTestCase.validateLoginWithValidCredential()'><b>validateLoginWithValidCredential</b><br>Test class: logintestcase.LoginTestCase</td>
-<td></td>
-<td>1</td>
-<td>logintestcase.LoginTestCase@179ece50</td></tr>
-<tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: Mumbai, optImportSea, 2026-27, Akash12, (2627), DEMO LTD, Mumbai (Import Sea)</td>
-<td></td>
-<td>5</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
-<tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: ahmedabad, optImportSea, 2026-27, Akash12, (2627), DEMO LTD, Ahmedabad (Import Sea)</td>
-<td></td>
-<td>5</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
-<tr>
-<td title='logintestcase.LoginTestCase.validateLoginPage()'><b>validateLoginPage</b><br>Test class: logintestcase.LoginTestCase<br>Test method: LoginSheet<br>Parameters: abc, 123, Invalid, iCaffe</td>
-<td></td>
+<td><div><pre>java.lang.ExceptionInInitializerError
+	at basetest.BaseTestForLogin.generatReport(BaseTestForLogin.java:45)
+Caused by: java.lang.RuntimeException: java.lang.NullPointerException: inStream parameter is null
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:397)
+	... 18 more
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:394)
+	... 18 more
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1787079037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1787079037'><pre>java.lang.ExceptionInInitializerError
+	at basetest.BaseTestForLogin.generatReport(BaseTestForLogin.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.RuntimeException: java.lang.NullPointerException: inStream parameter is null
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:397)
+	... 18 more
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at webutil.WebUtil.&lt;clinit&gt;(WebUtil.java:394)
+	... 18 more
+</pre></div></td>
 <td>0</td>
-<td>logintestcase.LoginTestCase@179ece50</td></tr>
-<tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: ahmedabad, optExportSea, 2026-27, Akash12, (2627), DEMO LTD, Ahmedabad (Export Sea)</td>
-<td></td>
-<td>4</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
-<tr>
-<td title='branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider()'><b>validate_AllBranch_Division_FinYear_with_DataProvider</b><br>Test class: branch_division_finyear.Branch_Division_FinYear_TestCase<br>Test method: All_BranchSheet<br>Parameters: ahmedabad, optExportAir, 2026-27, Akash12, (2627), DEMO LTD, Ahmedabad (Export Air)</td>
-<td></td>
-<td>5</td>
-<td>branch_division_finyear.Branch_Division_FinYear_TestCase@62ddbd7e</td></tr>
+<td>logintestcase.LoginTestCase@5bda8e08</td></tr>
 </table><p>
 </body>
 </html>

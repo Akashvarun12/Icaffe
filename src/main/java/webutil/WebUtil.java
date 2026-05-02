@@ -3,6 +3,7 @@ package webutil;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -36,6 +37,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.base.Functions;
 import com.google.common.io.Files;
+
+
 
 public class WebUtil {
 
@@ -361,7 +364,7 @@ public class WebUtil {
 		return path;
 	}
 
-	public Properties propertiFile(String propFile) {
+	public static Properties propertiFile(String propFile) {
 		Properties properties = null;
 		try {
 			properties = new Properties();
@@ -373,6 +376,33 @@ public class WebUtil {
 		}
 		return properties;
 	}
+	
+//	public class ConfigReader {
+//	    public String getConfig(String key) {
+//	        return configProps.getProperty(key);
+//	    }
+//	}
+//	
+//
+//	    private static Properties configProps = new Properties();
+//
+//	    static {
+//	        try (InputStream is = ConfigReader.class
+//	                .getClassLoader()
+//	                .getResourceAsStream("config.properties")) {
+//
+//	            configProps.load(is);
+//
+//	        } catch (Exception e) {
+//	            throw new RuntimeException(e);
+//	        }
+//	    }
+//
+//	    public static String getConfig(String key) {
+//	        return configProps.getProperty(key);
+//	    }
+//	
+
 
 	public void mouseOver(WebElement weEle, String eleName) {
 		Actions actbj = new Actions(driver);

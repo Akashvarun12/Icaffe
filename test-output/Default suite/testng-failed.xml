@@ -5,10 +5,10 @@
     <classes>
       <class name="masters.Party_Exporter_TestCase">
         <methods>
-          <include name="generatReport"/>
           <include name="takeScreenShot"/>
+          <include name="generatReport"/>
           <include name="login"/>
-          <include name="validateBranch_Division_FinYear"/>
+          <include name="validate_ShipperPageWith_Title"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- masters.Party_Exporter_TestCase -->

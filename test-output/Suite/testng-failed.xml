@@ -3,16 +3,16 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test Login and Branch Division FinYear(failed)">
     <classes>
-      <class name="branch_division_finyear.Branch_Division_FinYear_TestCase">
+      <class name="logintestcase.LoginTestCase">
         <methods>
-          <include name="validateAll_Branch_Division_FinYear_with_ID"/>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
+          <include name="validateLoginWithValidCredential"/>
           <include name="closeBrowser"/>
-          <include name="validate_Branch_Division_FinYear_with_PropertyFile"/>
+          <include name="importFileFromExcel"/>
+          <include name="generatReport"/>
+          <include name="takeScreenShot"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- branch_division_finyear.Branch_Division_FinYear_TestCase -->
+      </class> <!-- logintestcase.LoginTestCase -->
     </classes>
   </test> <!-- Test Login and Branch Division FinYear(failed) -->
 </suite> <!-- Failed suite [Suite] -->
