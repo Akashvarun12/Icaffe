@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="logintestcase.LoginTestCase">
+      <class name="branch_division_finyear.Branch_Division_FinYear_TestCase">
         <methods>
-          <include name="validateLoginWithValidCredential"/>
-          <include name="closeBrowser"/>
-          <include name="importFileFromExcel"/>
-          <include name="takeScreenShot"/>
+          <include name="validateAll_Branch_Division_FinYear_with_ID"/>
           <include name="generatReport"/>
+          <include name="takeScreenShot"/>
+          <include name="validate_AllBranch_Division_FinYear_with_DataProvider"/>
           <include name="login"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- logintestcase.LoginTestCase -->
+      </class> <!-- branch_division_finyear.Branch_Division_FinYear_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

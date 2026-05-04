@@ -18,12 +18,16 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.ExtentTest;
+
+import branch_division.LoginBranchDivision;
 import login.IcaffeLogin;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
 
 public class BaseTest {
 	protected static WebUtil utilObj;
+	protected static ExtentTest extObj;
 
 	@BeforeSuite
 	public void generatReport() {
@@ -34,10 +38,7 @@ public class BaseTest {
 	public void login(Method testName) throws InterruptedException {
 
 		utilObj = new WebUtil();
-		utilObj.generateExtentTest(testName.getName());
-//		Properties pr = utilObj.propertiFile("Akash_browser_url_and_credential.properties");
-//		String browsername = pr.getProperty("browser");
-//		String urlName = pr.getProperty("url");
+		extObj=	utilObj.generateExtentTest(testName.getName());
 
 		String browsername = WebUtil.getConfig("browser");
 		String urlName = WebUtil.getConfig("url");
@@ -49,6 +50,20 @@ public class BaseTest {
 		IcaffeLogin logObj = new IcaffeLogin(utilObj);
 		logObj.enterLoginCreadential();
 		logObj.clickOnLoginBT();
+		
+		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj,extObj);
+		
+		String branchName = WebUtil.getConfig("branch");
+		String divisionCheckbox = WebUtil.getConfig("division");
+		String finYear = WebUtil.getConfig("finYear");
+
+		logBranchDiv.SelectBranch(branchName);
+
+		logBranchDiv.SelectDevision(divisionCheckbox);
+
+		logBranchDiv.SelectFinYear(finYear);
+
+		logBranchDiv.clickOnOKButton();
 	}
 
 	@AfterMethod

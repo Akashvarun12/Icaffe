@@ -1,7 +1,10 @@
 package masters_party_pagewise_classes;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import webutil.WebUtil;
@@ -35,7 +38,17 @@ public class Exporter {
 	@FindBy(xpath="//select[@name='MercManuf']//option[text='Merchant']")
 	WebElement dropDownOption_MercManuf;
 	
+	@FindBy(xpath="//input[@name='SerialNumber ']")
+	WebElement serialNumber;
 	
+	@FindBy(xpath="//input[@name='Address1']")
+	WebElement address;
+	
+	@FindBy(xpath="//input[@placeholder='Country']")
+	WebElement clikOnCountry;
+	
+	@FindBys(@FindBy(xpath="//ul[contains(@class,'ui-autocomplete')]//div"))
+	List<WebElement> countryListSelection;
 	
 	public void enterShipperDetailsMandatoryFields() {
 		
@@ -47,6 +60,14 @@ public class Exporter {
 		utilobj.selectDropDownByText(dropDownOption_MercManuf,"Merchant option");
 	}
 	
+	public void enterShipperAddressMandatoryFields(String country) {
+		
+		utilobj.sendKeys(serialNumber, "112", " serial Number Textbox");
+		utilobj.sendKeys(address, "Mumbai 19/07", " address Textbox");
+		utilobj.clear(clikOnCountry, " Country");
+		utilobj.selectAutoSuggestOption(clikOnCountry,countryListSelection,"IN"," Country Textbox",country);
+
+	}
 	
 	
 }

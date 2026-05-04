@@ -38,8 +38,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.base.Functions;
 import com.google.common.io.Files;
 
-
-
 public class WebUtil {
 
 	private WebDriver driver;
@@ -377,44 +375,36 @@ public class WebUtil {
 //		return properties;
 //	}
 //	
-	
+
 	// ...............THIS CODE CHNANGE AFTER PUSH 02-05-26...............
-	
-	
+
 	public class ConfigReader {
-	    public String getConfig(String key) {
-	        return configProps.getProperty(key);
-	    }
+		public String getConfig(String key) {
+			return configProps.getProperty(key);
+		}
 	}
-	
 
+	private static Properties configProps = new Properties();
 
-	    private static Properties configProps = new Properties();
+	static {
+		String fileName = System.getProperty("config.file", "config.properties");
 
-	    static {
-	        String fileName = System.getProperty("config.file", "config.properties");
+		try (InputStream is = ConfigReader.class.getClassLoader().getResourceAsStream(fileName)) {
 
-	        try (InputStream is = ConfigReader.class
-	                .getClassLoader()
-	                .getResourceAsStream(fileName)) {
+			if (is == null) {
+				throw new RuntimeException("Config file not found: " + fileName);
+			}
 
-	            if (is == null) {
-	                throw new RuntimeException("Config file not found: " + fileName);
-	            }
+			configProps.load(is);
 
-	            configProps.load(is);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 
-	        } catch (Exception e) {
-	            throw new RuntimeException(e);
-	        }
-	    }
-
-	    public static String getConfig(String key) {
-	        return configProps.getProperty(key);
-	    }
-	
-	
-
+	public static String getConfig(String key) {
+		return configProps.getProperty(key);
+	}
 
 	public void mouseOver(WebElement weEle, String eleName) {
 		Actions actbj = new Actions(driver);
@@ -496,4 +486,37 @@ public class WebUtil {
 		}
 	}
 
+	public void selectAutoSuggestOption(WebElement weSendKeys, List<WebElement> options, String sendValue,
+			String eleName, String optionToSelect) {
+
+		try {
+          // Step 1: Enter value in auto-suggest textbox
+			sendKeys(weSendKeys, sendValue, eleName);
+
+         // Step 2: Wait for auto-suggest options to be visible
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			wait.until(ExpectedConditions.visibilityOfAllElements(options));
+
+        // Step 3: Iterate through options and match required value
+			for (WebElement option : options) {
+
+				String text = option.getText().trim();
+
+				if (text.equalsIgnoreCase(optionToSelect)) {
+					option.click();
+					extentTest.pass(text + " selected successfully in: " + eleName);
+					return;
+				}
+			}
+
+         // Step 4: If no match found, log failure
+			extentTest.fail("Option not found: " + optionToSelect + " in " + eleName);
+			throw new RuntimeException("Option not found: " + optionToSelect);
+
+		} catch (Exception e) {
+        // Step 5: Handle exception and log failure
+			extentTest.fail("Failed to select option: " + optionToSelect + " in " + eleName);
+			extentTest.fail("Exception: " + e.getMessage());
+		}
+	}
 }
