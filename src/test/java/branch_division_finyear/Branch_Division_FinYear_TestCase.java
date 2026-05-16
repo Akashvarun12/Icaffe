@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.apache.poi.ss.usermodel.Row;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -20,7 +21,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentTest;
 
 import basetest.BaseTest;
-import branch_division.LoginBranchDivision;
+import branch_division.BranchDivisionFinYear;
 import icaffe_homepage.Homepage;
 import login.IcaffeLogin;
 import webutil.ExcelDataSuplier;
@@ -30,6 +31,7 @@ public class Branch_Division_FinYear_TestCase {
 
 	protected static WebUtil utilObj;
 	protected static ExtentTest extObj;
+	protected static Properties proObj;
 
 	// This annotation runs before every test case. Annotation: @Test
 
@@ -40,16 +42,15 @@ public class Branch_Division_FinYear_TestCase {
 
 	@BeforeMethod
 	public void login(Method testName) throws InterruptedException {
-
 		utilObj = new WebUtil();
-		extObj=	utilObj.generateExtentTest(testName.getName());
+		extObj = utilObj.generateExtentTest(testName.getName());
 
-		String browsername = WebUtil.getConfig("browser");
-		String urlName = WebUtil.getConfig("url");
+		proObj = WebUtil.propertiFile("Akash_CommonSelection_Login_BranchDivisionYear.properties");
+		String browsername = proObj.getProperty("browser");
+		String urlName = proObj.getProperty("url");
+
 		utilObj.launchBrowser(browsername);
 		utilObj.openURL(urlName);
-		WebUtil.getConfig("username");
-		WebUtil.getConfig("password");
 
 		IcaffeLogin logObj = new IcaffeLogin(utilObj);
 		logObj.enterLoginCreadential();
@@ -66,7 +67,6 @@ public class Branch_Division_FinYear_TestCase {
 			utilObj.generateExtentTest(snapShot).addScreenCaptureFromPath(snapShot);
 		}
 		utilObj.flush();
-		
 
 		utilObj.quit();
 
@@ -77,42 +77,13 @@ public class Branch_Division_FinYear_TestCase {
 		utilObj.flush();
 	}
 
-
-	// Validate Branch_Division_FinYear_with_ID from Excel sheet (DYNAMICALLY)...
-	
-	@Test
-	public void validateAll_Branch_Division_FinYear_with_ID() {
-
-		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj,extObj);
-
-		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel("A-3");
-
-		String braname = testData.get("branchname");
-		String divi = testData.get("division");
-		String year = testData.get("finYear");
-
-		logBranchDiv.SelectBranch(braname);
-
-		logBranchDiv.SelectDevision(divi);
-
-		logBranchDiv.SelectFinYear(year);
-
-		logBranchDiv.clickOnOKButton();
-
-		Homepage homeObj = new Homepage(utilObj);
-
-		List<String> expectedList = Arrays.asList("Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Import Air)");
-		homeObj.getText_LoginBranchDivision_OnHomePage(expectedList);
-
-	}
-
 	// Validate AllBranch_Division_FinYear_with_DataProvider...
 
-	@Test(dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+	// @Test(priority = 1, dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
 	public void validate_AllBranch_Division_FinYear_with_DataProvider(String branchname, String division,
-			String finYear, String exp_1, String exp_2, String exp_3, String exp_4) {
+			String finYear, String exp_ID, String exp_Year, String exp_ENV, String exp_Branch_Division) {
 
-		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj,extObj);
+		BranchDivisionFinYear logBranchDiv = new BranchDivisionFinYear(utilObj, extObj);
 
 		logBranchDiv.SelectBranch(branchname);
 
@@ -122,11 +93,45 @@ public class Branch_Division_FinYear_TestCase {
 
 		logBranchDiv.clickOnOKButton();
 
-		List<String> expectedList = Arrays.asList(exp_1, exp_2, exp_3, exp_4);
+		List<String> expectedList = Arrays.asList(exp_ID, exp_Year, exp_ENV, exp_Branch_Division);
 
 		Homepage homeObj = new Homepage(utilObj);
 
 		homeObj.getText_LoginBranchDivision_OnHomePage(expectedList);
+
+	}
+
+	// Validate Branch_Division_FinYear_with_ID from Excel sheet (DYNAMICALLY)...
+
+	@Test(priority = 2)
+	public void validate_Branch_Division_FinYear_with_ID(ITestContext context ) {
+
+		BranchDivisionFinYear logBranchDiv = new BranchDivisionFinYear(utilObj, extObj);
+
+		
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+
+		String branchname = testData.get("branchName");
+		String division = testData.get("division");
+		String finYear = testData.get("finYear");
+//		String exp_ID = testData.get("exp_ID");
+//		String exp_Year = testData.get("exp_Year");
+//		String exp_ENV = testData.get("exp_ENV");
+//		String exp_Branch_Division = testData.get("exp_Branch_Division");
+		logBranchDiv.SelectBranch(branchname);
+
+		logBranchDiv.SelectDevision(division);
+
+		logBranchDiv.SelectFinYear(finYear);
+
+		logBranchDiv.clickOnOKButton();
+
+		Homepage homeObj = new Homepage(utilObj);
+		
+		List<String> expectedList = Arrays.asList("Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)");
+//		List<String> expectedList = Arrays.asList(exp_ID, exp_Year, exp_ENV, exp_Branch_Division);
+		homeObj.getText_LoginBranchDivision_OnHomePage(expectedList);
+	
 
 	}
 

@@ -11,11 +11,11 @@ import webutil.WebUtil;
 
 public class IcaffeLogin {
 
-	private WebUtil utilobj;
+	private WebUtil utilObj;
 
-	public IcaffeLogin(WebUtil utilobj) {
-		this.utilobj = utilobj;
-		PageFactory.initElements(utilobj.getDriver(), this);
+	public IcaffeLogin(WebUtil utilObj) {
+		this.utilObj = utilObj;
+		PageFactory.initElements(utilObj.getDriver(), this);
 
 	}
 
@@ -34,17 +34,21 @@ public class IcaffeLogin {
 	@FindBy(xpath = "//font[contains(text(),'You must specify a valid username and password.')]")
 	private WebElement message; 
 
-
+	@FindBy(xpath = "//label[@id='UserTag']")
+	private WebElement mouseOverOnLogOut; 
+	
+	@FindBy(xpath = "//a[@id='lnkLogout']")
+	private WebElement logOut; 
 
 	public void enterLoginCreadential() {
+		Properties proObj = WebUtil.propertiFile("Akash_CommonSelection_Login_BranchDivisionYear.properties");
+		String userName = proObj.getProperty("userName");
+		String password = proObj.getProperty("password");
 		
-		String userName = WebUtil.getConfig("userName");
-		String password = WebUtil.getConfig("password");
-		
-		utilobj.clear(usernameTB,"User Name Textbox");
-		utilobj.sendKeys(usernameTB, userName,"User Name Textbox");
-		utilobj.clear(passwordTB,"Password Textbox");
-		utilobj.sendKeys(passwordTB, password,"Password Textbox");
+		utilObj.clear(usernameTB,"User Name Textbox");
+		utilObj.sendKeys(usernameTB, userName,"User Name Textbox");
+		utilObj.clear(passwordTB,"Password Textbox");
+		utilObj.sendKeys(passwordTB, password,"Password Textbox");
 		
 		try {
 			Thread.sleep(10000);
@@ -55,17 +59,29 @@ public class IcaffeLogin {
 	
 
 
-	public void enterLoginCreadentialFromDataProvider(String userName, String password,String usernamevalue,String passwordvalue) {
+	public void enterLoginCreadential(String userName, String password,String usernamevalue,String passwordvalue) {
 
-		utilobj.clear(usernameTB,"User Name Textbox");
-		utilobj.sendKeys(usernameTB, userName,"User Name Textbox");
-		utilobj.clear(passwordTB,"Password Textbox");
-		utilobj.sendKeys(passwordTB, password,"Password Textbox");
+		utilObj.clear(usernameTB,"User Name Textbox");
+		utilObj.sendKeys(usernameTB, userName,"User Name Textbox");
+		utilObj.clear(passwordTB,"Password Textbox");
+		utilObj.sendKeys(passwordTB, password,"Password Textbox");
+		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void clickOnLogOut() {
+
+		utilObj.mouseOver(mouseOverOnLogOut, "Mouse Over On UserTag");
+		utilObj.clickByAction(logOut,"Logout");
 	}
 	
 	public void clickOnLoginBT() {
 
-		utilobj.click(signinBT,"Login Button");
+		utilObj.click(signinBT,"Login Button");
 	}
 
 

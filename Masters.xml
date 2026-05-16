@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="icaffe">
+
+
+		<test name="verifyShipperMasterTitle">
+
+		<parameter name="expTitle" value="Shipper Master" />
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyShipperMasterTitle" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest">
+
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="PrivateShipperPartyCreation" />
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test name="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest">
+
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="GovernmentShipperPartyCreation" />
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test name="verifyDuplicateShipperNameForGovernmentPartyCreationTest">
+
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="DuplicateShipperNameForGovernment" />
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyDuplicateShipperNameForGovernmentPartyCreationTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+			<test name="verifyDuplicateIECNumberForGovernmentShipperCreation">
+
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="DuplicateIECNumberforGovernmentShipper" />
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyDuplicateIECNumberForGovernmentShipperCreation" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	
+			<test name="verifyDuplicateIECNumberForPrivateShipperCreation">
+
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="DuplicateIECNumberforPrivateShipper" />
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyDuplicateIECNumberForPrivateShipperCreation" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="verifyShipperPartyModification">
+
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="ShipperPartyModification" />
+
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyShipperPartyModification" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test name="verifyShipperPartyDisplayedInSearchGrid">
+
+	<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="ShipperPartySearch" />
+
+	
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyShipperPartyDisplayedInSearchGrid" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="verifyShipperPartyDeletion">
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+
+		<parameter name="action" value="ShipperPartyDeletion" />
+
+		<classes>
+			<class name="masters.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyShipperPartyDeletion" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+
+
+</suite>

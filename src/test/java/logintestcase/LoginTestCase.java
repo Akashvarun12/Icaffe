@@ -1,13 +1,14 @@
 package logintestcase;
 
 import java.lang.reflect.Method;
+import java.util.Properties;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 
 import login.IcaffeLogin;
@@ -15,7 +16,7 @@ import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
 
 public class LoginTestCase {
-	
+
 	// This annotation runs before every test case. Annotation: @Test
 
 	protected WebUtil utilObj;
@@ -25,24 +26,20 @@ public class LoginTestCase {
 		WebUtil.genrateExtentReport();
 	}
 
-	@BeforeTest
-	public void importFileFromExcel() {
-
-	}
-
 	@BeforeMethod
 	public void login(Method testName) {
 		utilObj = new WebUtil();
 		utilObj.generateExtentTest(testName.getName());
 
-		String browsername = WebUtil.getConfig("browser");
-		String urlName = WebUtil.getConfig("url");
+		Properties proObj = WebUtil.propertiFile("Akash_CommonSelection_Login_BranchDivisionYear.properties");
+		String browsername = proObj.getProperty("browser");
+		String urlName = proObj.getProperty("url");
 
 		utilObj.launchBrowser(browsername);
 		utilObj.openURL(urlName);
 
 	}
-	
+
 	// This annotation runs after every test case. Annotation: @Test
 
 	@AfterMethod
@@ -67,14 +64,16 @@ public class LoginTestCase {
 	// Validate Login Page with Title....
 
 	@Test(dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
-	public void validateLoginPageWith_Title(String username, String password, String type, String expectedTitle) {
+	public void validateLoginPageWith_Title(String username, String password, String expectedTitle,String expType) {
 
 		IcaffeLogin logObj = new IcaffeLogin(utilObj);
-		logObj.enterLoginCreadentialFromDataProvider(username, password, "UserName", "Password");
+		logObj.enterLoginCreadential(username, password, "UserName", "Password");
 
 		logObj.clickOnLoginBT();
-		utilObj.validateGetTitle(expectedTitle, type, "Credential");
+		utilObj.validateTitleForLoginPages(expectedTitle,expType  );
 
 	}
+
+	// li[contains(text(),'User Already Login.')]
 
 }

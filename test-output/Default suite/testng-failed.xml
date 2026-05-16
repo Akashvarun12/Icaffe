@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="branch_division_finyear.Branch_Division_FinYear_TestCase">
+      <class name="masters.Party_Exporter_TestCase">
         <methods>
-          <include name="validateAll_Branch_Division_FinYear_with_ID"/>
-          <include name="generatReport"/>
           <include name="takeScreenShot"/>
-          <include name="validate_AllBranch_Division_FinYear_with_DataProvider"/>
+          <include name="generatReport"/>
           <include name="login"/>
+          <include name="verifyShipperAccountModification"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- branch_division_finyear.Branch_Division_FinYear_TestCase -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

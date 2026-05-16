@@ -20,7 +20,7 @@ import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentTest;
 
-import branch_division.LoginBranchDivision;
+import branch_division.BranchDivisionFinYear;
 import login.IcaffeLogin;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
@@ -28,6 +28,8 @@ import webutil.WebUtil;
 public class BaseTest {
 	protected static WebUtil utilObj;
 	protected static ExtentTest extObj;
+	protected static IcaffeLogin logObj;
+	protected Properties proObj;
 
 	@BeforeSuite
 	public void generatReport() {
@@ -38,28 +40,26 @@ public class BaseTest {
 	public void login(Method testName) throws InterruptedException {
 
 		utilObj = new WebUtil();
-		extObj=	utilObj.generateExtentTest(testName.getName());
-
-		String browsername = WebUtil.getConfig("browser");
-		String urlName = WebUtil.getConfig("url");
+		extObj = utilObj.generateExtentTest(testName.getName());
+		proObj = WebUtil.propertiFile("Akash_CommonSelection_Login_BranchDivisionYear.properties");
+		String browsername = proObj.getProperty("browser");
+		String urlName = proObj.getProperty("url");
 		utilObj.launchBrowser(browsername);
 		utilObj.openURL(urlName);
-		WebUtil.getConfig("username");
-		WebUtil.getConfig("password");
 
-		IcaffeLogin logObj = new IcaffeLogin(utilObj);
+		logObj = new IcaffeLogin(utilObj);
 		logObj.enterLoginCreadential();
 		logObj.clickOnLoginBT();
-		
-		LoginBranchDivision logBranchDiv = new LoginBranchDivision(utilObj,extObj);
-		
-		String branchName = WebUtil.getConfig("branch");
-		String divisionCheckbox = WebUtil.getConfig("division");
-		String finYear = WebUtil.getConfig("finYear");
+
+		BranchDivisionFinYear logBranchDiv = new BranchDivisionFinYear(utilObj, extObj);
+
+		String branchName = proObj.getProperty("branchName");
+		String division = proObj.getProperty("division");
+		String finYear = proObj.getProperty("finYear");
 
 		logBranchDiv.SelectBranch(branchName);
 
-		logBranchDiv.SelectDevision(divisionCheckbox);
+		logBranchDiv.SelectDevision(division);
 
 		logBranchDiv.SelectFinYear(finYear);
 
@@ -75,7 +75,8 @@ public class BaseTest {
 		}
 		utilObj.flush();
 		Thread.sleep(1000);
-
+       
+		logObj.clickOnLogOut();
 		utilObj.quit();
 
 	}
