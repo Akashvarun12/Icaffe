@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
@@ -10,7 +11,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install'
+            }
+        }
+
+        stage('TestNG') {
+            steps {
+                bat 'mvn test -DsuiteXmlFile=Masters.xml'
             }
         }
     }
