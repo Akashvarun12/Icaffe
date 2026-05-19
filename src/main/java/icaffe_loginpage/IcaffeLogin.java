@@ -1,4 +1,4 @@
-package login;
+package icaffe_loginpage;
 
 import java.util.Properties;
 

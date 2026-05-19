@@ -1,4 +1,4 @@
-package branch_division_finyear;
+package branch_division_financialyear_testcase;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -21,13 +21,13 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentTest;
 
 import basetest.BaseTest;
-import branch_division.BranchDivisionFinYear;
+import icaffe_branch_division.BranchDivisionFinYear_Page;
 import icaffe_homepage.Homepage;
-import login.IcaffeLogin;
+import icaffe_loginpage.IcaffeLogin;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
 
-public class Branch_Division_FinYear_TestCase {
+public class Branch_Division_FinancialYear_TestCase {
 
 	protected static WebUtil utilObj;
 	protected static ExtentTest extObj;
@@ -83,7 +83,7 @@ public class Branch_Division_FinYear_TestCase {
 	public void validate_AllBranch_Division_FinYear_with_DataProvider(String branchname, String division,
 			String finYear, String exp_ID, String exp_Year, String exp_ENV, String exp_Branch_Division) {
 
-		BranchDivisionFinYear logBranchDiv = new BranchDivisionFinYear(utilObj, extObj);
+		BranchDivisionFinYear_Page logBranchDiv = new BranchDivisionFinYear_Page(utilObj, extObj);
 
 		logBranchDiv.SelectBranch(branchname);
 
@@ -106,7 +106,7 @@ public class Branch_Division_FinYear_TestCase {
 	@Test(priority = 2)
 	public void validate_Branch_Division_FinYear_with_ID(ITestContext context ) {
 
-		BranchDivisionFinYear logBranchDiv = new BranchDivisionFinYear(utilObj, extObj);
+		BranchDivisionFinYear_Page logBranchDiv = new BranchDivisionFinYear_Page(utilObj, extObj);
 
 		
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);

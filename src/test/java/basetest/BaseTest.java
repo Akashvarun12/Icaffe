@@ -20,8 +20,8 @@ import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentTest;
 
-import branch_division.BranchDivisionFinYear;
-import login.IcaffeLogin;
+import icaffe_branch_division.BranchDivisionFinYear_Page;
+import icaffe_loginpage.IcaffeLogin;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
 
@@ -51,7 +51,7 @@ public class BaseTest {
 		logObj.enterLoginCreadential();
 		logObj.clickOnLoginBT();
 
-		BranchDivisionFinYear logBranchDiv = new BranchDivisionFinYear(utilObj, extObj);
+		BranchDivisionFinYear_Page logBranchDiv = new BranchDivisionFinYear_Page(utilObj, extObj);
 
 		String branchName = proObj.getProperty("branchName");
 		String division = proObj.getProperty("division");

@@ -1,4 +1,4 @@
-package masters_party_pagewise_classes;
+package icaffe_masters_party_pagewise_classes;
 
 import java.util.List;
 import java.util.Map;
@@ -97,18 +97,45 @@ public class Exporter_ShipperTab {
 
 	}
 
+	// Enter Mandatory details in shipper details section
+	public void modifyShipperDetailsMandatoryFields(String partyName, String IECNumber, 
+			String classDropDownOption,String mercManufDropDownOption) {
+		utilobj.clear(shipperName, "Shipper Name Textbox");
+		utilobj.sendKeys(shipperName, partyName, "Shipper Name Textbox");
+		utilobj.clear(IecNumber, "IEC No Textbox");
+		utilobj.sendKeys(IecNumber, IECNumber, "IEC No Textbox");
+		utilobj.selectDropDownByText(selectDropDown_ClassOption, classDropDownOption);
+		utilobj.selectDropDownByText(selectDropDown_MercManufOption, mercManufDropDownOption);
+
+	}
+
 	// Enter Mandatory details in shipper address section
 	public void enterShipperAddressMandatoryFields(String partySerialNumber, String partyAddress, String entCountry,
 			String expSelCountry, String entState, String expSelState, String GSTNumber, String ctxState) {
 		utilobj.clear(serialNumber, "serial Number Textbox");
-		utilobj.sendKeys(serialNumber, partySerialNumber, " serial Number Textbox");
+		utilobj.sendKeys(serialNumber, partySerialNumber, "serial Number Textbox");
 		utilobj.clear(address, "address Textbox");
-		utilobj.sendKeys(address, partyAddress, " address Textbox");
+		utilobj.sendKeys(address, partyAddress, "address Textbox");
 		utilobj.clear(clikOnCountry, " Country");
-		utilobj.selectAutoSuggestOption(listOfCountrytext, clikOnCountry, entCountry, " Country Textbox",
+		utilobj.selectAutoSuggestOption(listOfCountrytext, clikOnCountry, entCountry, "Country Textbox",
 				expSelCountry);
 		utilobj.clear(clickState, " Country");
-		utilobj.selectAutoSuggestOption(listOfStatetext, clickState, entState, " State Textbox", expSelState);
+		utilobj.selectAutoSuggestOption(listOfStatetext, clickState, entState, "State Textbox", expSelState);
+		utilobj.selectDropDownByText(selectCtxState, ctxState);
+		utilobj.clear(selectGSTNumber, "GST Number Textbox");
+		utilobj.sendKeys(selectGSTNumber, GSTNumber, "GST Number Textbox");
+
+	}
+
+	// Modify Mandatory details in shipper address section
+	public void modifyShipperAddressMandatoryFields(String partyAddress, String entState, String expSelState,
+			String GSTNumber, String ctxState) {
+
+		utilobj.clear(address, "address Textbox");
+		utilobj.sendKeys(address, partyAddress, "address Textbox");
+
+		utilobj.clear(clickState, "State");
+		utilobj.selectAutoSuggestOption(listOfStatetext, clickState, entState, "State Textbox", expSelState);
 		utilobj.selectDropDownByText(selectCtxState, ctxState);
 		utilobj.clear(selectGSTNumber, "GST Number Textbox");
 		utilobj.sendKeys(selectGSTNumber, GSTNumber, "GST Number Textbox");
@@ -136,33 +163,21 @@ public class Exporter_ShipperTab {
 
 	}
 
-	// Modify shipper party mandatory details partially
-	public void modifyShipperPartyPartially(ITestContext context,String selectpartyName_InSearchGrid,String selectclassDropDownOption_InSearch,String selectname_or_ID_InSearch,String partyName,String mercManufDropDownOption) {
-		
-		selectSearchShipperParty(context,selectclassDropDownOption_InSearch,selectname_or_ID_InSearch);
-
-		utilobj.selectOptionFromSearch("Search Grid", selectpartyName_InSearchGrid);
-		utilobj.clear(shipperName, "Shipper Name Textbox");
-		utilobj.sendKeys(shipperName, partyName, "Edit Shipper Name Textbox");
-		utilobj.selectDropDownByText(selectDropDown_MercManufOption, mercManufDropDownOption);
-		utilobj.scrollByAction(clickOnModifyButton);
-
-	}
 
 	// Modify shipper party mandatory details partially
-	public void modifyShipperWithAllParty(ITestContext context, String selectclassDropDownOption_InSearch,
+	public void modifyShipperPartyWithPartialData(ITestContext context, String selectclassDropDownOption_InSearch,
 			String selectname_or_ID_InSearch, String selectpartyName_InSearchGrid, String partyName, String IECNumber,
-			String classDropDownOption, String mercManufDropDownOption, String partySerialNumber, String partyAddress,
-			String entCountry, String expSelCountry, String entState, String expSelState, String GSTNumber,
+			String classDropDownOption, String mercManufDropDownOption,  String partyAddress,
+			 String entState, String expSelState, String GSTNumber,
 			String ctxState) {
 
 		selectSearchShipperParty(context, selectclassDropDownOption_InSearch, selectname_or_ID_InSearch);
 
 		utilobj.selectOptionFromSearch("Search Grid", selectpartyName_InSearchGrid);
-		enterShipperDetailsMandatoryFields(partyName, IECNumber, classDropDownOption, mercManufDropDownOption);
+		modifyShipperDetailsMandatoryFields(partyName, IECNumber,classDropDownOption, mercManufDropDownOption);
 		clickOnPartyAddressGrid();
-		enterShipperAddressMandatoryFields(partySerialNumber, partyAddress, entCountry, expSelCountry, entState,
-				expSelState, GSTNumber, ctxState);
+		modifyShipperAddressMandatoryFields( partyAddress,  entState,
+				expSelState,  ctxState,GSTNumber);
 
 	}
 

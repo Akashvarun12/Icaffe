@@ -1,4 +1,4 @@
-package branch_division;
+package icaffe_branch_division;
 
 
 
@@ -16,12 +16,12 @@ import com.aventstack.extentreports.Status;
 
 import webutil.WebUtil;
 
-public class BranchDivisionFinYear {
+public class BranchDivisionFinYear_Page {
 
 	private WebUtil utilobj;
 	private ExtentTest extObj;
 
-	public BranchDivisionFinYear(WebUtil utilobj, ExtentTest extObj) {
+	public BranchDivisionFinYear_Page(WebUtil utilobj, ExtentTest extObj) {
 		this.utilobj = utilobj;
 		this.extObj = extObj;
 		PageFactory.initElements(utilobj.getDriver(), this);

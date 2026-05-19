@@ -1,4 +1,4 @@
-package masters_party_pagewise_classes;
+package icaffe_masters_party_pagewise_classes;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,8 +26,8 @@ public class Exporter_OtherTab {
 	
 	public void enterShipperOtherTabMandatoryFields(String ADCode) {
 
-		utilobj.sendKeys(adCode_ADCodeDetailsSection, ADCode, "AD Code Textbox on AD Code Details Section");
-		utilobj.sendKeys(adCode_ADCodeDrawbackACSection, ADCode, "AD Code Textbox on Drawback AC Details Section");
+		utilobj.sendKeys(adCode_ADCodeDetailsSection, ADCode, "Modify AD Code Textbox on AD Code Details Section");
+		utilobj.sendKeys(adCode_ADCodeDrawbackACSection, ADCode, "Modify AD Code Textbox on Drawback AC Details Section");
 		
 	}
 	

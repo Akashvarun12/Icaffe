@@ -1,1029 +1,395 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="2" failed="0" skipped="7">
+<testng-results ignored="72" total="81" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-16T17:10:21 IST" name="icaffe" finished-at="2026-05-16T17:11:18 IST" duration-ms="57168">
+  <suite started-at="2026-05-18T15:08:51 IST" name="icaffe" finished-at="2026-05-18T15:13:30 IST" duration-ms="279510">
     <groups>
     </groups>
-    <test started-at="2026-05-16T17:10:21 IST" name="Branch Division Year" finished-at="2026-05-16T17:11:18 IST" duration-ms="57168">
-      <class name="branch_division_finyear.Branch_Division_FinYear_TestCase">
-        <test-method is-config="true" signature="generatReport()[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:10:21 IST" name="generatReport" finished-at="2026-05-16T17:10:21 IST" duration-ms="382" status="PASS">
+    <test started-at="2026-05-18T15:08:51 IST" name="verifyShipperMasterTitle" finished-at="2026-05-18T15:09:20 IST" duration-ms="29713">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@d35dea7]" started-at="2026-05-18T15:08:51 IST" name="login" finished-at="2026-05-18T15:09:14 IST" duration-ms="23407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperMasterTitle(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyShipperMasterTitle(org.testng.ITestContext)[pri:1, instance:masters.Party_Exporter_TestCase@d35dea7]" started-at="2026-05-18T15:09:14 IST" name="verifyShipperMasterTitle" finished-at="2026-05-18T15:09:17 IST" duration-ms="3405" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2b4c3c29]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShipperMasterTitle -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@d35dea7]" started-at="2026-05-18T15:09:17 IST" name="takeScreenShot" finished-at="2026-05-18T15:09:20 IST" duration-ms="2834" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyShipperMasterTitle status=SUCCESS method=Party_Exporter_TestCase.verifyShipperMasterTitle(org.testng.ITestContext)[pri:1, instance:masters.Party_Exporter_TestCase@d35dea7] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperMasterTitle(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyShipperMasterTitle -->
+    <test started-at="2026-05-18T15:09:20 IST" name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest" finished-at="2026-05-18T15:09:57 IST" duration-ms="36672">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@6aaceffd]" started-at="2026-05-18T15:09:20 IST" name="login" finished-at="2026-05-18T15:09:41 IST" duration-ms="20590" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:2, instance:masters.Party_Exporter_TestCase@6aaceffd]" started-at="2026-05-18T15:09:41 IST" name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest" finished-at="2026-05-18T15:09:55 IST" duration-ms="13724" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@37637a24]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPrivateShipperPartyCreationWithMandatoryFieldsTest -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@6aaceffd]" started-at="2026-05-18T15:09:55 IST" name="takeScreenShot" finished-at="2026-05-18T15:09:57 IST" duration-ms="2352" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPrivateShipperPartyCreationWithMandatoryFieldsTest status=SUCCESS method=Party_Exporter_TestCase.verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:2, instance:masters.Party_Exporter_TestCase@6aaceffd] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyPrivateShipperPartyCreationWithMandatoryFieldsTest -->
+    <test started-at="2026-05-18T15:09:57 IST" name="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest" finished-at="2026-05-18T15:10:25 IST" duration-ms="27879">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@10aa41f2]" started-at="2026-05-18T15:09:57 IST" name="login" finished-at="2026-05-18T15:10:15 IST" duration-ms="17845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:3, instance:masters.Party_Exporter_TestCase@10aa41f2]" started-at="2026-05-18T15:10:15 IST" name="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest" finished-at="2026-05-18T15:10:23 IST" duration-ms="7698" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@100807ca]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@10aa41f2]" started-at="2026-05-18T15:10:23 IST" name="takeScreenShot" finished-at="2026-05-18T15:10:25 IST" duration-ms="2329" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest status=SUCCESS method=Party_Exporter_TestCase.verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:3, instance:masters.Party_Exporter_TestCase@10aa41f2] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest -->
+    <test started-at="2026-05-18T15:10:25 IST" name="verifyDuplicateShipperNameForGovernmentPartyCreationTest" finished-at="2026-05-18T15:10:53 IST" duration-ms="28312">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@4c309d4d]" started-at="2026-05-18T15:10:25 IST" name="login" finished-at="2026-05-18T15:10:43 IST" duration-ms="17933" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyDuplicateShipperNameForGovernmentPartyCreationTest(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyDuplicateShipperNameForGovernmentPartyCreationTest(org.testng.ITestContext)[pri:4, instance:masters.Party_Exporter_TestCase@4c309d4d]" started-at="2026-05-18T15:10:43 IST" name="verifyDuplicateShipperNameForGovernmentPartyCreationTest" finished-at="2026-05-18T15:10:51 IST" duration-ms="7934" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1987807b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDuplicateShipperNameForGovernmentPartyCreationTest -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@4c309d4d]" started-at="2026-05-18T15:10:51 IST" name="takeScreenShot" finished-at="2026-05-18T15:10:53 IST" duration-ms="2436" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyDuplicateShipperNameForGovernmentPartyCreationTest status=SUCCESS method=Party_Exporter_TestCase.verifyDuplicateShipperNameForGovernmentPartyCreationTest(org.testng.ITestContext)[pri:4, instance:masters.Party_Exporter_TestCase@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyDuplicateShipperNameForGovernmentPartyCreationTest(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyDuplicateShipperNameForGovernmentPartyCreationTest -->
+    <test started-at="2026-05-18T15:10:53 IST" name="verifyDuplicateIECNumberForGovernmentShipperCreation" finished-at="2026-05-18T15:11:21 IST" duration-ms="27608">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@4e3958e7]" started-at="2026-05-18T15:10:53 IST" name="login" finished-at="2026-05-18T15:11:11 IST" duration-ms="17760" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyDuplicateIECNumberForGovernmentShipperCreation(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyDuplicateIECNumberForGovernmentShipperCreation(org.testng.ITestContext)[pri:4, instance:masters.Party_Exporter_TestCase@4e3958e7]" started-at="2026-05-18T15:11:11 IST" name="verifyDuplicateIECNumberForGovernmentShipperCreation" finished-at="2026-05-18T15:11:18 IST" duration-ms="7486" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@18d396eb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDuplicateIECNumberForGovernmentShipperCreation -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@4e3958e7]" started-at="2026-05-18T15:11:18 IST" name="takeScreenShot" finished-at="2026-05-18T15:11:21 IST" duration-ms="2358" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyDuplicateIECNumberForGovernmentShipperCreation status=SUCCESS method=Party_Exporter_TestCase.verifyDuplicateIECNumberForGovernmentShipperCreation(org.testng.ITestContext)[pri:4, instance:masters.Party_Exporter_TestCase@4e3958e7] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyDuplicateIECNumberForGovernmentShipperCreation(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyDuplicateIECNumberForGovernmentShipperCreation -->
+    <test started-at="2026-05-18T15:11:21 IST" name="verifyDuplicateIECNumberForPrivateShipperCreation" finished-at="2026-05-18T15:11:50 IST" duration-ms="28982">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@58ea606c]" started-at="2026-05-18T15:11:21 IST" name="login" finished-at="2026-05-18T15:11:39 IST" duration-ms="18115" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyDuplicateIECNumberForPrivateShipperCreation(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyDuplicateIECNumberForPrivateShipperCreation(org.testng.ITestContext)[pri:5, instance:masters.Party_Exporter_TestCase@58ea606c]" started-at="2026-05-18T15:11:39 IST" name="verifyDuplicateIECNumberForPrivateShipperCreation" finished-at="2026-05-18T15:11:47 IST" duration-ms="8459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5cca5ff3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDuplicateIECNumberForPrivateShipperCreation -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@58ea606c]" started-at="2026-05-18T15:11:47 IST" name="takeScreenShot" finished-at="2026-05-18T15:11:50 IST" duration-ms="2402" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyDuplicateIECNumberForPrivateShipperCreation status=SUCCESS method=Party_Exporter_TestCase.verifyDuplicateIECNumberForPrivateShipperCreation(org.testng.ITestContext)[pri:5, instance:masters.Party_Exporter_TestCase@58ea606c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyDuplicateIECNumberForPrivateShipperCreation(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyDuplicateIECNumberForPrivateShipperCreation -->
+    <test started-at="2026-05-18T15:11:50 IST" name="verifyShipperPartyModification" finished-at="2026-05-18T15:12:18 IST" duration-ms="28100">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@68e5eea7]" started-at="2026-05-18T15:11:50 IST" name="login" finished-at="2026-05-18T15:12:08 IST" duration-ms="17787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperPartyModification(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyShipperPartyModification(org.testng.ITestContext)[pri:3, instance:masters.Party_Exporter_TestCase@68e5eea7]" started-at="2026-05-18T15:12:08 IST" name="verifyShipperPartyModification" finished-at="2026-05-18T15:12:16 IST" duration-ms="7935" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@e196238]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShipperPartyModification -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@68e5eea7]" started-at="2026-05-18T15:12:16 IST" name="takeScreenShot" finished-at="2026-05-18T15:12:18 IST" duration-ms="2376" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyShipperPartyModification status=SUCCESS method=Party_Exporter_TestCase.verifyShipperPartyModification(org.testng.ITestContext)[pri:3, instance:masters.Party_Exporter_TestCase@68e5eea7] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperPartyModification(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyShipperPartyModification -->
+    <test started-at="2026-05-18T15:12:18 IST" name="verifyShipperPartyDisplayedInSearchGrid" finished-at="2026-05-18T15:12:59 IST" duration-ms="40849">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@31f9b85e]" started-at="2026-05-18T15:12:18 IST" name="login" finished-at="2026-05-18T15:12:42 IST" duration-ms="24309" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperPartyDisplayedInSearchGrid(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="verifyShipperPartyDisplayedInSearchGrid(org.testng.ITestContext)[pri:4, instance:masters.Party_Exporter_TestCase@31f9b85e]" started-at="2026-05-18T15:12:42 IST" name="verifyShipperPartyDisplayedInSearchGrid" finished-at="2026-05-18T15:12:56 IST" duration-ms="14225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@408573b1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShipperPartyDisplayedInSearchGrid -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@31f9b85e]" started-at="2026-05-18T15:12:56 IST" name="takeScreenShot" finished-at="2026-05-18T15:12:59 IST" duration-ms="2312" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyShipperPartyDisplayedInSearchGrid status=SUCCESS method=Party_Exporter_TestCase.verifyShipperPartyDisplayedInSearchGrid(org.testng.ITestContext)[pri:4, instance:masters.Party_Exporter_TestCase@31f9b85e] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperPartyDisplayedInSearchGrid(org.testng.ITestContext)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyShipperPartyDisplayedInSearchGrid -->
+    <test started-at="2026-05-18T15:12:59 IST" name="verifyShipperPartyDeletion" finished-at="2026-05-18T15:13:30 IST" duration-ms="31266">
+      <class name="masters.Party_Exporter_TestCase">
+        <test-method is-config="true" signature="generatReport()[pri:0, instance:masters.Party_Exporter_TestCase@6db9f5a4]" started-at="2026-05-18T15:08:50 IST" name="generatReport" finished-at="2026-05-18T15:08:51 IST" duration-ms="444" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generatReport -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:10:23 IST" name="login" finished-at="2026-05-16T17:10:39 IST" duration-ms="16083" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@6db9f5a4]" started-at="2026-05-18T15:12:59 IST" name="login" finished-at="2026-05-18T15:13:19 IST" duration-ms="20580" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperPartyDeletion(org.testng.ITestContext)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:10:39 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:10:45 IST" duration-ms="6408" status="PASS">
+        <test-method signature="verifyShipperPartyDeletion(org.testng.ITestContext)[pri:5, instance:masters.Party_Exporter_TestCase@6db9f5a4]" started-at="2026-05-18T15:13:19 IST" name="verifyShipperPartyDeletion" finished-at="2026-05-18T15:13:28 IST" duration-ms="8323" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Mumbai]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optExportAir]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Mumbai (Export Air)]]>
+                <![CDATA[org.testng.TestRunner@1508bc71]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:10:45 IST" name="takeScreenShot" finished-at="2026-05-16T17:10:46 IST" duration-ms="817" status="PASS">
+        </test-method> <!-- verifyShipperPartyDeletion -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masters.Party_Exporter_TestCase@6db9f5a4]" started-at="2026-05-18T15:13:28 IST" name="takeScreenShot" finished-at="2026-05-18T15:13:30 IST" duration-ms="2360" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validate_AllBranch_Division_FinYear_with_DataProvider status=SUCCESS method=Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d] output={null}]]]>
+                <![CDATA[[TestResult name=verifyShipperPartyDeletion status=SUCCESS method=Party_Exporter_TestCase.verifyShipperPartyDeletion(org.testng.ITestContext)[pri:5, instance:masters.Party_Exporter_TestCase@6db9f5a4] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void masters.Party_Exporter_TestCase.verifyShipperPartyDeletion(org.testng.ITestContext)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:10:46 IST" name="login" finished-at="2026-05-16T17:11:03 IST" duration-ms="17306" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:03 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:11:15 IST" duration-ms="12024" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mumbai]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optExportSea]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Mumbai (Export Sea)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:15 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:16 IST" duration-ms="381" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validate_AllBranch_Division_FinYear_with_DataProvider status=SUCCESS method=Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:16 IST" name="login" finished-at="2026-05-16T17:11:18 IST" duration-ms="2370" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void branch_division_finyear.Branch_Division_FinYear_TestCase.validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mumbai]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optImportAir]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Mumbai (Import Air)]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="login" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mumbai]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optImportSea]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Mumbai (Import Sea)]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="login" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:11:18 IST" duration-ms="1" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ahmedabad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optExportAir]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Ahmedabad (Export Air)]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="login" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ahmedabad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optExportSea]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Ahmedabad (Export Sea)]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="login" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ahmedabad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optImportAir]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Ahmedabad (Import Air)]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="login" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_AllBranch_Division_FinYear_with_DataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="validate_AllBranch_Division_FinYear_with_DataProvider" data-provider="ReadDataFromExcel" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ahmedabad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[optImportSea]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2026-27]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Akash12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[(2627)]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[DEMO LTD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Ahmedabad (Import Sea)]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_AllBranch_Division_FinYear_with_DataProvider -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="login" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="validate_Branch_Division_FinYear_with_ID(org.testng.ITestContext)[pri:2, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="validate_Branch_Division_FinYear_with_ID" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@5ed0b4e3]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.54)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [24d85e115f118d781b1286d6762c859a, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.54, fedcm:accounts: true, goog:processID: 6380, ms:edgeOptions: {debuggerAddress: localhost:64507}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64507/devtoo..., se:cdpVersion: 148.0.3967.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d85e115f118d781b1286d6762c859a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-at webutil.WebUtil.takeScreenShot(WebUtil.java:441)
-at webutil.WebUtil.sendKeys(WebUtil.java:180)
-at login.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-at branch_division_finyear.Branch_Division_FinYear_TestCase.login(Branch_Division_FinYear_TestCase.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_Branch_Division_FinYear_with_ID -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="takeScreenShot" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:branch_division_finyear.Branch_Division_FinYear_TestCase@61322f9d]" started-at="2026-05-16T17:11:18 IST" name="closeBrowser" finished-at="2026-05-16T17:11:18 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masters.Party_Exporter_TestCase@6db9f5a4]" started-at="2026-05-18T15:13:30 IST" name="closeBrowser" finished-at="2026-05-18T15:13:30 IST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- branch_division_finyear.Branch_Division_FinYear_TestCase -->
-    </test> <!-- Branch Division Year -->
+      </class> <!-- masters.Party_Exporter_TestCase -->
+    </test> <!-- verifyShipperPartyDeletion -->
   </suite> <!-- icaffe -->
 </testng-results>

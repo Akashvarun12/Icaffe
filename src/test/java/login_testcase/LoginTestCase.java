@@ -1,4 +1,4 @@
-package logintestcase;
+package login_testcase;
 
 import java.lang.reflect.Method;
 import java.util.Properties;
@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 
 import org.testng.annotations.Test;
 
-import login.IcaffeLogin;
+import icaffe_loginpage.IcaffeLogin;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
 
