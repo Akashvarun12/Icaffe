@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
 
         stage('Checkout') {
@@ -17,7 +21,7 @@ pipeline {
 
         stage('TestNG') {
             steps {
-                bat 'mvn test -DsuiteXmlFile=Masters.xml'
+                bat 'mvn test -DsuiteXmlFile=testng.xml'
             }
         }
     }
