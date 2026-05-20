@@ -9,35 +9,485 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">icaffe</th></tr>
-<tr><td><a href="#t0">verifyShipperMasterTitle</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">29,713</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">36,672</td><td></td><td></td></tr>
-<tr><td><a href="#t2">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">27,879</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">verifyDuplicateShipperNameForGovernmentPartyCreationTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,312</td><td></td><td></td></tr>
-<tr><td><a href="#t4">verifyDuplicateIECNumberForGovernmentShipperCreation</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">27,608</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t5">verifyDuplicateIECNumberForPrivateShipperCreation</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,982</td><td></td><td></td></tr>
-<tr><td><a href="#t6">verifyShipperPartyModification</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,100</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t7">verifyShipperPartyDisplayedInSearchGrid</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">40,849</td><td></td><td></td></tr>
-<tr><td><a href="#t8">verifyShipperPartyDeletion</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">31,266</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">9</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">279,381</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">verifyShipperMasterTitle</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">8,276</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,529</td><td></td><td></td></tr>
+<tr><td><a href="#t2">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,222</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">verifyDuplicateShipperNameForGovernmentPartyCreationTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,599</td><td></td><td></td></tr>
+<tr><td><a href="#t4">verifyDuplicateIECNumberForGovernmentShipperCreation</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,607</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">verifyDuplicateIECNumberForPrivateShipperCreation</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,328</td><td></td><td></td></tr>
+<tr><td><a href="#t6">verifyShipperPartyModification</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,464</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t7">verifyShipperPartyDisplayedInSearchGrid</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,418</td><td></td><td></td></tr>
+<tr><td><a href="#t8">verifyShipperPartyDeletion</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,413</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">9</th><th class="num">0</th><th class="num">0</th><th class="num">27,856</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">icaffe</th></tr></tbody><tbody id="t0"><tr><th colspan="4">verifyShipperMasterTitle &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m0">verifyShipperMasterTitle</a></td><td rowspan="1">1779097154495</td><td rowspan="1">3405</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m1">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</a></td><td rowspan="1">1779097181396</td><td rowspan="1">13724</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m2">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</a></td><td rowspan="1">1779097215336</td><td rowspan="1">7698</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">verifyDuplicateShipperNameForGovernmentPartyCreationTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m3">verifyDuplicateShipperNameForGovernmentPartyCreationTest</a></td><td rowspan="1">1779097243311</td><td rowspan="1">7934</td></tr></tbody>
-<tbody id="t4"><tr><th colspan="4">verifyDuplicateIECNumberForGovernmentShipperCreation &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m4">verifyDuplicateIECNumberForGovernmentShipperCreation</a></td><td rowspan="1">1779097271461</td><td rowspan="1">7486</td></tr></tbody>
-<tbody id="t5"><tr><th colspan="4">verifyDuplicateIECNumberForPrivateShipperCreation &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m5">verifyDuplicateIECNumberForPrivateShipperCreation</a></td><td rowspan="1">1779097299431</td><td rowspan="1">8459</td></tr></tbody>
-<tbody id="t6"><tr><th colspan="4">verifyShipperPartyModification &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m6">verifyShipperPartyModification</a></td><td rowspan="1">1779097328095</td><td rowspan="1">7935</td></tr></tbody>
-<tbody id="t7"><tr><th colspan="4">verifyShipperPartyDisplayedInSearchGrid &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m7">verifyShipperPartyDisplayedInSearchGrid</a></td><td rowspan="1">1779097362733</td><td rowspan="1">14225</td></tr></tbody>
-<tbody id="t8"><tr><th colspan="4">verifyShipperPartyDeletion &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">masters.Party_Exporter_TestCase</td><td><a href="#m8">verifyShipperPartyDeletion</a></td><td rowspan="1">1779097399861</td><td rowspan="1">8323</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">icaffe</th></tr></tbody><tbody id="t0"><tr><th colspan="4">verifyShipperMasterTitle &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m0">login</a></td><td rowspan="1">1779253118900</td><td rowspan="1">8122</td></tr><tr><th colspan="4">verifyShipperMasterTitle &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m1">takeScreenShot</a></td><td rowspan="1">1779253127087</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyShipperMasterTitle &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m2">verifyShipperMasterTitle</a></td><td rowspan="1">1779253127065</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m3">login</a></td><td rowspan="1">1779253127349</td><td rowspan="1">2492</td></tr><tr><th colspan="4">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m4">takeScreenShot</a></td><td rowspan="1">1779253129870</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m5">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</a></td><td rowspan="1">1779253129846</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m6">login</a></td><td rowspan="1">1779253129947</td><td rowspan="1">2164</td></tr><tr><th colspan="4">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m7">takeScreenShot</a></td><td rowspan="1">1779253132137</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m8">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</a></td><td rowspan="1">1779253132115</td><td rowspan="1">1</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">verifyDuplicateShipperNameForGovernmentPartyCreationTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m9">login</a></td><td rowspan="1">1779253132262</td><td rowspan="1">2529</td></tr><tr><th colspan="4">verifyDuplicateShipperNameForGovernmentPartyCreationTest &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m10">takeScreenShot</a></td><td rowspan="1">1779253134847</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyDuplicateShipperNameForGovernmentPartyCreationTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m11">verifyDuplicateShipperNameForGovernmentPartyCreationTest</a></td><td rowspan="1">1779253134797</td><td rowspan="1">1</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">verifyDuplicateIECNumberForGovernmentShipperCreation &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m12">login</a></td><td rowspan="1">1779253134944</td><td rowspan="1">2586</td></tr><tr><th colspan="4">verifyDuplicateIECNumberForGovernmentShipperCreation &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m13">takeScreenShot</a></td><td rowspan="1">1779253137539</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyDuplicateIECNumberForGovernmentShipperCreation &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m14">verifyDuplicateIECNumberForGovernmentShipperCreation</a></td><td rowspan="1">1779253137532</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">verifyDuplicateIECNumberForPrivateShipperCreation &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m15">login</a></td><td rowspan="1">1779253137607</td><td rowspan="1">2305</td></tr><tr><th colspan="4">verifyDuplicateIECNumberForPrivateShipperCreation &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m16">takeScreenShot</a></td><td rowspan="1">1779253139927</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyDuplicateIECNumberForPrivateShipperCreation &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m17">verifyDuplicateIECNumberForPrivateShipperCreation</a></td><td rowspan="1">1779253139917</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">verifyShipperPartyModification &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m18">login</a></td><td rowspan="1">1779253140007</td><td rowspan="1">2435</td></tr><tr><th colspan="4">verifyShipperPartyModification &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m19">takeScreenShot</a></td><td rowspan="1">1779253142457</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyShipperPartyModification &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m20">verifyShipperPartyModification</a></td><td rowspan="1">1779253142448</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t7"><tr><th colspan="4">verifyShipperPartyDisplayedInSearchGrid &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m21">login</a></td><td rowspan="1">1779253142552</td><td rowspan="1">2401</td></tr><tr><th colspan="4">verifyShipperPartyDisplayedInSearchGrid &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m22">takeScreenShot</a></td><td rowspan="1">1779253144961</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyShipperPartyDisplayedInSearchGrid &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m23">verifyShipperPartyDisplayedInSearchGrid</a></td><td rowspan="1">1779253144955</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t8"><tr><th colspan="4">verifyShipperPartyDeletion &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m24">login</a></td><td rowspan="1">1779253145015</td><td rowspan="1">2396</td></tr><tr><th colspan="4">verifyShipperPartyDeletion &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m25">takeScreenShot</a></td><td rowspan="1">1779253147420</td><td rowspan="1">0</td></tr><tr><th colspan="4">verifyShipperPartyDeletion &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">masterstestcase.Party_Exporter_TestCase</td><td><a href="#m26">verifyShipperPartyDeletion</a></td><td rowspan="1">1779253147415</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>verifyShipperMasterTitle</h2><h3 id="m0">masters.Party_Exporter_TestCase#verifyShipperMasterTitle</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@2b4c3c29</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</h2><h3 id="m1">masters.Party_Exporter_TestCase#verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@37637a24</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</h2><h3 id="m2">masters.Party_Exporter_TestCase#verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@100807ca</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyDuplicateShipperNameForGovernmentPartyCreationTest</h2><h3 id="m3">masters.Party_Exporter_TestCase#verifyDuplicateShipperNameForGovernmentPartyCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@1987807b</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyDuplicateIECNumberForGovernmentShipperCreation</h2><h3 id="m4">masters.Party_Exporter_TestCase#verifyDuplicateIECNumberForGovernmentShipperCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@18d396eb</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyDuplicateIECNumberForPrivateShipperCreation</h2><h3 id="m5">masters.Party_Exporter_TestCase#verifyDuplicateIECNumberForPrivateShipperCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@5cca5ff3</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyShipperPartyModification</h2><h3 id="m6">masters.Party_Exporter_TestCase#verifyShipperPartyModification</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@e196238</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyShipperPartyDisplayedInSearchGrid</h2><h3 id="m7">masters.Party_Exporter_TestCase#verifyShipperPartyDisplayedInSearchGrid</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@408573b1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>verifyShipperPartyDeletion</h2><h3 id="m8">masters.Party_Exporter_TestCase#verifyShipperPartyDeletion</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@1508bc71</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyShipperMasterTitle</h2><h3 id="m0">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyShipperMasterTitle(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b9d08b7a5700de2d0ac3ece0072212cb, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 13132, ms:edgeOptions: {debuggerAddress: localhost:58165}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58165/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b9d08b7a5700de2d0ac3ece0072212cb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:51)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">masterstestcase.Party_Exporter_TestCase#verifyShipperMasterTitle</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@18ca3c62</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b9d08b7a5700de2d0ac3ece0072212cb, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 13132, ms:edgeOptions: {debuggerAddress: localhost:58165}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58165/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b9d08b7a5700de2d0ac3ece0072212cb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:51)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</h2><h3 id="m3">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [0547306167b257c9b60b3e0e4b8cfd38, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 11552, ms:edgeOptions: {debuggerAddress: localhost:58198}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58198/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0547306167b257c9b60b3e0e4b8cfd38
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">masterstestcase.Party_Exporter_TestCase#verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@408a247c</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [0547306167b257c9b60b3e0e4b8cfd38, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 11552, ms:edgeOptions: {debuggerAddress: localhost:58198}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58198/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0547306167b257c9b60b3e0e4b8cfd38
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</h2><h3 id="m6">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [06869faff92d2d4ad9c66cfbfd7acb12, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 14932, ms:edgeOptions: {debuggerAddress: localhost:58231}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58231/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 06869faff92d2d4ad9c66cfbfd7acb12
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">masterstestcase.Party_Exporter_TestCase#verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@72458efc</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [06869faff92d2d4ad9c66cfbfd7acb12, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 14932, ms:edgeOptions: {debuggerAddress: localhost:58231}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58231/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 06869faff92d2d4ad9c66cfbfd7acb12
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyDuplicateShipperNameForGovernmentPartyCreationTest</h2><h3 id="m9">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyDuplicateShipperNameForGovernmentPartyCreationTest(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [74f23dd679d0dff1fe71520e7a96839e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 15548, ms:edgeOptions: {debuggerAddress: localhost:58260}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58260/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74f23dd679d0dff1fe71520e7a96839e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">masterstestcase.Party_Exporter_TestCase#verifyDuplicateShipperNameForGovernmentPartyCreationTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@71391b3f</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [74f23dd679d0dff1fe71520e7a96839e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 15548, ms:edgeOptions: {debuggerAddress: localhost:58260}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58260/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74f23dd679d0dff1fe71520e7a96839e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyDuplicateIECNumberForGovernmentShipperCreation</h2><h3 id="m12">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyDuplicateIECNumberForGovernmentShipperCreation(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [928e190809fdc75b55074e938cf3a5cb, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 5912, ms:edgeOptions: {debuggerAddress: localhost:58289}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58289/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 928e190809fdc75b55074e938cf3a5cb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">masterstestcase.Party_Exporter_TestCase#verifyDuplicateIECNumberForGovernmentShipperCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@26ae880a</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [928e190809fdc75b55074e938cf3a5cb, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 5912, ms:edgeOptions: {debuggerAddress: localhost:58289}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58289/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 928e190809fdc75b55074e938cf3a5cb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyDuplicateIECNumberForPrivateShipperCreation</h2><h3 id="m15">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyDuplicateIECNumberForPrivateShipperCreation(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b4ebbaa585d51b43fd983ec4ac39680f, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 7920, ms:edgeOptions: {debuggerAddress: localhost:58311}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58311/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b4ebbaa585d51b43fd983ec4ac39680f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">masterstestcase.Party_Exporter_TestCase#verifyDuplicateIECNumberForPrivateShipperCreation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@5ce4369b</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b4ebbaa585d51b43fd983ec4ac39680f, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 7920, ms:edgeOptions: {debuggerAddress: localhost:58311}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58311/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b4ebbaa585d51b43fd983ec4ac39680f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyShipperPartyModification</h2><h3 id="m18">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyShipperPartyModification(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [178e3b9e9e9c04c4cec46208d18df17b, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 14848, ms:edgeOptions: {debuggerAddress: localhost:58332}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58332/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 178e3b9e9e9c04c4cec46208d18df17b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">masterstestcase.Party_Exporter_TestCase#verifyShipperPartyModification</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@56d93692</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [178e3b9e9e9c04c4cec46208d18df17b, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 14848, ms:edgeOptions: {debuggerAddress: localhost:58332}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58332/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 178e3b9e9e9c04c4cec46208d18df17b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyShipperPartyDisplayedInSearchGrid</h2><h3 id="m21">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyShipperPartyDisplayedInSearchGrid(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [78e2fd181db9d26d51064af41aeef121, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 14576, ms:edgeOptions: {debuggerAddress: localhost:58354}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58354/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78e2fd181db9d26d51064af41aeef121
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">masterstestcase.Party_Exporter_TestCase#verifyShipperPartyDisplayedInSearchGrid</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@6a282fdd</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [78e2fd181db9d26d51064af41aeef121, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 14576, ms:edgeOptions: {debuggerAddress: localhost:58354}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58354/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78e2fd181db9d26d51064af41aeef121
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>verifyShipperPartyDeletion</h2><h3 id="m24">masterstestcase.Party_Exporter_TestCase#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void masterstestcase.Party_Exporter_TestCase.verifyShipperPartyDeletion(org.testng.ITestContext)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [615a7f1fa4cab621f6875c66a6ab6b0f, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 15948, ms:edgeOptions: {debuggerAddress: localhost:58375}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58375/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 615a7f1fa4cab621f6875c66a6ab6b0f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">masterstestcase.Party_Exporter_TestCase#takeScreenShot</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">masterstestcase.Party_Exporter_TestCase#verifyShipperPartyDeletion</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@10ef5fa0</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.70)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [615a7f1fa4cab621f6875c66a6ab6b0f, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 15948, ms:edgeOptions: {debuggerAddress: localhost:58375}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58375/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 615a7f1fa4cab621f6875c66a6ab6b0f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:443)
+	at webutil.WebUtil.sendKeys(WebUtil.java:182)
+	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
+	at basetest.BaseTest.login(BaseTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
