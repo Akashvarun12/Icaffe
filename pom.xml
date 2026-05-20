@@ -91,7 +91,7 @@
 				<configuration>
 					<!-- TestNG XML File -->
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>masters.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 
