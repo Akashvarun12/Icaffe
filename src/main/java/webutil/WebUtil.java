@@ -24,8 +24,11 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -59,28 +62,64 @@ public class WebUtil {
 	}
 	// Launches browser based on browser name (Chrome, Edge, Firefox)
 	public void launchBrowser(String browser) {
-		try {
-			if (browser.equalsIgnoreCase("chromebrowser")) {
-				setDriver(new ChromeDriver());
-			} else if (browser.equalsIgnoreCase("edgebrowser")) {
-				setDriver(new EdgeDriver());
-			} else if (browser.equalsIgnoreCase("firefoxbrowser")) {
-				setDriver(new FirefoxDriver());
-			} else {
-				System.out.println("Invalid browser: " + browser);
-				return;
-			}
-			System.out.println(browser + " launched successfully");
-			extentTest.log(Status.INFO, browser + " launched successfully");
-			implicitlyWait();
-		} catch (Exception e) {
-			System.out.println("Failed to launch browser: " + browser);
-			e.printStackTrace();
-			extentTest.log(Status.FAIL, "Failed to launch browser: " + browser);
-		}
 
-		maxmize();
+	    try {
 
+	        if (browser.equalsIgnoreCase("chromebrowser")) {
+
+	            ChromeOptions options = new ChromeOptions();
+
+	            options.addArguments("--remote-allow-origins=*");
+	            options.addArguments("--headless=new");
+	            options.addArguments("--disable-gpu");
+	            options.addArguments("--no-sandbox");
+	            options.addArguments("--window-size=1920,1080");
+
+	            setDriver(new ChromeDriver(options));
+
+	        } else if (browser.equalsIgnoreCase("edgebrowser")) {
+
+	            EdgeOptions options = new EdgeOptions();
+
+	            options.addArguments("--remote-allow-origins=*");
+	            options.addArguments("--headless=new");
+	            options.addArguments("--disable-gpu");
+	            options.addArguments("--no-sandbox");
+	            options.addArguments("--window-size=1920,1080");
+
+	            setDriver(new EdgeDriver(options));
+
+	        } else if (browser.equalsIgnoreCase("firefoxbrowser")) {
+
+	            FirefoxOptions options = new FirefoxOptions();
+
+	            options.addArguments("--headless");
+
+	            setDriver(new FirefoxDriver(options));
+
+	        } else {
+
+	            System.out.println("Invalid browser: " + browser);
+	            return;
+	        }
+
+	        System.out.println(browser + " launched successfully");
+
+	        extentTest.log(Status.INFO, browser + " launched successfully");
+
+	        implicitlyWait();
+
+	        maxmize();
+
+	    } catch (Exception e) {
+
+	        System.out.println("Failed to launch browser: " + browser);
+
+	        e.printStackTrace();
+
+	        extentTest.log(Status.FAIL, "Failed to launch browser: " + browser);
+	    }
+	    maxmize();
 	}
 	// Generates Extent Report with timestamp report file
 	public static ExtentReports genrateExtentReport() {
