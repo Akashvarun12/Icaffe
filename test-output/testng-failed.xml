@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [icaffe]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="verifyShipperMasterTitle(failed)">
-    <parameter name="expTitle" value="Shipper Master"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="verifyShipperMasterTitle"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyShipperMasterTitle(failed) -->
   <test thread-count="5" name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(failed)">
     <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
     <parameter name="sheetName" value="MastersPartyExporter"/>
