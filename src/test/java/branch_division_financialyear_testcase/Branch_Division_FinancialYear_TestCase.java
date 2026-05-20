@@ -79,7 +79,7 @@ public class Branch_Division_FinancialYear_TestCase {
 
 	// Validate AllBranch_Division_FinYear_with_DataProvider...
 
-	// @Test(priority = 1, dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+	 @Test(priority = 1, dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
 	public void validate_AllBranch_Division_FinYear_with_DataProvider(String branchname, String division,
 			String finYear, String exp_ID, String exp_Year, String exp_ENV, String exp_Branch_Division) {
 
@@ -103,7 +103,7 @@ public class Branch_Division_FinancialYear_TestCase {
 
 	// Validate Branch_Division_FinYear_with_ID from Excel sheet (DYNAMICALLY)...
 
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	public void validate_Branch_Division_FinYear_with_ID(ITestContext context ) {
 
 		BranchDivisionFinYear_Page logBranchDiv = new BranchDivisionFinYear_Page(utilObj, extObj);
@@ -114,10 +114,7 @@ public class Branch_Division_FinancialYear_TestCase {
 		String branchname = testData.get("branchName");
 		String division = testData.get("division");
 		String finYear = testData.get("finYear");
-//		String exp_ID = testData.get("exp_ID");
-//		String exp_Year = testData.get("exp_Year");
-//		String exp_ENV = testData.get("exp_ENV");
-//		String exp_Branch_Division = testData.get("exp_Branch_Division");
+
 		logBranchDiv.SelectBranch(branchname);
 
 		logBranchDiv.SelectDevision(division);

@@ -21,7 +21,7 @@ pipeline {
 
         stage('TestNG') {
             steps {
-                bat 'mvn test -DsuiteXmlFile=Masters.xml'
+                bat 'mvn test -DsuiteXmlFile=masters.xml'
             }
         }
     }

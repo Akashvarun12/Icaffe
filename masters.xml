@@ -10,7 +10,7 @@
 		<parameter name="expTitle" value="Shipper Master" />
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyShipperMasterTitle" />
 				</methods>
@@ -26,7 +26,7 @@
 		<parameter name="action" value="PrivateShipperPartyCreation" />
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest" />
 				</methods>
@@ -42,7 +42,7 @@
 		<parameter name="action" value="GovernmentShipperPartyCreation" />
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest" />
 				</methods>
@@ -58,7 +58,7 @@
 		<parameter name="action" value="DuplicateShipperNameForGovernment" />
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyDuplicateShipperNameForGovernmentPartyCreationTest" />
 				</methods>
@@ -74,7 +74,7 @@
 		<parameter name="action" value="DuplicateIECNumberforGovernmentShipper" />
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyDuplicateIECNumberForGovernmentShipperCreation" />
 				</methods>
@@ -91,7 +91,7 @@
 		<parameter name="action" value="DuplicateIECNumberforPrivateShipper" />
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyDuplicateIECNumberForPrivateShipperCreation" />
 				</methods>
@@ -108,7 +108,7 @@
 
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyShipperPartyModification" />
 				</methods>
@@ -126,7 +126,7 @@
 	
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyShipperPartyDisplayedInSearchGrid" />
 				</methods>
@@ -142,7 +142,7 @@
 		<parameter name="action" value="ShipperPartyDeletion" />
 
 		<classes>
-			<class name="masters.Party_Exporter_TestCase">
+			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
 					<include name="verifyShipperPartyDeletion" />
 				</methods>
