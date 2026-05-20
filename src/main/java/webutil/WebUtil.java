@@ -75,13 +75,13 @@ public class WebUtil {
 				setDriver(new ChromeDriver());
 			} else if (browser.equalsIgnoreCase("edgebrowser")) {
 				
-				  EdgeOptions options= new EdgeOptions();
-
-		            options.addArguments("--remote-allow-origins=*");
-		            options.addArguments("--headless=new");
-		            options.addArguments("--disable-gpu");
-		            options.addArguments("--no-sandbox");
-		            options.addArguments("--window-size=1366,768");
+//				  EdgeOptions options= new EdgeOptions();
+//
+//		            options.addArguments("--remote-allow-origins=*");
+//		            options.addArguments("--headless=new");
+//		            options.addArguments("--disable-gpu");
+//		            options.addArguments("--no-sandbox");
+//		            options.addArguments("--window-size=1366,768");
 				setDriver(new EdgeDriver());
 			} else if (browser.equalsIgnoreCase("firefoxbrowser")) {
 				setDriver(new FirefoxDriver());
