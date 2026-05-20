@@ -13,8 +13,7 @@ import java.util.List;
 
 import java.util.Properties;
 
-
-
+import org.apache.commons.math3.geometry.spherical.twod.Edge;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 
@@ -26,6 +25,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -64,16 +64,24 @@ public class WebUtil {
 	
 		try {
 			if (browser.equalsIgnoreCase("chromebrowser")) {
-				  ChromeOptions options = new ChromeOptions();
+//				  ChromeOptions options = new ChromeOptions();
+//
+//		            options.addArguments("--remote-allow-origins=*");
+//		            options.addArguments("--headless=new");
+//		            options.addArguments("--disable-gpu");
+//		            options.addArguments("--no-sandbox");
+//		            options.addArguments("--window-size=1366,768");
+
+				setDriver(new ChromeDriver());
+			} else if (browser.equalsIgnoreCase("edgebrowser")) {
+				
+				  EdgeOptions options= new EdgeOptions();
 
 		            options.addArguments("--remote-allow-origins=*");
 		            options.addArguments("--headless=new");
 		            options.addArguments("--disable-gpu");
 		            options.addArguments("--no-sandbox");
-		            options.addArguments("--window-size=1920,1080");
-
-				setDriver(new ChromeDriver());
-			} else if (browser.equalsIgnoreCase("edgebrowser")) {
+		            options.addArguments("--window-size=1366,768");
 				setDriver(new EdgeDriver());
 			} else if (browser.equalsIgnoreCase("firefoxbrowser")) {
 				setDriver(new FirefoxDriver());
