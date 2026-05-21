@@ -37,13 +37,15 @@ public class Branch_Division_FinancialYear_TestCase {
 
 	@BeforeSuite
 	public void generatReport() {
-		WebUtil.genrateExtentReport();
+		String reportType = this.getClass().getSimpleName();
+		WebUtil.genrateExtentReport(reportType);
 	}
 
 	@BeforeMethod
 	public void login(Method testName) throws InterruptedException {
 		utilObj = new WebUtil();
-		extObj = utilObj.generateExtentTest(testName.getName());
+		String reportType = this.getClass().getSimpleName();
+		extObj = utilObj.generateExtentTest(testName.getName(),reportType);
 
 		proObj = WebUtil.propertiFile("Akash_CommonSelection_Login_BranchDivisionYear.properties");
 		String browsername = proObj.getProperty("browser");
@@ -64,7 +66,8 @@ public class Branch_Division_FinancialYear_TestCase {
 		if (result.getStatus() == ITestResult.FAILURE) {
 
 			String snapShot = utilObj.takeScreenShot(testName.getName());
-			utilObj.generateExtentTest(snapShot).addScreenCaptureFromPath(snapShot);
+			String reportType = this.getClass().getSimpleName();
+			utilObj.generateExtentTest(snapShot,reportType).addScreenCaptureFromPath(snapShot);
 		}
 		utilObj.flush();
 

@@ -101,32 +101,67 @@ public class WebUtil {
 		maxmize();
 
 	}
+	
+	public static ExtentReports genrateExtentReport(String reportType) {
 
-	// Generates Extent Report with timestamp report file
-	public static ExtentReports genrateExtentReport() {
-		try {
-			extReport = new ExtentReports();
-			SimpleDateFormat simpDateFormat = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
-			String timeStamp = simpDateFormat.format(new Date());
-			File folderObj = new File("ICaffeResult");
-			if (!folderObj.exists()) {
-				folderObj.mkdir();
-			}
-			ExtentSparkReporter extSparkReport = new ExtentSparkReporter("ICaffeResult\\icaffe_" + timeStamp + ".html");
-			extSparkReport.config().setTheme(Theme.DARK);
-			extSparkReport.config().setReportName("Akash Varun");
-			extReport.attachReporter(extSparkReport);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return extReport;
+	    try {
+	        extReport = new ExtentReports();
+
+	        SimpleDateFormat simpDateFormat =
+	                new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
+
+	        String timeStamp = simpDateFormat.format(new Date());
+
+	        File folderObj = new File("ExtentReport");
+
+	        if (!folderObj.exists()) {
+	            folderObj.mkdir();
+	        }
+
+	        String reportPath = "ExtentReport\\"
+	                + reportType + "_"
+	                + timeStamp + ".html";
+
+	        ExtentSparkReporter extSparkReport =
+	                new ExtentSparkReporter(reportPath);
+
+	        extSparkReport.config().setTheme(Theme.DARK);
+	        extSparkReport.config().setReportName("Akash varun");
+
+	        extReport.attachReporter(extSparkReport);
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return extReport;
 	}
 
+//	// Generates Extent Report with timestamp report file
+//	public static ExtentReports genrateExtentReport() {
+//		try {
+//			extReport = new ExtentReports();
+//			SimpleDateFormat simpDateFormat = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
+//			String timeStamp = simpDateFormat.format(new Date());
+//			File folderObj = new File("ICaffeResult");
+//			if (!folderObj.exists()) {
+//				folderObj.mkdir();
+//			}
+//			ExtentSparkReporter extSparkReport = new ExtentSparkReporter("ICaffeResult\\icaffe_" + timeStamp + ".html");
+//			extSparkReport.config().setTheme(Theme.DARK);
+//			extSparkReport.config().setReportName("Akash Varun");
+//			extReport.attachReporter(extSparkReport);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return extReport;
+//	}
+
 	// Creates ExtentTest for logging test execution
-	public ExtentTest generateExtentTest(String testName) {
+	public ExtentTest generateExtentTest(String testName,String reportType) {
 		try {
 			if (extReport == null) {
-				genrateExtentReport();
+				genrateExtentReport(reportType);
 			}
 			extentTest = extReport.createTest(testName);
 		} catch (Exception e) {

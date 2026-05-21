@@ -23,13 +23,15 @@ public class LoginTestCase {
 
 	@BeforeSuite
 	public void generatReport() {
-		WebUtil.genrateExtentReport();
+		String reportType = this.getClass().getSimpleName();
+		WebUtil.genrateExtentReport(reportType);
 	}
 
 	@BeforeMethod
 	public void login(Method testName) {
 		utilObj = new WebUtil();
-		utilObj.generateExtentTest(testName.getName());
+		String reportType = this.getClass().getSimpleName();
+		utilObj.generateExtentTest(testName.getName(),reportType);
 
 		Properties proObj = WebUtil.propertiFile("Akash_CommonSelection_Login_BranchDivisionYear.properties");
 		String browsername = proObj.getProperty("browser");

@@ -27,18 +27,16 @@ pipeline {
         }
     }
 
-    post {
-
-        always {
-
-            publishHTML(target: [
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'ICaffeResult',
-                reportFiles: '*.html',
-                reportName: 'Extent Report'
-            ])
-        }
+  post {
+    always {
+        publishHTML(target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: true,
+            keepAll: true,
+            reportDir: 'ExtentReport',
+            reportFiles: '*.html',
+            reportName: 'ICaffe Project Report'
+        ])
     }
+}
 }
