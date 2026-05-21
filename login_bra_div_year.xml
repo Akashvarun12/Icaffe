@@ -20,7 +20,7 @@
 
 		<classes>
 			<class
-				name="branch_division_financialyear_testcase.Branch_Division_FinYear_TestCase" />
+				name="branch_division_financialyear_testcase.Branch_Division_FinancialYear_TestCase" />
 
 
 		</classes>
