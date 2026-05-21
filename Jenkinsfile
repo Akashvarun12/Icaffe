@@ -32,7 +32,7 @@ pipeline {
                 keepAll: true,
                 reportDir: 'ICaffeResult',
                 reportFiles: '*.html',
-                reportName: 'icaffe_'
+                reportName: 'icaffe'
         ])
     }
 }
