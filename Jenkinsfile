@@ -4,7 +4,7 @@ pipeline {
 
     triggers {
 
-        cron('0 16 * * *')
+        cron('0 17 * * *')
     }
 
     stages {
@@ -27,16 +27,18 @@ pipeline {
         }
     }
 
-  post {
-    always {
-        publishHTML(target: [
-            allowMissing: false,
-            alwaysLinkToLastBuild: true,
-            keepAll: true,
-            reportDir: 'ExtentReport',
-            reportFiles: '*.html',
-            reportName: 'ICaffe Project Report'
-        ])
+    post {
+
+        always {
+
+            publishHTML(target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'ExtentReport',
+                reportFiles: '*.html',
+                reportName: 'ICaffe Project Report'
+            ])
+        }
     }
-}
 }
