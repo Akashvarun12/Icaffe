@@ -80,25 +80,22 @@
 
 	</dependencies>
 
-	<build>
-		<plugins>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
+            <configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>all.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
 
-				<configuration>
-					<!-- TestNG XML File -->
-					<suiteXmlFiles>
-						<suiteXmlFile>masters.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-
-			</plugin>
-
-		</plugins>
-	</build>
+        </plugin>
+    </plugins>
+</build>
 
 
 </project>
