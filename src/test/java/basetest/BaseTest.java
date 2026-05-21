@@ -33,6 +33,7 @@ public class BaseTest {
 
 	@BeforeSuite
 	public void generatReport() {
+		
 		WebUtil.genrateExtentReport();
 	}
 

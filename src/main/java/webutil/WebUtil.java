@@ -48,20 +48,20 @@ public class WebUtil {
 	private WebDriver driver;
 	private static ExtentReports extReport;
 	private static ExtentTest extentTest;
-	
-	
+
 	// Returns current WebDriver instance
 	public WebDriver getDriver() {
 		return driver;
 	}
+
 	// Sets WebDriver instance
 	public void setDriver(WebDriver driver) {
 		this.driver = driver;
 	}
+
 	// Launches browser based on browser name (Chrome, Edge, Firefox)
 	public void launchBrowser(String browser) {
-		
-	
+
 		try {
 			if (browser.equalsIgnoreCase("chromebrowser")) {
 //				  ChromeOptions options = new ChromeOptions();
@@ -74,7 +74,7 @@ public class WebUtil {
 
 				setDriver(new ChromeDriver());
 			} else if (browser.equalsIgnoreCase("edgebrowser")) {
-				
+
 //				  EdgeOptions options= new EdgeOptions();
 //
 //		            options.addArguments("--remote-allow-origins=*");
@@ -101,6 +101,7 @@ public class WebUtil {
 		maxmize();
 
 	}
+
 	// Generates Extent Report with timestamp report file
 	public static ExtentReports genrateExtentReport() {
 		try {
@@ -120,6 +121,7 @@ public class WebUtil {
 		}
 		return extReport;
 	}
+
 	// Creates ExtentTest for logging test execution
 	public ExtentTest generateExtentTest(String testName) {
 		try {
@@ -132,6 +134,7 @@ public class WebUtil {
 		}
 		return extentTest;
 	}
+
 	// Flushes and saves Extent Report
 	public void flush() {
 		try {
@@ -142,6 +145,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Opens application URL in browser
 	public void openURL(String URL) {
 		try {
@@ -155,6 +159,7 @@ public class WebUtil {
 			extentTest.addScreenCaptureFromPath(takeScreenShot("OpenURL"));
 		}
 	}
+
 	// Maximizes browser window
 	public void maxmize() {
 		try {
@@ -168,6 +173,7 @@ public class WebUtil {
 			extentTest.addScreenCaptureFromPath(takeScreenShot("Maxmize Window"));
 		}
 	}
+
 	// Closes current browser tab/window
 	public void close() {
 		try {
@@ -178,6 +184,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Quits complete browser session
 	public void quit() {
 		try {
@@ -188,6 +195,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Sends input value into text field
 	public void sendKeys(WebElement we, String value, String eleName) {
 		try {
@@ -201,6 +209,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Clears existing text from input field
 	public void clear(WebElement we, String eleName) {
 		try {
@@ -212,6 +221,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Clicks on web element
 	public void click(WebElement we, String eleName) {
 		try {
@@ -223,6 +233,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Fetches visible text from web element
 	public String getText(WebElement we) {
 		String elementText = "";
@@ -304,6 +315,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Validates current page URL
 	public void validateCurrentURL(String expURL) {
 		try {
@@ -321,6 +333,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Fetches attribute value from web element
 	public String getAttribute(WebElement we, String attributeValue) {
 		String value = "";
@@ -334,6 +347,7 @@ public class WebUtil {
 		}
 		return value;
 	}
+
 	// Validates expected text with actual web element text
 	public void validateTextValue(WebElement we, String expText) {
 
@@ -352,6 +366,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Fetches first selected option from dropdown
 	public WebElement verifyGetFirstSelectedOption(WebElement we) {
 		WebElement selectedOption = null;
@@ -365,6 +380,7 @@ public class WebUtil {
 		}
 		return selectedOption;
 	}
+
 	// Selects dropdown option using visible text
 	public void selectDropDownByText(WebElement we, String visibleText) {
 		try {
@@ -383,6 +399,7 @@ public class WebUtil {
 			extentTest.log(Status.FAIL, "Exception: " + e.getMessage());
 		}
 	}
+
 	// Applies implicit wait globally
 	public void implicitlyWait() {
 		try {
@@ -394,6 +411,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Applies explicit wait until element becomes visible
 	public void explicitlyWait(WebElement WeEle) {
 		try {
@@ -406,6 +424,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Accepts browser alert popup
 	public void alertHandleAccept() {
 		try {
@@ -422,9 +441,10 @@ public class WebUtil {
 			extentTest.log(Status.FAIL, "Failed to handle alert: " + e.getMessage());
 		}
 	}
+
 	// Validates alert popup text and accepts alert
 	public void alertTextValidation(String expectedText) {
-		
+
 		try {
 			// Wait until alert is present (prevents NoAlertPresentException)
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -451,6 +471,7 @@ public class WebUtil {
 			extentTest.log(Status.FAIL, "Exception while handling alert: " + e.getMessage());
 		}
 	}
+
 	// Captures screenshot and returns screenshot path
 	public String takeScreenShot(String testCaseImageName) {
 		String path = "";
@@ -471,6 +492,7 @@ public class WebUtil {
 		}
 		return path;
 	}
+
 	// Reads data from properties file
 	public static Properties propertiFile(String fileName) {
 		Properties properties = new Properties();
@@ -487,6 +509,7 @@ public class WebUtil {
 
 		return properties;
 	}
+
 	// Performs mouse hover action on element
 	public void mouseOver(WebElement weEle, String eleName) {
 		Actions actbj = new Actions(driver);
@@ -498,6 +521,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 	}
+
 	// Performs click action using Actions class
 	public void clickByAction(WebElement ele, String eleName) {
 		Actions actbj = new Actions(driver);
@@ -510,6 +534,7 @@ public class WebUtil {
 		}
 
 	}
+
 	// Performs generic click using Actions class
 	public void clickByAction(String eleName) {
 		Actions actbj = new Actions(driver);
@@ -522,6 +547,7 @@ public class WebUtil {
 		}
 
 	}
+
 	// Sends keyboard input using Actions class
 	public void sendkeyByAction(WebElement ele, String input, String eleName) {
 		Actions actbj = new Actions(driver);
@@ -534,6 +560,7 @@ public class WebUtil {
 		}
 
 	}
+
 	// Scrolls page until element becomes visible
 	public void scrollByAction(WebElement ele) {
 		Actions actbj = new Actions(driver);
@@ -546,6 +573,7 @@ public class WebUtil {
 		}
 
 	}
+
 	// Fetches list of text from multiple web elements
 	public List<String> getListOfText(List<WebElement> listOfWebEle) {
 		List<String> strList = new ArrayList<>();
@@ -562,6 +590,7 @@ public class WebUtil {
 		}
 		return strList;
 	}
+
 	// Validates actual list with expected list
 	public void validateListOfText(List<WebElement> weActualList, List<String> expectedList) {
 
@@ -579,6 +608,7 @@ public class WebUtil {
 			throw e;
 		}
 	}
+
 	// Selects option from auto-suggestion dropdown
 	public void selectAutoSuggestOption(List<WebElement> options, WebElement weSendKeys, String sendValue,
 			String eleName, String valueToSelect) {
@@ -610,12 +640,13 @@ public class WebUtil {
 			extentTest.fail("Exception: " + e.getMessage());
 		}
 	}
+
 	// Selects value from search result grid/table
-	public void selectOptionFromSearch( String eleName, String valueToSelect) {
+	public void selectOptionFromSearch(String eleName, String valueToSelect) {
 		try {
 
-			List<WebElement> options = driver
-					.findElements(By.xpath("//img[contains(@src,'accept.png')]/ancestor::td/following-sibling::td[@class='x-grid3-col x-grid3-cell x-grid3-td-2 ']"));
+			List<WebElement> options = driver.findElements(By.xpath(
+					"//img[contains(@src,'accept.png')]/ancestor::td/following-sibling::td[@class='x-grid3-col x-grid3-cell x-grid3-td-2 ']"));
 
 			// Step 2: Wait until list is visible
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -626,7 +657,8 @@ public class WebUtil {
 				String text = option.getText().trim();
 
 				if (text.equalsIgnoreCase(valueToSelect)) {
-				WebElement weClick =	driver.findElement(By.xpath("//div[text()='"+text+"']/parent::td/preceding-sibling::td//div//img"));
+					WebElement weClick = driver.findElement(
+							By.xpath("//div[text()='" + text + "']/parent::td/preceding-sibling::td//div//img"));
 					weClick.click();
 
 					extentTest.pass(text + " selected successfully in: " + eleName);
@@ -643,6 +675,7 @@ public class WebUtil {
 			extentTest.fail("Exception: " + e.getMessage());
 		}
 	}
+
 	// Fetches and prints table data into Extent Report
 	public void printTableData() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
