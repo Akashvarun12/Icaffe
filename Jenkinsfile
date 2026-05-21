@@ -2,6 +2,11 @@ pipeline {
 
     agent any
 
+    triggers {
+
+        cron('0 16 * * *')
+    }
+
     stages {
 
         stage('Checkout') {
@@ -22,18 +27,18 @@ pipeline {
         }
     }
 
-   post {
+    post {
 
-    always {
+        always {
 
-       publishHTML(target: [
+            publishHTML(target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
                 reportDir: 'ICaffeResult',
                 reportFiles: '*.html',
-                reportName: 'icaffe'
-        ])
+                reportName: 'Extent Report'
+            ])
+        }
     }
-}
 }
