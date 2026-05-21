@@ -7,7 +7,7 @@
 		<parameter name="sheetName" value="LoginSheet" />
 		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
 		<classes>
-			<class name="logintestcase.LoginTestCase" />
+			<class name="login_testcase.LoginTestCase" />
 		</classes>
 	</test>
 	             
@@ -20,7 +20,7 @@
 
 		<classes>
 			<class
-				name="branch_division_finyear.Branch_Division_FinYear_TestCase" />
+				name="branch_division_financialyear_testcase.Branch_Division_FinYear_TestCase" />
 
 
 		</classes>
