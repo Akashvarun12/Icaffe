@@ -18,9 +18,9 @@ pipeline {
             }
         }
         
-        stage('Clean Old Reports One Time') {
+stage('Clean Old Reports One Time') {
     steps {
-        bat 'if exist ExtentReport rmdir /s /q ICaffe Project Report'
+        bat 'if exist ExtentReport rmdir /s /q ExtentReport'
     }
 }
 
