@@ -64,24 +64,11 @@ public class WebUtil {
 
 		try {
 			if (browser.equalsIgnoreCase("chromebrowser")) {
-//				  ChromeOptions options = new ChromeOptions();
-//
-//		            options.addArguments("--remote-allow-origins=*");
-//		            options.addArguments("--headless=new");
-//		            options.addArguments("--disable-gpu");
-//		            options.addArguments("--no-sandbox");
-//		            options.addArguments("--window-size=1366,768");
 
 				setDriver(new ChromeDriver());
 			} else if (browser.equalsIgnoreCase("edgebrowser")) {
 
-//				  EdgeOptions options= new EdgeOptions();
-//
-//		            options.addArguments("--remote-allow-origins=*");
-//		            options.addArguments("--headless=new");
-//		            options.addArguments("--disable-gpu");
-//		            options.addArguments("--no-sandbox");
-//		            options.addArguments("--window-size=1366,768");
+
 				setDriver(new EdgeDriver());
 			} else if (browser.equalsIgnoreCase("firefoxbrowser")) {
 				setDriver(new FirefoxDriver());
@@ -137,25 +124,6 @@ public class WebUtil {
 	    return extReport;
 	}
 
-//	// Generates Extent Report with timestamp report file
-//	public static ExtentReports genrateExtentReport() {
-//		try {
-//			extReport = new ExtentReports();
-//			SimpleDateFormat simpDateFormat = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
-//			String timeStamp = simpDateFormat.format(new Date());
-//			File folderObj = new File("ICaffeResult");
-//			if (!folderObj.exists()) {
-//				folderObj.mkdir();
-//			}
-//			ExtentSparkReporter extSparkReport = new ExtentSparkReporter("ICaffeResult\\icaffe_" + timeStamp + ".html");
-//			extSparkReport.config().setTheme(Theme.DARK);
-//			extSparkReport.config().setReportName("Akash Varun");
-//			extReport.attachReporter(extSparkReport);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return extReport;
-//	}
 
 	// Creates ExtentTest for logging test execution
 	public ExtentTest generateExtentTest(String testName,String reportType) {
@@ -509,13 +477,13 @@ public class WebUtil {
 
 	// Captures screenshot and returns screenshot path
 	public String takeScreenShot(String testCaseImageName) {
-		String path = "";
+		String path = "./screenshots/";
 		try {
 			DateFormat dFormat = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
 			String timeStamp = dFormat.format(new Date());
 			TakesScreenshot tssObj = (TakesScreenshot) driver;
 			File sourceFile = tssObj.getScreenshotAs(OutputType.FILE);
-			File folderObj = new File("SnapshotsFolder");
+			File folderObj = new File("ExtentReport/screenshots");
 			if (!folderObj.exists()) {
 				folderObj.mkdir();
 			}

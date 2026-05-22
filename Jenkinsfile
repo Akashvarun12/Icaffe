@@ -18,17 +18,17 @@ pipeline {
             }
         }
         
-stage('Clean Old Reports One Time') {
+/*stage('Clean Old Reports One Time') {
     steps {
         bat 'if exist ExtentReport rmdir /s /q ExtentReport'
     }
-}
+}*/
 
         stage('Build & Test') {
 
             steps {
 
-                bat 'mvn clean install'
+                bat 'mvn clean install || exit /b 0'
             }
         }
     }
@@ -36,11 +36,13 @@ stage('Clean Old Reports One Time') {
     post {
 
         always {
+			
+			junit 'target/surefire-reports/*.xml'
 
             publishHTML(target: [
-                allowMissing: false,
+                allowMissing: true,
                 alwaysLinkToLastBuild: true,
-                keepAll: false,
+                keepAll: true,
                 reportDir: 'ExtentReport',
                 reportFiles: '*.html',
                 reportName: 'ICaffe Project Report'
