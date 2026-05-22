@@ -51,8 +51,6 @@ public class LoginTestCase {
 			utilObj.takeScreenShot(testName.getName());
 		}
 		Thread.sleep(1000);
-//		Login_Page logObj = new Login_Page(utilObj);
-//		logObj.logOut();
 		utilObj.quit();
 		utilObj.flush();
 

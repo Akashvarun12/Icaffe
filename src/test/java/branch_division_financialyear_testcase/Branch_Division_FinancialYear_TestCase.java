@@ -104,35 +104,6 @@ public class Branch_Division_FinancialYear_TestCase {
 
 	}
 
-	// Validate Branch_Division_FinYear_with_ID from Excel sheet (DYNAMICALLY)...
 
-//	@Test(priority = 2)
-	public void validate_Branch_Division_FinYear_with_ID(ITestContext context ) {
-
-		BranchDivisionFinYear_Page logBranchDiv = new BranchDivisionFinYear_Page(utilObj, extObj);
-
-		
-		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
-
-		String branchname = testData.get("branchName");
-		String division = testData.get("division");
-		String finYear = testData.get("finYear");
-
-		logBranchDiv.SelectBranch(branchname);
-
-		logBranchDiv.SelectDevision(division);
-
-		logBranchDiv.SelectFinYear(finYear);
-
-		logBranchDiv.clickOnOKButton();
-
-		Homepage homeObj = new Homepage(utilObj);
-		
-		List<String> expectedList = Arrays.asList("Akash12", "(2627)", "DEMO LTD", "Ahmedabad (Export Sea)");
-//		List<String> expectedList = Arrays.asList(exp_ID, exp_Year, exp_ENV, exp_Branch_Division);
-		homeObj.getText_LoginBranchDivision_OnHomePage(expectedList);
-	
-
-	}
 
 }
