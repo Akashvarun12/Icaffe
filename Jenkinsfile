@@ -17,6 +17,12 @@ pipeline {
                 url: 'https://github.com/Akashvarun12/project_iCaffe.git'
             }
         }
+        
+        stage('Clean Old Reports One Time') {
+    steps {
+        bat 'if exist ExtentReport rmdir /s /q ExtentReport'
+    }
+}
 
         stage('Build & Test') {
 
@@ -34,7 +40,7 @@ pipeline {
             publishHTML(target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
-                keepAll: true,
+                keepAll: false,
                 reportDir: 'ExtentReport',
                 reportFiles: '*.html',
                 reportName: 'ICaffe Project Report'
