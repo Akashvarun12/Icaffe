@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [icaffe (0)]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="verifyShipperMasterTitle(failed)">
-    <parameter name="expTitle" value="Shipper Master"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="verifyShipperMasterTitle"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyShipperMasterTitle(failed) -->
+<suite name="Failed suite [icaffe]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(failed)">
     <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
     <parameter name="sheetName" value="MastersPartyExporter"/>
@@ -22,125 +8,13 @@
     <classes>
       <class name="masterstestcase.Party_Exporter_TestCase">
         <methods>
-          <include name="takeScreenShot"/>
           <include name="generatReport"/>
+          <include name="takeScreenShot"/>
           <include name="login"/>
-          <include name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest"/>
+          <include name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest" invocation-numbers="0"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- masterstestcase.Party_Exporter_TestCase -->
     </classes>
   </test> <!-- verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(failed) -->
-  <test thread-count="5" name="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest(failed)">
-    <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="GovernmentShipperPartyCreation"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="generatReport"/>
-          <include name="takeScreenShot"/>
-          <include name="login"/>
-          <include name="verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest(failed) -->
-  <test thread-count="5" name="verifyDuplicateShipperNameForGovernmentPartyCreationTest(failed)">
-    <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="DuplicateShipperNameForGovernment"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="verifyDuplicateShipperNameForGovernmentPartyCreationTest"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyDuplicateShipperNameForGovernmentPartyCreationTest(failed) -->
-  <test thread-count="5" name="verifyDuplicateIECNumberForGovernmentShipperCreation(failed)">
-    <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="DuplicateIECNumberforGovernmentShipper"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="closeBrowser"/>
-          <include name="verifyDuplicateIECNumberForGovernmentShipperCreation"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyDuplicateIECNumberForGovernmentShipperCreation(failed) -->
-  <test thread-count="5" name="verifyDuplicateIECNumberForPrivateShipperCreation(failed)">
-    <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="DuplicateIECNumberforPrivateShipper"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="verifyDuplicateIECNumberForPrivateShipperCreation"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyDuplicateIECNumberForPrivateShipperCreation(failed) -->
-  <test thread-count="5" name="verifyShipperPartyModification(failed)">
-    <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="ShipperPartyModification"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="verifyShipperPartyModification"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyShipperPartyModification(failed) -->
-  <test thread-count="5" name="verifyShipperPartyDisplayedInSearchGrid(failed)">
-    <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="ShipperPartySearch"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="verifyShipperPartyDisplayedInSearchGrid"/>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyShipperPartyDisplayedInSearchGrid(failed) -->
-  <test thread-count="5" name="verifyShipperPartyDeletion(failed)">
-    <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="ShipperPartyDeletion"/>
-    <classes>
-      <class name="masterstestcase.Party_Exporter_TestCase">
-        <methods>
-          <include name="takeScreenShot"/>
-          <include name="generatReport"/>
-          <include name="login"/>
-          <include name="verifyShipperPartyDeletion"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- masterstestcase.Party_Exporter_TestCase -->
-    </classes>
-  </test> <!-- verifyShipperPartyDeletion(failed) -->
-</suite> <!-- Failed suite [icaffe (0)] -->
+</suite> <!-- Failed suite [icaffe] -->

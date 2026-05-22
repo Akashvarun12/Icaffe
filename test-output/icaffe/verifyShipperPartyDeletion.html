@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 20 16:24:35 IST 2026</td>
+<td>Started on:</td><td>Fri May 22 14:55:24 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1886 ms)</td>
+<tr><td>Total time:</td><td>9 seconds (9404 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,15 +77,13 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='masterstestcase.Party_Exporter_TestCase.login()'><b>login</b><br>Test class: masterstestcase.Party_Exporter_TestCase<br>Parameters: public void masterstestcase.Party_Exporter_TestCase.verifyShipperPartyDeletion(org.testng.ITestContext)</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=148.0.7778.168)
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e05bf8c2a2368872b0c8bd24125840f, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62786}, goog:processID: 2808, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62786/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e05bf8c2a2368872b0c8bd24125840f
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c0d912a1859aa90f248514e8bc517d51, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 11648, ms:edgeOptions: {debuggerAddress: localhost:51692}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51692/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0d912a1859aa90f248514e8bc517d51
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -96,21 +94,19 @@ Session ID: 0e05bf8c2a2368872b0c8bd24125840f
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-	at webutil.WebUtil.takeScreenShot(WebUtil.java:453)
-	at webutil.WebUtil.sendKeys(WebUtil.java:192)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:485)
+	at webutil.WebUtil.sendKeys(WebUtil.java:211)
 	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-	at basetest.BaseTest.login(BaseTest.java:51)
+	at basetest.BaseTest.login(BaseTest.java:53)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace172711139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace172711139'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=148.0.7778.168)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1255877511", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1255877511'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e05bf8c2a2368872b0c8bd24125840f, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62786}, goog:processID: 2808, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62786/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e05bf8c2a2368872b0c8bd24125840f
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c0d912a1859aa90f248514e8bc517d51, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 11648, ms:edgeOptions: {debuggerAddress: localhost:51692}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51692/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0d912a1859aa90f248514e8bc517d51
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -121,10 +117,10 @@ Session ID: 0e05bf8c2a2368872b0c8bd24125840f
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-	at webutil.WebUtil.takeScreenShot(WebUtil.java:453)
-	at webutil.WebUtil.sendKeys(WebUtil.java:192)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:485)
+	at webutil.WebUtil.sendKeys(WebUtil.java:211)
 	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-	at basetest.BaseTest.login(BaseTest.java:51)
+	at basetest.BaseTest.login(BaseTest.java:53)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -156,7 +152,7 @@ Session ID: 0e05bf8c2a2368872b0c8bd24125840f
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>1</td>
+<td>9</td>
 <td>masterstestcase.Party_Exporter_TestCase@6db9f5a4</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
@@ -182,16 +178,14 @@ Session ID: 0e05bf8c2a2368872b0c8bd24125840f
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='masterstestcase.Party_Exporter_TestCase.verifyShipperPartyDeletion()'><b>verifyShipperPartyDeletion</b><br>Test class: masterstestcase.Party_Exporter_TestCase<br>Parameters: org.testng.TestRunner@43c87306</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=148.0.7778.168)
+<td title='masterstestcase.Party_Exporter_TestCase.verifyShipperPartyDeletion()'><b>verifyShipperPartyDeletion</b><br>Test class: masterstestcase.Party_Exporter_TestCase<br>Parameters: org.testng.TestRunner@45c270f9</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e05bf8c2a2368872b0c8bd24125840f, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62786}, goog:processID: 2808, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62786/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e05bf8c2a2368872b0c8bd24125840f
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c0d912a1859aa90f248514e8bc517d51, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 11648, ms:edgeOptions: {debuggerAddress: localhost:51692}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51692/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0d912a1859aa90f248514e8bc517d51
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -202,21 +196,19 @@ Session ID: 0e05bf8c2a2368872b0c8bd24125840f
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-	at webutil.WebUtil.takeScreenShot(WebUtil.java:453)
-	at webutil.WebUtil.sendKeys(WebUtil.java:192)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:485)
+	at webutil.WebUtil.sendKeys(WebUtil.java:211)
 	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-	at basetest.BaseTest.login(BaseTest.java:51)
+	at basetest.BaseTest.login(BaseTest.java:53)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace351535152", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace351535152'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=148.0.7778.168)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1266091244", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1266091244'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e05bf8c2a2368872b0c8bd24125840f, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62786}, goog:processID: 2808, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62786/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e05bf8c2a2368872b0c8bd24125840f
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c0d912a1859aa90f248514e8bc517d51, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.70, fedcm:accounts: true, goog:processID: 11648, ms:edgeOptions: {debuggerAddress: localhost:51692}, msedge: {msedgedriverVersion: 148.0.3967.70 (8956564be045..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51692/devtoo..., se:cdpVersion: 148.0.3967.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0d912a1859aa90f248514e8bc517d51
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -227,10 +219,10 @@ Session ID: 0e05bf8c2a2368872b0c8bd24125840f
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:395)
-	at webutil.WebUtil.takeScreenShot(WebUtil.java:453)
-	at webutil.WebUtil.sendKeys(WebUtil.java:192)
+	at webutil.WebUtil.takeScreenShot(WebUtil.java:485)
+	at webutil.WebUtil.sendKeys(WebUtil.java:211)
 	at icaffe_loginpage.IcaffeLogin.enterLoginCreadential(IcaffeLogin.java:49)
-	at basetest.BaseTest.login(BaseTest.java:51)
+	at basetest.BaseTest.login(BaseTest.java:53)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)

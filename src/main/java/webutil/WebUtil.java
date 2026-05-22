@@ -43,6 +43,20 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import com.google.common.io.Files;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.imageio.ImageIO;
+
+import org.openqa.selenium.WebDriver;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
 public class WebUtil {
 
 	private WebDriver driver;
@@ -379,6 +393,7 @@ public class WebUtil {
 			extentTest.log(Status.INFO, "Fetched selected option");
 		} catch (Exception e) {
 			extentTest.log(Status.FAIL, "Failed to get selected option");
+			extentTest.addScreenCaptureFromPath(takeScreenShot("SelectedOption"));
 			e.printStackTrace();
 		}
 		return selectedOption;
@@ -399,6 +414,7 @@ public class WebUtil {
 
 		} catch (Exception e) {
 			extentTest.log(Status.FAIL, "Failed to select dropdown: " + visibleText);
+			extentTest.addScreenCaptureFromPath(takeScreenShot(visibleText));
 			extentTest.log(Status.FAIL, "Exception: " + e.getMessage());
 		}
 	}
@@ -442,6 +458,7 @@ public class WebUtil {
 			extentTest.log(Status.WARNING, "No alert appeared to handle");
 		} catch (Exception e) {
 			extentTest.log(Status.FAIL, "Failed to handle alert: " + e.getMessage());
+			extentTest.addScreenCaptureFromPath(takeScreenShot("Alert Handle"));
 		}
 	}
 
@@ -461,8 +478,11 @@ public class WebUtil {
 				extentTest.log(Status.PASS,
 						"Alert text matched successfully. Expected: " + expectedText + " | Actual: " + actualText);
 			} else {
+				Thread.sleep(1000);
+				extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidAlertText"));
 				extentTest.log(Status.FAIL,
 						"Alert text mismatch. Expected: " + expectedText + " | Actual: " + actualText);
+				
 			}
 
 			// Optional: accept alert after validation (recommended)
@@ -471,30 +491,48 @@ public class WebUtil {
 		} catch (TimeoutException e) {
 			extentTest.log(Status.WARNING, "No alert appeared within timeout");
 		} catch (Exception e) {
+			extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidAlertText"));
 			extentTest.log(Status.FAIL, "Exception while handling alert: " + e.getMessage());
 		}
 	}
 
+
 	// Captures screenshot and returns screenshot path
 	public String takeScreenShot(String testCaseImageName) {
-		String path = "./screenshots/";
-		try {
-			DateFormat dFormat = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
-			String timeStamp = dFormat.format(new Date());
-			TakesScreenshot tssObj = (TakesScreenshot) driver;
-			File sourceFile = tssObj.getScreenshotAs(OutputType.FILE);
-			File folderObj = new File("ExtentReport/screenshots");
-			if (!folderObj.exists()) {
-				folderObj.mkdir();
-			}
-			File destinationFile = new File(folderObj, testCaseImageName + "_" + timeStamp + ".jpg");
-			Files.copy(sourceFile, destinationFile);
-			path = destinationFile.getAbsolutePath();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return path;
+
+	    String path = "";
+
+	    try {
+
+	        DateFormat dFormat = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
+	        String timeStamp = dFormat.format(new Date());
+
+	        File folderObj = new File("ExtentReport/screenshots");
+
+	        if (!folderObj.exists()) {
+	            folderObj.mkdirs();
+	        }
+
+	        File destinationFile = new File(
+	                folderObj,
+	                testCaseImageName + "_" + timeStamp + ".png"
+	        );
+
+	        Screenshot screenshot = new AShot()
+	                .shootingStrategy(ShootingStrategies.viewportPasting(1000))
+	                .takeScreenshot(driver);
+
+	        ImageIO.write(screenshot.getImage(), "PNG", destinationFile);
+
+	        path = destinationFile.getAbsolutePath();
+
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+
+	    return path;
 	}
+
 
 	// Reads data from properties file
 	public static Properties propertiFile(String fileName) {
@@ -533,6 +571,7 @@ public class WebUtil {
 			extentTest.log(Status.INFO, "Clicked Succsessfully on " + eleName + " by Action");
 		} catch (Exception e) {
 			extentTest.log(Status.FAIL, "Clicked Failed on " + eleName + " by Action");
+			extentTest.addScreenCaptureFromPath(takeScreenShot(eleName));
 			e.printStackTrace();
 		}
 
@@ -546,6 +585,7 @@ public class WebUtil {
 			extentTest.log(Status.INFO, "Clicked Succsessfully on " + eleName + " by Action");
 		} catch (Exception e) {
 			extentTest.log(Status.FAIL, "Clicked Failed on " + eleName + " by Action");
+			extentTest.addScreenCaptureFromPath(takeScreenShot(eleName));
 			e.printStackTrace();
 		}
 
@@ -559,6 +599,7 @@ public class WebUtil {
 			extentTest.log(Status.INFO, input + " Send Succsessfully on " + eleName + " by Action");
 		} catch (Exception e) {
 			extentTest.log(Status.FAIL, " Send Fail on " + eleName + " by Action");
+			extentTest.addScreenCaptureFromPath(takeScreenShot(eleName));
 			e.printStackTrace();
 		}
 
@@ -588,7 +629,8 @@ public class WebUtil {
 				strList.add(textList);
 			}
 		} catch (Exception e) {
-			extentTest.log(Status.INFO, " List of Element not Fetch successfully");
+			extentTest.log(Status.FAIL, " List of Element not Fetch successfully");
+			extentTest.addScreenCaptureFromPath(takeScreenShot("ListOfText"));
 			e.printStackTrace();
 		}
 		return strList;
@@ -608,6 +650,7 @@ public class WebUtil {
 			extentTest.fail("List mismatch");
 			extentTest.fail("Actual: " + actualList);
 			extentTest.fail("Expected: " + expectedList);
+			extentTest.addScreenCaptureFromPath(takeScreenShot("ListOfText"));
 			throw e;
 		}
 	}
@@ -640,6 +683,7 @@ public class WebUtil {
 
 		} catch (Exception e) {
 			extentTest.fail("Failed to select option: " + valueToSelect + " in " + eleName);
+			extentTest.addScreenCaptureFromPath(takeScreenShot("Suggestion Not select"));
 			extentTest.fail("Exception: " + e.getMessage());
 		}
 	}
@@ -675,6 +719,7 @@ public class WebUtil {
 
 		} catch (Exception e) {
 			extentTest.fail("Failed to select option: " + valueToSelect + " in " + eleName);
+			extentTest.addScreenCaptureFromPath(takeScreenShot("Option not found"));
 			extentTest.fail("Exception: " + e.getMessage());
 		}
 	}
@@ -714,6 +759,7 @@ public class WebUtil {
 				}
 
 			} catch (Exception e) {
+				extentTest.addScreenCaptureFromPath(takeScreenShot("Column not found"));
 				System.out.println("Column not found");
 			}
 		}

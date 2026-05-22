@@ -50,6 +50,12 @@ public class Party_Exporter_TestCase extends BaseTest {
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnSaveButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 	@Test(priority = 3)
