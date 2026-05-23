@@ -109,7 +109,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 
 	public void verifyDuplicateIECNumberForGovernmentShipperCreation(ITestContext context) {
 
@@ -134,7 +134,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 
 	public void verifyDuplicateIECNumberForPrivateShipperCreation(ITestContext context) {
 
@@ -159,7 +159,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 7)
 	public void verifyShipperPartyModification(ITestContext context) {
 		Homepage homeObj = new Homepage(utilObj);
 		homeObj.Goto_Masters_PartyExporter();
@@ -182,7 +182,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 8)
 	public void verifyShipperPartyDisplayedInSearchGrid(ITestContext context) {
 		Homepage homeObj = new Homepage(utilObj);
 		homeObj.Goto_Masters_PartyExporter();
@@ -196,8 +196,42 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 	}
 
-	@Test(priority = 5)
-	public void verifyShipperPartyDeletion(ITestContext context) {
+	@Test(priority = 9)
+	public void verifyGovernmentShipperPartyDeletion(ITestContext context) {
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ExporterTestData data = new ExporterTestData(testData);
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyExporter();
+		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		expShipperObj.deleteShipperParty(context, data.getSelectclassDropDownOption_InSearch(),
+				data.getSelectname_or_ID_InSearch(), data.getselectpartyName_InSearchGrid());
+		expShipperObj.clickOnDeleteButton();
+
+		utilObj.alertHandleAccept();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+
+	}
+	
+	@Test(priority = 10)
+	public void verifyDuplicateGovernmentShipperPartyDeletion(ITestContext context) {
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ExporterTestData data = new ExporterTestData(testData);
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyExporter();
+		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		expShipperObj.deleteShipperParty(context, data.getSelectclassDropDownOption_InSearch(),
+				data.getSelectname_or_ID_InSearch(), data.getselectpartyName_InSearchGrid());
+		expShipperObj.clickOnDeleteButton();
+
+		utilObj.alertHandleAccept();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+
+	}
+	
+	@Test(priority = 11)
+	public void verifyPrivateShipperPartyDeletion(ITestContext context) {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
 		Homepage homeObj = new Homepage(utilObj);

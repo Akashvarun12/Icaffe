@@ -18,11 +18,11 @@ pipeline {
             }
         }
         
-stage('Clean Old Reports One Time') {
+/*stage('Clean Old Reports One Time') {
     steps {
         bat 'if exist ExtentReport rmdir /s /q ExtentReport'
     }
-}
+}*/
 
         stage('Build & Test') {
 
@@ -42,7 +42,7 @@ stage('Clean Old Reports One Time') {
             publishHTML(target: [
                 allowMissing: true,
                 alwaysLinkToLastBuild: true,
-                keepAll: false,
+                keepAll: true,
                 reportDir: 'ExtentReport',
                 reportFiles: '*.html',
                 reportName: 'ICaffe Project Report'

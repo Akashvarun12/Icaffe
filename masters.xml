@@ -135,16 +135,48 @@
 
 	</test>
 
-	<test name="verifyShipperPartyDeletion">
+	<test name="verifyGovernmentShipperPartyDeletion">
 		<parameter name="sheetName" value="MastersPartyExporter" />
 		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
 
-		<parameter name="action" value="ShipperPartyDeletion" />
+		<parameter name="action" value="GovernmentShipperPartyDeletion" />
 
 		<classes>
 			<class name="masterstestcase.Party_Exporter_TestCase">
 				<methods>
-					<include name="verifyShipperPartyDeletion" />
+					<include name="verifyGovernmentShipperPartyDeletion" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test name="verifyDuplicateGovernmentShipperPartyDeletion">
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+
+		<parameter name="action" value="DuplicateGovernmentShipperPartyDeletion" />
+
+		<classes>
+			<class name="masterstestcase.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyDuplicateGovernmentShipperPartyDeletion" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+			<test name="verifyPrivateShipperPartyDeletion">
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+
+		<parameter name="action" value="PrivateShipperPartyDeletion" />
+
+		<classes>
+			<class name="masterstestcase.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyPrivateShipperPartyDeletion" />
 				</methods>
 			</class>
 		</classes>
