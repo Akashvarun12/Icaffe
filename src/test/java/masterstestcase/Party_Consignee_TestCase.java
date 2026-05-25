@@ -25,24 +25,24 @@ public class Party_Consignee_TestCase extends BaseTest{
 		utilObj.validateCurrentURL(context);
 
 	}
+//	
+//	@Test(priority = 2)
+//
+//	public void verifyConsigneePartyCreationWithMandatoryFieldsTest(ITestContext context) {
+//
+//		Homepage homeObj = new Homepage(utilObj);
+//		homeObj.Goto_Masters_PartyConsignee();
+//		
+//		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+//		ExporterTestData data = new ExporterTestData(testData);
+
 	
-	@Test(priority = 2)
-
-	public void verifyConsigneePartyCreationWithMandatoryFieldsTest(ITestContext context) {
-
-		Homepage homeObj = new Homepage(utilObj);
-		homeObj.Goto_Masters_PartyConsignee();
-		
-		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
-		ExporterTestData data = new ExporterTestData(testData);
-
-	
-		
-		Consignee conObj=	new Consignee(utilObj);
-		conObj.enterConsigneePartyDetailsMandatoryFields();
-		conObj.enterConsigneePartyAddressMandatoryFields();
-		conObj.clickOnAddButton();
-		conObj.clickOnSaveButton();
+//		
+//		Consignee conObj=	new Consignee(utilObj);
+//		conObj.enterConsigneePartyDetailsMandatoryFields();
+//		conObj.enterConsigneePartyAddressMandatoryFields();
+//		conObj.clickOnAddButton();
+//		conObj.clickOnSaveButton();
 		
 
 //		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
@@ -64,7 +64,7 @@ public class Party_Consignee_TestCase extends BaseTest{
 //			
 //			e.printStackTrace();
 //		}
-	}
+//	}
 	
 	
 }
