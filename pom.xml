@@ -95,7 +95,7 @@
 
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>all.xml</suiteXmlFile>
+						<suiteXmlFile>login.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 
