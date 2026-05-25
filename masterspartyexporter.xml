@@ -5,7 +5,7 @@
 <suite name="icaffe">
 
 
-	<!--		<test name="verifyShipperMasterTitle">
+			<test name="verifyShipperMasterTitle">
 
 		<parameter name="expTitle" value="Shipper Master" />
 
@@ -181,22 +181,8 @@
 			</class>
 		</classes>
 
-	</test>-->
-
-
-	<test name="verifyConsigneeMasterURL">
-
-		<parameter name="expURL"
-			value="https://idp.icaffe.co.in/forms/Master/ConsigneeMaster.aspx?mnuid=mnuMasterConsignee" />
-
-		<classes>
-			<class name="masterstestcase.Party_Consignee_TestCase">
-				<methods>
-					<include name="verifyConsigneeMasterURL" />
-				</methods>
-			</class>
-		</classes>
-
 	</test>
+
+
 
 </suite>

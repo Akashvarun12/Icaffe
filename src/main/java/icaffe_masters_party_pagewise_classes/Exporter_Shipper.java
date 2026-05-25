@@ -77,7 +77,7 @@ public class Exporter_Shipper {
 	WebElement enter_Name_or_ID;
 
 	@FindBy(xpath = "//img[@src='../../CSImages/edit.png']")
-	WebElement clickOnPrtyAddressGrid;
+	WebElement clickEditIconOnPrtyAddressGrid;
 
 	@FindBy(xpath = "//button[@id='btnModify']")
 	WebElement clickOnModifyButton;
@@ -97,7 +97,7 @@ public class Exporter_Shipper {
 
 	}
 
-	// Enter Mandatory details in shipper details section
+	// Modify Mandatory details in shipper details section
 	public void modifyShipperDetailsMandatoryFields(String partyName, String IECNumber, 
 			String classDropDownOption,String mercManufDropDownOption) {
 		utilobj.clear(shipperName, "Shipper Name Textbox");
@@ -119,7 +119,7 @@ public class Exporter_Shipper {
 		utilobj.clear(clikOnCountry, " Country");
 		utilobj.selectAutoSuggestOption(listOfCountrytext, clikOnCountry, entCountry, "Country Textbox",
 				expSelCountry);
-		utilobj.clear(clickState, " Country");
+		utilobj.clear(clickState, "State");
 		utilobj.selectAutoSuggestOption(listOfStatetext, clickState, entState, "State Textbox", expSelState);
 		utilobj.selectDropDownByText(selectCtxState, ctxState);
 		utilobj.clear(selectGSTNumber, "GST Number Textbox");
@@ -198,7 +198,7 @@ public class Exporter_Shipper {
 
 	// Click on Party Address Grid Edit Icon
 	public void clickOnPartyAddressGrid() {
-		utilobj.click(clickOnPrtyAddressGrid, "Grid Edit Button");
+		utilobj.click(clickEditIconOnPrtyAddressGrid, "Grid Edit Button");
 
 	}
 

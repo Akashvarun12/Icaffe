@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  
+	<test name="verifyConsigneeMasterURL">
+
+		<parameter name="expURL"
+			value="https://idp.icaffe.co.in/forms/Master/ConsigneeMaster.aspx?mnuid=mnuMasterConsignee" />
+
+		<classes>
+			<class name="masterstestcase.Party_Consignee_TestCase">
+				<methods>
+					<include name="verifyConsigneeMasterURL" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test name="verifyConsigneePartyCreationWithMandatoryFieldsTest">
+
+		<classes>
+			<class name="masterstestcase.Party_Consignee_TestCase">
+				<methods>
+					<include name="verifyConsigneePartyCreationWithMandatoryFieldsTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+</suite> <!-- Suite -->

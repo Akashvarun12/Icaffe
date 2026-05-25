@@ -5,7 +5,7 @@
     <suite-files>
         <suite-file path="login.xml"/>
         <suite-file path="bra_div_year.xml"/>
-        <suite-file path="masters.xml"/>
+        <suite-file path="masterspartyexporter.xml"/>
     </suite-files>
 
 </suite>

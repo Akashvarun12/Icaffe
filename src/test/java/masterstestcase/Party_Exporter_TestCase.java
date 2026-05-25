@@ -53,7 +53,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			
+
 			e.printStackTrace();
 		}
 	}
@@ -170,7 +170,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		expShipperObj.modifyShipperPartyWithPartialData(context, data.getSelectclassDropDownOption_InSearch(),
 				data.getSelectname_or_ID_InSearch(), data.getselectpartyName_InSearchGrid(), data.getPartyName(),
 				data.getIECNumber(), data.getClassDropDownOption(), data.getMercManufDropDownOption(),
-				data.getPartyAddress(),data.getEntState(), data.getState(), data.getCtxState(), data.getRegNumber());
+				data.getPartyAddress(), data.getEntState(), data.getState(), data.getCtxState(), data.getRegNumber());
 		expShipperObj.clickOnAddButton();
 
 		expShipperObj.goToOtherTab();
@@ -212,7 +212,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
 
 	}
-	
+
 	@Test(priority = 10)
 	public void verifyDuplicateGovernmentShipperPartyDeletion(ITestContext context) {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
@@ -229,7 +229,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
 
 	}
-	
+
 	@Test(priority = 11)
 	public void verifyPrivateShipperPartyDeletion(ITestContext context) {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);

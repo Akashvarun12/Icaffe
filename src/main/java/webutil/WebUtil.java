@@ -778,40 +778,28 @@ public class WebUtil {
 		}
 	}
 	
-	public void selectRadioButton(String valueToSelect ,String eleName) {
-			try {
+	public void selectRadioButton(String valueToSelect, String eleName) {
 
-				List<WebElement> options = driver.findElements(By.xpath(
-						"//input[@type='radio']"));
+	    try {
 
-				// Step 2: Wait until list is visible
-				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-				wait.until(ExpectedConditions.visibilityOfAllElements(options));
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-				// Step 3: Iterate and match
-				for (WebElement option : options) {
-					String text = option.getText().trim();
+	        WebElement radioBtn = wait.until(ExpectedConditions.elementToBeClickable(
+	                By.xpath("//input[@id='"+valueToSelect+"']")));
 
-					if (text.equalsIgnoreCase(valueToSelect)) {
-						WebElement weClick = driver.findElement(
-								By.xpath("//div[text()='" + text + "']/parent::td/preceding-sibling::td//div//img"));
-						weClick.click();
+	        radioBtn.click();
 
-						extentTest.pass(text + " selected successfully in: " + eleName);
-						return;
-					}
-				}
+	        extentTest.pass(valueToSelect + " selected successfully in: " + eleName);
 
-				// Step 4: Not found
-				extentTest.fail("Option not found: " + valueToSelect + " in " + eleName);
-				throw new RuntimeException("Option not found: " + valueToSelect);
+	    } catch (Exception e) {
 
-			} catch (Exception e) {
-				extentTest.fail("Failed to select option: " + valueToSelect + " in " + eleName);
-				extentTest.addScreenCaptureFromPath(takeScreenShot("Option not found"));
-				extentTest.fail("Exception: " + e.getMessage());
-			}
-		}
+	        extentTest.fail("Failed to select option: " + valueToSelect + " in " + eleName);
+
+	        extentTest.addScreenCaptureFromPath(takeScreenShot("Radio_Button_Error"));
+
+	        extentTest.fail("Exception: " + e.getMessage());
+	    }
+	}
 	
 	//input[@name='ConType']
 }

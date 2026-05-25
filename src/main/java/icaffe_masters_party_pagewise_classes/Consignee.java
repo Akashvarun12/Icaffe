@@ -23,38 +23,26 @@ public class Consignee {
 	@FindBy(xpath = "//input[@name='ConsigneeName']")
 	WebElement consigneeName;
 
-	@FindBy(xpath = "//input[@name='IecNumber']")
-	WebElement IecNumber;
+	@FindBy(xpath = "//input[@name='ConEXTENDEDNAME']")
+	WebElement extendedName;
 
-	@FindBy(xpath = "//select[@id='txtClass']")
-	WebElement selectDropDown_ClassOption;
-
-	@FindBy(xpath = "//select[@name='MercManuf']")
-	WebElement selectDropDown_MercManufOption;
-
-	@FindBy(xpath = "//input[@name='SerialNumber ']")
-	WebElement serialNumber;
+	@FindBy(xpath = "//input[@name='ContactPerson']")
+	WebElement contactPerson;
 
 	@FindBy(xpath = "//input[@name='Address1']")
 	WebElement address;
 
-	@FindBys(@FindBy(xpath = "//ul[@id='ui-id-2']//li"))
+	@FindBys(@FindBy(xpath = "//ul[@id='ui-id-1']//li"))
 	List<WebElement> listOfCountrytext;
 
 	@FindBy(xpath = "//input[@placeholder='Country']")
 	WebElement clikOnCountry;
 
-	@FindBy(xpath = "//ul[@id='ui-id-1']//li")
-	List<WebElement> listOfStatetext;
-
 	@FindBy(xpath = "//input[@placeholder='State']")
 	WebElement clickState;
 
-	@FindBy(xpath = "//select[@name='GSTStateName']")
-	WebElement selectCtxState;
-
-	@FindBy(xpath = "//input[@name='GSTNumber']")
-	WebElement selectGSTNumber;
+	@FindBy(xpath = "//input[@name='Email1']")
+	WebElement clickEmail;
 
 	@FindBy(xpath = "//button[@onclick='InsertAddress();']")
 	WebElement clickOnAddBT;
@@ -62,8 +50,6 @@ public class Consignee {
 	@FindBy(xpath = "//button[@id='btnAdd']")
 	WebElement clickOnSaveBT;
 
-	@FindBy(xpath = "//a[@id='ext-gen24']")
-	WebElement otherTab;
 
 	@FindBy(xpath = "//select[@id='ddlQueryClassType']")
 	WebElement selectDropDown_ClassOptionInSearchField;
@@ -71,11 +57,8 @@ public class Consignee {
 	@FindBy(xpath = "//select[@id='ddlSearchType']")
 	WebElement search_WithShipperName_or_ID;
 
-	@FindBy(xpath = "//input[@id='txtListShipperName']")
-	WebElement enter_Name_or_ID;
-
 	@FindBy(xpath = "//img[@src='../../CSImages/edit.png']")
-	WebElement clickOnPrtyAddressGrid;
+	WebElement clickEditIconOnPrtyAddressGrid;
 
 	@FindBy(xpath = "//button[@id='btnModify']")
 	WebElement clickOnModifyButton;
@@ -84,59 +67,52 @@ public class Consignee {
 	WebElement clickOnDeleteBT;
 
 	// Enter Mandatory details in consignee details section
-	public void enterShipperDetailsMandatoryFields(String partyName, String IECNumber, String classDropDownOption,
-			String mercManufDropDownOption) {
-		utilobj.clear(consigneeName, "Shipper Name Textbox");
-		utilobj.sendKeys(consigneeName, partyName, "Shipper Name Textbox");
-		utilobj.clear(IecNumber, "IEC No Textbox");
-		utilobj.sendKeys(IecNumber, IECNumber, "IEC No Textbox");
-		utilobj.selectDropDownByText(selectDropDown_ClassOption, classDropDownOption);
-		utilobj.selectDropDownByText(selectDropDown_MercManufOption, mercManufDropDownOption);
+	public void enterConsigneePartyDetailsMandatoryFields(String entConsignee,String entExtendedName) {
+		utilobj.selectRadioButton("rdoConsignee","Consignee Party details Radio Button" );
+		utilobj.clear(consigneeName, "Consignee Name Textbox");
+		utilobj.sendKeys(consigneeName, entConsignee, "Consignee Name Textbox");
+		utilobj.clear(extendedName, "Extended Name Textbox");
+		utilobj.sendKeys(extendedName, entExtendedName, "Extended Name Textbox");
+	
 
 	}
 
-	// Enter Mandatory details in shipper details section
-	public void modifyShipperDetailsMandatoryFields(String partyName, String IECNumber, 
-			String classDropDownOption,String mercManufDropDownOption) {
+	// Modify Mandatory details in consignee details section
+	public void modifyConsigneePartyrDetailsMandatoryFields(String modConsignee,String modExtendedName) {
 		utilobj.clear(consigneeName, "Shipper Name Textbox");
-		utilobj.sendKeys(consigneeName, partyName, "Shipper Name Textbox");
-		utilobj.clear(IecNumber, "IEC No Textbox");
-		utilobj.sendKeys(IecNumber, IECNumber, "IEC No Textbox");
-		utilobj.selectDropDownByText(selectDropDown_ClassOption, classDropDownOption);
-		utilobj.selectDropDownByText(selectDropDown_MercManufOption, mercManufDropDownOption);
+		utilobj.sendKeys(consigneeName, modConsignee, "Shipper Name Textbox");
+		utilobj.clear(extendedName, "Extended Name Textbox");
+		utilobj.sendKeys(extendedName, modExtendedName, "Extended Name Textbox");
+	
 
 	}
 
-	// Enter Mandatory details in shipper address section
-	public void enterShipperAddressMandatoryFields(String partySerialNumber, String partyAddress, String entCountry,
-			String expSelCountry, String entState, String expSelState, String GSTNumber, String ctxState) {
-		utilobj.clear(serialNumber, "serial Number Textbox");
-		utilobj.sendKeys(serialNumber, partySerialNumber, "serial Number Textbox");
-		utilobj.clear(address, "address Textbox");
-		utilobj.sendKeys(address, partyAddress, "address Textbox");
-		utilobj.clear(clikOnCountry, " Country");
-		utilobj.selectAutoSuggestOption(listOfCountrytext, clikOnCountry, entCountry, "Country Textbox",
-				expSelCountry);
-		utilobj.clear(clickState, " Country");
-		utilobj.selectAutoSuggestOption(listOfStatetext, clickState, entState, "State Textbox", expSelState);
-		utilobj.selectDropDownByText(selectCtxState, ctxState);
-		utilobj.clear(selectGSTNumber, "GST Number Textbox");
-		utilobj.sendKeys(selectGSTNumber, GSTNumber, "GST Number Textbox");
+	// Enter Mandatory details in consignee address section
+	public void enterConsigneePartyAddressMandatoryFields(String entAddress,String entContactPerson,String entCountry,String selCountry,String entState,String selState,String entEmail) {
+		utilobj.clear(address, "address1 Textbox");
+		utilobj.sendKeys(address, entAddress, "address1 Textbox");
+		utilobj.clear(contactPerson, "contactPerson Textbox");
+		utilobj.sendKeys(contactPerson, entContactPerson, "contactPerson Textbox");
+		utilobj.clear(clikOnCountry, "Country");
+		utilobj.selectAutoSuggestOption(listOfCountrytext, clikOnCountry, entCountry, "Country Textbox",selCountry);
+		utilobj.clear(clickState, "State Textbox");
+		utilobj.sendKeys(clickState, entState, "State Textbox");
+		utilobj.clear(clickState, "Email Textbox");
+		utilobj.sendKeys(clickEmail, entEmail, "Email Textbox");
 
 	}
 
 	// Modify Mandatory details in shipper address section
-	public void modifyShipperAddressMandatoryFields(String partyAddress, String entState, String expSelState,
-			String GSTNumber, String ctxState) {
+	public void modifyConsigneePartyAddressMandatoryFields(String entAddress,String entState,String entEmail) {
 
 		utilobj.clear(address, "address Textbox");
-		utilobj.sendKeys(address, partyAddress, "address Textbox");
+		utilobj.sendKeys(address, entAddress, "address Textbox");
+		utilobj.clear(clickState, "State Textbox");
+		utilobj.sendKeys(clickState, entState, "State Textbox");
+		utilobj.clear(clickState, "Email Textbox");
+		utilobj.sendKeys(clickEmail, entEmail, "Email Textbox");
 
-		utilobj.clear(clickState, "State");
-		utilobj.selectAutoSuggestOption(listOfStatetext, clickState, entState, "State Textbox", expSelState);
-		utilobj.selectDropDownByText(selectCtxState, ctxState);
-		utilobj.clear(selectGSTNumber, "GST Number Textbox");
-		utilobj.sendKeys(selectGSTNumber, GSTNumber, "GST Number Textbox");
+
 
 	}
 
@@ -164,18 +140,14 @@ public class Consignee {
 
 	// Modify shipper party mandatory details partially
 	public void modifyShipperPartyWithPartialData(ITestContext context, String selectclassDropDownOption_InSearch,
-			String selectname_or_ID_InSearch, String selectpartyName_InSearchGrid, String partyName, String IECNumber,
-			String classDropDownOption, String mercManufDropDownOption,  String partyAddress,
-			 String entState, String expSelState, String GSTNumber,
-			String ctxState) {
+			String selectname_or_ID_InSearch,String entConsignee,String entExtendedName,String selectpartyName_InSearchGrid,String entAddress,String entState,String entEmail) {
 
 		selectSearchShipperParty(context, selectclassDropDownOption_InSearch, selectname_or_ID_InSearch);
 
 		utilobj.selectOptionFromSearch("Search Grid", selectpartyName_InSearchGrid);
-		modifyShipperDetailsMandatoryFields(partyName, IECNumber,classDropDownOption, mercManufDropDownOption);
+		modifyConsigneePartyrDetailsMandatoryFields(entConsignee,entExtendedName);
 		clickOnPartyAddressGrid();
-		modifyShipperAddressMandatoryFields( partyAddress,  entState,
-				expSelState,  ctxState,GSTNumber);
+		modifyConsigneePartyAddressMandatoryFields(entAddress,entState,entEmail);
 
 	}
 
@@ -196,7 +168,7 @@ public class Consignee {
 
 	// Click on Party Address Grid Edit Icon
 	public void clickOnPartyAddressGrid() {
-		utilobj.click(clickOnPrtyAddressGrid, "Grid Edit Button");
+		utilobj.click(clickEditIconOnPrtyAddressGrid, "Grid Edit Button");
 
 	}
 
@@ -220,11 +192,6 @@ public class Consignee {
 
 	}
 
-	// goto Shipper party other tab
-	public void goToOtherTab() {
-		utilobj.click(otherTab, "Other Tab");
-
-	}
 
 	
 	

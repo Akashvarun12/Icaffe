@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="verifyConsigneePartyCreationWithMandatoryFieldsTest(failed)">
     <classes>
       <class name="masterstestcase.Party_Consignee_TestCase">
         <methods>
-          <include name="generatReport"/>
           <include name="takeScreenShot"/>
+          <include name="generatReport"/>
           <include name="login"/>
-          <include name="verifyConsigneeMasterURL"/>
+          <include name="verifyConsigneePartyCreationWithMandatoryFieldsTest"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- masterstestcase.Party_Consignee_TestCase -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- verifyConsigneePartyCreationWithMandatoryFieldsTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

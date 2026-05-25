@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-23T12:57:21 IST" name="icaffe" finished-at="2026-05-23T12:57:47 IST" duration-ms="25234">
+  <suite started-at="2026-05-25T14:45:48 IST" name="Suite" finished-at="2026-05-25T14:46:15 IST" duration-ms="26980">
     <groups>
     </groups>
-    <test started-at="2026-05-23T12:57:21 IST" name="verifyConsigneeMasterURL" finished-at="2026-05-23T12:57:47 IST" duration-ms="25234">
+    <test started-at="2026-05-25T14:45:48 IST" name="verifyConsigneePartyCreationWithMandatoryFieldsTest" finished-at="2026-05-25T14:46:15 IST" duration-ms="26980">
       <class name="masterstestcase.Party_Consignee_TestCase">
-        <test-method is-config="true" signature="generatReport()[pri:0, instance:masterstestcase.Party_Consignee_TestCase@fa4c865]" started-at="2026-05-23T12:57:21 IST" name="generatReport" finished-at="2026-05-23T12:57:21 IST" duration-ms="354" status="PASS">
+        <test-method is-config="true" signature="generatReport()[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:45:48 IST" name="generatReport" finished-at="2026-05-25T14:45:48 IST" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generatReport -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masterstestcase.Party_Consignee_TestCase@fa4c865]" started-at="2026-05-23T12:57:21 IST" name="login" finished-at="2026-05-23T12:57:41 IST" duration-ms="19311" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:45:49 IST" name="login" finished-at="2026-05-25T14:46:08 IST" duration-ms="19303" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masterstestcase.Party_Consignee_TestCase.verifyConsigneeMasterURL(org.testng.ITestContext)]]>
+                <![CDATA[public void masterstestcase.Party_Consignee_TestCase.verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="verifyConsigneeMasterURL(org.testng.ITestContext)[pri:1, instance:masterstestcase.Party_Consignee_TestCase@fa4c865]" started-at="2026-05-23T12:57:41 IST" name="verifyConsigneeMasterURL" finished-at="2026-05-23T12:57:44 IST" duration-ms="2991" status="PASS">
+        <test-method signature="verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:2, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:46:08 IST" name="verifyConsigneePartyCreationWithMandatoryFieldsTest" finished-at="2026-05-25T14:46:13 IST" duration-ms="4791" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7ca0863b]]>
+                <![CDATA[org.testng.TestRunner@415156bf]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyConsigneeMasterURL -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masterstestcase.Party_Consignee_TestCase@fa4c865]" started-at="2026-05-23T12:57:44 IST" name="takeScreenShot" finished-at="2026-05-23T12:57:47 IST" duration-ms="2870" status="PASS">
+        </test-method> <!-- verifyConsigneePartyCreationWithMandatoryFieldsTest -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:46:13 IST" name="takeScreenShot" finished-at="2026-05-25T14:46:15 IST" duration-ms="2840" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyConsigneeMasterURL status=SUCCESS method=Party_Consignee_TestCase.verifyConsigneeMasterURL(org.testng.ITestContext)[pri:1, instance:masterstestcase.Party_Consignee_TestCase@fa4c865] output={null}]]]>
+                <![CDATA[[TestResult name=verifyConsigneePartyCreationWithMandatoryFieldsTest status=SUCCESS method=Party_Consignee_TestCase.verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:2, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void masterstestcase.Party_Consignee_TestCase.verifyConsigneeMasterURL(org.testng.ITestContext)]]>
+                <![CDATA[public void masterstestcase.Party_Consignee_TestCase.verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masterstestcase.Party_Consignee_TestCase@fa4c865]" started-at="2026-05-23T12:57:47 IST" name="closeBrowser" finished-at="2026-05-23T12:57:47 IST" duration-ms="31" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:46:16 IST" name="closeBrowser" finished-at="2026-05-25T14:46:16 IST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- masterstestcase.Party_Consignee_TestCase -->
-    </test> <!-- verifyConsigneeMasterURL -->
-  </suite> <!-- icaffe -->
+    </test> <!-- verifyConsigneePartyCreationWithMandatoryFieldsTest -->
+  </suite> <!-- Suite -->
 </testng-results>
