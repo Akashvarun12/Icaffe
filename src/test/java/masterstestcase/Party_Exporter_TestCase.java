@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 import basetest.BaseTest;
 
 import icaffe_homepage.Homepage;
-import icaffe_masters_party_pagewise_classes.Exporter_OtherTab;
-import icaffe_masters_party_pagewise_classes.Exporter_ShipperTab;
+import icaffe_masters_party_pagewise_classes.Exporter_Other;
+import icaffe_masters_party_pagewise_classes.Exporter_Shipper;
 import pojo.ExporterTestData;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
@@ -36,7 +36,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
 
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
 				data.getClassDropDownOption(), data.getMercManufDropDownOption());
 		expShipperObj.enterShipperAddressMandatoryFields(data.getSerialNumber(), data.getPartyAddress(),
@@ -46,7 +46,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 		expShipperObj.goToOtherTab();
 
-		Exporter_OtherTab expOtherObj = new Exporter_OtherTab(utilObj);
+		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnSaveButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
@@ -67,7 +67,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
 
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
 				data.getClassDropDownOption(), data.getMercManufDropDownOption());
 		expShipperObj.enterShipperAddressMandatoryFields(data.getSerialNumber(), data.getPartyAddress(),
@@ -77,7 +77,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 		expShipperObj.goToOtherTab();
 
-		Exporter_OtherTab expOtherObj = new Exporter_OtherTab(utilObj);
+		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnSaveButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
@@ -93,7 +93,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
 
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
 				data.getClassDropDownOption(), data.getMercManufDropDownOption());
 		expShipperObj.enterShipperAddressMandatoryFields(data.getSerialNumber(), data.getPartyAddress(),
@@ -103,7 +103,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 		expShipperObj.goToOtherTab();
 
-		Exporter_OtherTab expOtherObj = new Exporter_OtherTab(utilObj);
+		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnSaveButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
@@ -118,7 +118,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
 
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
 				data.getClassDropDownOption(), data.getMercManufDropDownOption());
 		expShipperObj.enterShipperAddressMandatoryFields(data.getSerialNumber(), data.getPartyAddress(),
@@ -128,7 +128,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 		expShipperObj.goToOtherTab();
 
-		Exporter_OtherTab expOtherObj = new Exporter_OtherTab(utilObj);
+		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnSaveButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
@@ -143,7 +143,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
 
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
 				data.getClassDropDownOption(), data.getMercManufDropDownOption());
 		expShipperObj.enterShipperAddressMandatoryFields(data.getSerialNumber(), data.getPartyAddress(),
@@ -153,7 +153,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 		expShipperObj.goToOtherTab();
 
-		Exporter_OtherTab expOtherObj = new Exporter_OtherTab(utilObj);
+		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnSaveButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
@@ -166,7 +166,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
 
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.modifyShipperPartyWithPartialData(context, data.getSelectclassDropDownOption_InSearch(),
 				data.getSelectname_or_ID_InSearch(), data.getselectpartyName_InSearchGrid(), data.getPartyName(),
 				data.getIECNumber(), data.getClassDropDownOption(), data.getMercManufDropDownOption(),
@@ -175,7 +175,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 		expShipperObj.goToOtherTab();
 
-		Exporter_OtherTab expOtherObj = new Exporter_OtherTab(utilObj);
+		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnModifyButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
@@ -188,7 +188,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		homeObj.Goto_Masters_PartyExporter();
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 
 		expShipperObj.selectSearchShipperParty(context, data.getSelectclassDropDownOption_InSearch(),
 				data.getSelectname_or_ID_InSearch());
@@ -202,7 +202,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		ExporterTestData data = new ExporterTestData(testData);
 		Homepage homeObj = new Homepage(utilObj);
 		homeObj.Goto_Masters_PartyExporter();
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.deleteShipperParty(context, data.getSelectclassDropDownOption_InSearch(),
 				data.getSelectname_or_ID_InSearch(), data.getselectpartyName_InSearchGrid());
 		expShipperObj.clickOnDeleteButton();
@@ -219,7 +219,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		ExporterTestData data = new ExporterTestData(testData);
 		Homepage homeObj = new Homepage(utilObj);
 		homeObj.Goto_Masters_PartyExporter();
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.deleteShipperParty(context, data.getSelectclassDropDownOption_InSearch(),
 				data.getSelectname_or_ID_InSearch(), data.getselectpartyName_InSearchGrid());
 		expShipperObj.clickOnDeleteButton();
@@ -236,7 +236,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		ExporterTestData data = new ExporterTestData(testData);
 		Homepage homeObj = new Homepage(utilObj);
 		homeObj.Goto_Masters_PartyExporter();
-		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
 		expShipperObj.deleteShipperParty(context, data.getSelectclassDropDownOption_InSearch(),
 				data.getSelectname_or_ID_InSearch(), data.getselectpartyName_InSearchGrid());
 		expShipperObj.clickOnDeleteButton();

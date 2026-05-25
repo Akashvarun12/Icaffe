@@ -2,8 +2,11 @@ pipeline {
 
     agent any
 
-    triggers {
+    tools {
+        maven 'Maven'
+    }
 
+    triggers {
         cron('0 17 * * *')
     }
 
@@ -17,12 +20,12 @@ pipeline {
                 url: 'https://github.com/Akashvarun12/project_iCaffe.git'
             }
         }
-        
-/*stage('Clean Old Reports One Time') {
-    steps {
-        bat 'if exist ExtentReport rmdir /s /q ExtentReport'
-    }
-}*/
+
+        /*stage('Clean Old Reports One Time') {
+            steps {
+                bat 'if exist ExtentReport rmdir /s /q ExtentReport'
+            }
+        }*/
 
         stage('Build & Test') {
 
@@ -36,8 +39,8 @@ pipeline {
     post {
 
         always {
-			
-			junit 'target/surefire-reports/*.xml'
+
+            junit 'target/surefire-reports/*.xml'
 
             publishHTML(target: [
                 allowMissing: true,

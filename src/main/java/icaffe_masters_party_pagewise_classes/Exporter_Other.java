@@ -6,12 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import webutil.WebUtil;
 
-public class Exporter_OtherTab {
+public class Exporter_Other {
 
 	
 	private WebUtil utilobj;
 
-	public Exporter_OtherTab(WebUtil utilobj) {
+	public Exporter_Other(WebUtil utilobj) {
 		this.utilobj = utilobj;
 		PageFactory.initElements(utilobj.getDriver(), this);
 

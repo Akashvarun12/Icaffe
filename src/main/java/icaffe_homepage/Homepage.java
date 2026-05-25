@@ -31,6 +31,9 @@ public class Homepage {
 	@FindBy(xpath = "//a[text()='Exporter']")
 	private WebElement clickOnExporter;
 	
+	@FindBy(xpath = "//a[text()='Consignee']")
+	private WebElement clickOnConsignee;
+	
 	@FindBys(@FindBy(xpath = "//label[@id='UserTag']//span[not(contains(text(),'Welcome'))]"))
 	private List<WebElement> listOfWebEle;
 	
@@ -56,6 +59,18 @@ public class Homepage {
 		
 	}
 
+	public void Goto_Masters_PartyConsignee() {
+
+	
+		
+		utilobj.mouseOver(goToMasters,"Masters");
+		utilobj.mouseOver(goToParty,"Party");
+		utilobj.explicitlyWait(goToParty);
+		utilobj.clickByAction(clickOnConsignee,"Consignee");
+
+		
+	}
+	
 
 
 }

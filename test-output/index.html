@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-icaffe">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-icaffe" title="masterstestcase.Party_Exporter_TestCase" class="method navigator-link" hash-for-method="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.TestRunner@2fc07784)">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.TestRunner@2fc07784)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-icaffe" title="masterstestcase.Party_Consignee_TestCase" class="method navigator-link" hash-for-method="verifyConsigneeMasterURL(org.testng.TestRunner@7ca0863b)">verifyConsigneeMasterURL(org.testng.TestRunner@7ca0863b)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-icaffe -->
@@ -121,15 +121,15 @@
           <div class="suite-icaffe-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">masterstestcase.Party_Exporter_TestCase</span>
+              <span class="class-name">masterstestcase.Party_Consignee_TestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.TestRunner@2fc07784)">
-                  </a> <!-- verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.TestRunner@2fc07784) -->
-                  <span class="method-name">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest</span>
-                  <span class="parameters">(org.testng.TestRunner@2fc07784)</span>
+                  <a name="verifyConsigneeMasterURL(org.testng.TestRunner@7ca0863b)">
+                  </a> <!-- verifyConsigneeMasterURL(org.testng.TestRunner@7ca0863b) -->
+                  <span class="method-name">verifyConsigneeMasterURL</span>
+                  <span class="parameters">(org.testng.TestRunner@7ca0863b)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,18 +144,16 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;icaffe&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;verifyPrivateShipperPartyCreationWithMandatoryFieldsTest&quot;&gt;
-    &lt;parameter name=&quot;excelFile&quot; value=&quot;Akash_TestByDataprovider.xlsx&quot;/&gt;
-    &lt;parameter name=&quot;sheetName&quot; value=&quot;MastersPartyExporter&quot;/&gt;
-    &lt;parameter name=&quot;action&quot; value=&quot;PrivateShipperPartyCreation&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;verifyConsigneeMasterURL&quot;&gt;
+    &lt;parameter name=&quot;expURL&quot; value=&quot;https://idp.icaffe.co.in/forms/Master/ConsigneeMaster.aspx?mnuid=mnuMasterConsignee&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;masterstestcase.Party_Exporter_TestCase&quot;&gt;
+      &lt;class name=&quot;masterstestcase.Party_Consignee_TestCase&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyPrivateShipperPartyCreationWithMandatoryFieldsTest&quot;/&gt;
+          &lt;include name=&quot;verifyConsigneeMasterURL&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- masterstestcase.Party_Exporter_TestCase --&gt;
+      &lt;/class&gt; &lt;!-- masterstestcase.Party_Consignee_TestCase --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- verifyPrivateShipperPartyCreationWithMandatoryFieldsTest --&gt;
+  &lt;/test&gt; &lt;!-- verifyConsigneeMasterURL --&gt;
 &lt;/suite&gt; &lt;!-- icaffe --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +165,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest (1 class)</span>
+                <span class="test-name">verifyConsigneeMasterURL (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyPrivateShipperPartyCreationWithMandatoryFieldsTest')
-data.setCell(0, 2, 'masterstestcase.Party_Exporter_TestCase')
-data.setCell(0, 3, 18471);
+data.setCell(0, 1, 'verifyConsigneeMasterURL')
+data.setCell(0, 2, 'masterstestcase.Party_Consignee_TestCase')
+data.setCell(0, 3, 2991);
 window.suiteTableData['icaffe']= { tableData: data, tableDiv: 'times-div-icaffe'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-icaffe">
               </div> <!-- times-div-icaffe -->
             </div> <!-- times-div -->
@@ -217,30 +215,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-icaffe" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">8 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">masterstestcase.Party_Exporter_TestCase</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyShipperPartyDeletion</span>
-                <br/>
-                <span class="ignored-method-name">verifyShipperMasterTitle</span>
-                <br/>
-                <span class="ignored-method-name">verifyShipperPartyModification</span>
-                <br/>
-                <span class="ignored-method-name">verifyDuplicateIECNumberForPrivateShipperCreation</span>
-                <br/>
-                <span class="ignored-method-name">verifyDuplicateShipperNameForGovernmentPartyCreationTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyDuplicateIECNumberForGovernmentShipperCreation</span>
-                <br/>
-                <span class="ignored-method-name">verifyShipperPartyDisplayedInSearchGrid</span>
-                <br/>
-                <span class="ignored-method-name">verifyGovernmentShipperPartyCreationWithMandatoryFieldsTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-icaffe" class="panel">
@@ -249,26 +226,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">masterstestcase.Party_Exporter_TestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">masterstestcase.Party_Consignee_TestCase</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">generatReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">login(public void masterstestcase.Party_Exporter_TestCase.verifyPrivateShipperPartyCreationWithMandatoryFi...)</span>
-                <span class="method-start">432 ms</span>
+                <span class="method-name">login(public void masterstestcase.Party_Consignee_TestCase.verifyConsigneeMasterURL(org.testng.ITestContex...)</span>
+                <span class="method-start">391 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(org.testng.TestRunner@2fc07784)</span>
-                <span class="method-start">19599 ms</span>
+                <span class="method-name">verifyConsigneeMasterURL(org.testng.TestRunner@7ca0863b)</span>
+                <span class="method-start">19708 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">takeScreenShot([TestResult name=verifyPrivateShipperPartyCreationWithMandatoryFieldsTest status=SUCCESS method=Part...)</span>
-                <span class="method-start">38073 ms</span>
+                <span class="method-name">takeScreenShot([TestResult name=verifyConsigneeMasterURL status=SUCCESS method=Party_Consignee_TestCase.verifyConsi...)</span>
+                <span class="method-start">22716 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">40784 ms</span>
+                <span class="method-start">25635 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

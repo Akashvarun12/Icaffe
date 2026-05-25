@@ -12,11 +12,11 @@ import org.testng.ITestContext;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
 
-public class Exporter_ShipperTab {
+public class Exporter_Shipper {
 
 	private WebUtil utilobj;
 
-	public Exporter_ShipperTab(WebUtil utilobj) {
+	public Exporter_Shipper(WebUtil utilobj) {
 		this.utilobj = utilobj;
 		PageFactory.initElements(utilobj.getDriver(), this);
 

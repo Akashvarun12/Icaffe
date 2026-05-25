@@ -334,7 +334,8 @@ public class WebUtil {
 	}
 
 	// Validates current page URL
-	public void validateCurrentURL(String expURL) {
+	public void validateCurrentURL(ITestContext context) {
+		String expURL = context.getCurrentXmlTest().getParameter("expURL");
 		try {
 			String actURL = getDriver().getCurrentUrl();
 			if (expURL.equalsIgnoreCase(actURL)) {
@@ -776,4 +777,41 @@ public class WebUtil {
 			System.out.println("No data found.");
 		}
 	}
+	
+	public void selectRadioButton(String valueToSelect ,String eleName) {
+			try {
+
+				List<WebElement> options = driver.findElements(By.xpath(
+						"//input[@type='radio']"));
+
+				// Step 2: Wait until list is visible
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+				wait.until(ExpectedConditions.visibilityOfAllElements(options));
+
+				// Step 3: Iterate and match
+				for (WebElement option : options) {
+					String text = option.getText().trim();
+
+					if (text.equalsIgnoreCase(valueToSelect)) {
+						WebElement weClick = driver.findElement(
+								By.xpath("//div[text()='" + text + "']/parent::td/preceding-sibling::td//div//img"));
+						weClick.click();
+
+						extentTest.pass(text + " selected successfully in: " + eleName);
+						return;
+					}
+				}
+
+				// Step 4: Not found
+				extentTest.fail("Option not found: " + valueToSelect + " in " + eleName);
+				throw new RuntimeException("Option not found: " + valueToSelect);
+
+			} catch (Exception e) {
+				extentTest.fail("Failed to select option: " + valueToSelect + " in " + eleName);
+				extentTest.addScreenCaptureFromPath(takeScreenShot("Option not found"));
+				extentTest.fail("Exception: " + e.getMessage());
+			}
+		}
+	
+	//input[@name='ConType']
 }
