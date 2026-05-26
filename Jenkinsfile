@@ -61,12 +61,6 @@ pipeline {
 
                     <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
 
-                    <p><b>Total Tests:</b>
-                    ${currentBuild.rawBuild.getAction(hudson.tasks.junit.TestResultAction.class).totalCount}</p>
-
-                    <p><b>Failed Tests:</b>
-                    ${currentBuild.rawBuild.getAction(hudson.tasks.junit.TestResultAction.class).failCount}</p>
-
                     <p>
                     <a href="${env.BUILD_URL}">
                     Open Jenkins Build
