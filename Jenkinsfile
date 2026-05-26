@@ -41,27 +41,29 @@ pipeline {
                 reportName: 'ICaffe Project Report'
             ])
 
-            emailext(
-                to: 'akash.varun@hanssupport.com',
+  emailext(
+    to: 'akash.varun@hanssupport.com',
 
-                subject: "iCaffe Automation Result : ${currentBuild.currentResult}",
+    subject: "iCaffe Automation Result : ${currentBuild.currentResult}",
 
-                body: """
-                    <h2>Automation Execution Summary</h2>
+    mimeType: 'text/html',
 
-                    <p><b>Project:</b> iCaffe</p>
+    body: """
+        <h2>Automation Execution Summary</h2>
 
-                    <p><b>Status:</b> ${currentBuild.currentResult}</p>
+        <p><b>Project:</b> iCaffe</p>
 
-                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+        <p><b>Status:</b> ${currentBuild.currentResult}</p>
 
-                    <p>
-                    <a href="${env.BUILD_URL}">
-                    Open Jenkins Build
-                    </a>
-                    </p>
-                """
-            )
+        <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+
+        <p>
+        <a href="${env.BUILD_URL}">
+        Open Jenkins Build
+        </a>
+        </p>
+    """
+)
         }
 
         cleanup {
