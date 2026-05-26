@@ -41,11 +41,6 @@ pipeline {
                 reportName: 'ICaffe Project Report'
             ])
 
-            withCredentials([usernamePassword(
-                credentialsId: 'akash.varun@hanssupport.com',
-                usernameVariable: 'admin',
-                passwordVariable: 'admin@1234'
-            )]) {
 
                 emailext(
                     to: 'akash.varun@hanssupport.com',
