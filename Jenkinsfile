@@ -1,13 +1,13 @@
+```groovy id="8v4qpl"
 pipeline {
 
     agent any
 
     stages {
 
-        stage('Clean Old Reports') {
+        stage('Clean Workspace') {
             steps {
-                bat 'if exist ExtentReport rmdir /s /q ExtentReport'
-                bat 'if exist target rmdir /s /q target'
+                deleteDir()
             }
         }
 
@@ -21,6 +21,7 @@ pipeline {
 
         stage('Build & Test') {
             steps {
+
                 bat 'mvn clean install || exit /b 0'
             }
         }
@@ -33,37 +34,40 @@ pipeline {
             junit 'target/surefire-reports/*.xml'
 
             publishHTML(target: [
-                allowMissing: false,
-                alwaysLinkToLastBuild: false,
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
                 keepAll: false,
                 reportDir: 'ExtentReport',
                 reportFiles: '*.html',
                 reportName: 'ICaffe Project Report'
             ])
 
+            emailext(
+                to: 'akash.varun@hanssupport.com',
 
-                emailext(
-                    to: 'akash.varun@hanssupport.com',
+                subject: "iCaffe Automation Result : ${currentBuild.currentResult}",
 
-                    subject: "iCaffe Automation Result : ${currentBuild.currentResult}",
+                body: """
+                    <h2>Automation Execution Summary</h2>
 
-                    body: """
-                        <h2>Automation Execution Summary</h2>
+                    <p><b>Project:</b> iCaffe</p>
 
-                        <p><b>Project:</b> iCaffe</p>
+                    <p><b>Status:</b> ${currentBuild.currentResult}</p>
 
-                        <p><b>Status:</b> ${currentBuild.currentResult}</p>
+                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
 
-                        <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                    <p>
+                    <a href="${env.BUILD_URL}">
+                    Open Jenkins Build
+                    </a>
+                    </p>
+                """
+            )
+        }
 
-                        <p>
-                        <a href="${env.BUILD_URL}">
-                        Open Jenkins Build
-                        </a>
-                        </p>
-                    """
-                )
-            }
+        cleanup {
+            cleanWs()
         }
     }
 }
+```
