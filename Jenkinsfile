@@ -2,11 +2,14 @@ pipeline {
 
     agent any
 
-/*    tools {
-        maven 'Maven'
-    }*/
-
     stages {
+
+        stage('Clean Old Reports') {
+            steps {
+                bat 'if exist ExtentReport rmdir /s /q ExtentReport'
+                bat 'if exist target rmdir /s /q target'
+            }
+        }
 
         stage('Checkout') {
 
@@ -41,27 +44,32 @@ pipeline {
                 reportName: 'ICaffe Project Report'
             ])
 
-            emailext(
-                to: 'akash.varun@hanssupport.com',
+      withCredentials([usernamePassword(
+    credentialsId: 'gmail-creds',
+    usernameVariable: 'EMAIL_USER',
+    passwordVariable: 'EMAIL_PASS'
+    
+)]) {
 
-                subject: "iCaffe Automation Result : ${currentBuild.currentResult}",
+    emailext(
+        to: 'akash.varun@hanssupport.com',
 
-                body: """
-                    <h2>Automation Execution Summary</h2>
+        subject: "iCaffe Automation Result : ${currentBuild.currentResult}",
 
-                    <p><b>Project:</b> iCaffe</p>
+        body: """
+            <h2>Automation Execution Summary</h2>
 
-                    <p><b>Status:</b> ${currentBuild.currentResult}</p>
+            <p><b>Project:</b> iCaffe</p>
 
-                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+            <p><b>Status:</b> ${currentBuild.currentResult}</p>
 
-                    <p>
-                    <a href="${env.BUILD_URL}">
-                    Open Jenkins Build
-                    </a>
-                    </p>
-                """
-            )
-        }
-    }
+            <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+
+            <p>
+            <a href="${env.BUILD_URL}">
+            Open Jenkins Build
+            </a>
+            </p>
+        """
+    )
 }
