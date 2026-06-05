@@ -97,8 +97,10 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>login.xml</suiteXmlFile>
 					</suiteXmlFiles>
-				</configuration>
 
+					<!-- 🔥 IMPORTANT -->
+					<testFailureIgnore>false</testFailureIgnore>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

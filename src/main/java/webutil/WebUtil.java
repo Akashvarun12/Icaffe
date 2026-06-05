@@ -266,41 +266,84 @@ public class WebUtil {
 		return elementText;
 	}
 
+//	// Validates page title for login scenarios (Valid/Invalid credentials)
+//	public void validateTitleForLoginPages(String expTitle, String type) {
+//
+//		try {
+//			String actTitle = getDriver().getTitle();
+//
+//			if (type.equalsIgnoreCase("Valid Credential")) {
+//				// valid case
+//				if (expTitle.equalsIgnoreCase(actTitle)) {
+//					extentTest.log(Status.PASS, "Title matches for: " + type);
+//					extentTest.log(Status.PASS, "Expected: " + expTitle + " Title matches Actual: " + actTitle);
+//				} else {
+//					System.out.println("Failed: Title mismatch");
+//					extentTest.log(Status.FAIL, "Expected: " + expTitle + " Title not matches: " + actTitle);
+//					extentTest.addScreenCaptureFromPath(takeScreenShot("TitleMismatch"));
+//				}
+//
+//			} else {
+//				// invalid case
+//				if (expTitle.equalsIgnoreCase(actTitle)) {
+//					extentTest.log(Status.PASS, " Title Mismatch for: " + type);
+//					extentTest.log(Status.PASS, "Expected: " + expTitle + " Title Match Actual: " + actTitle
+//							+ " And User stayed on Same Page");
+//
+//				} else {
+//					extentTest.log(Status.FAIL,
+//							"Expected: " + expTitle + " Title matches:and user redirected " + actTitle);
+//					extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidCaseFailure"));
+//				}
+//			}
+//
+//		} catch (Exception e) {
+//			extentTest.log(Status.FAIL, "Exception in validateGetTitle: " + e.getMessage());
+//			e.printStackTrace();
+//		}
+//	}
+	
 	// Validates page title for login scenarios (Valid/Invalid credentials)
 	public void validateTitleForLoginPages(String expTitle, String type) {
 
-		try {
-			String actTitle = getDriver().getTitle();
+	    try {
+	        String actTitle = getDriver().getTitle();
 
-			if (type.equalsIgnoreCase("Valid Credential")) {
-				// valid case
-				if (expTitle.equalsIgnoreCase(actTitle)) {
-					extentTest.log(Status.PASS, "Title matches for: " + type);
-					extentTest.log(Status.PASS, "Expected: " + expTitle + " Title matches Actual: " + actTitle);
-				} else {
-					System.out.println("Failed: Title mismatch");
-					extentTest.log(Status.FAIL, "Expected: " + expTitle + " Title not matches: " + actTitle);
-					extentTest.addScreenCaptureFromPath(takeScreenShot("TitleMismatch"));
-				}
+	        if (type.equalsIgnoreCase("Valid Credential")) {
+	            // valid case
+	            if (expTitle.equalsIgnoreCase(actTitle)) {
+	                extentTest.log(Status.PASS, "Title matches for: " + type);
+	                extentTest.log(Status.PASS, "Expected: " + expTitle + " Title matches Actual: " + actTitle);
+	            } else {
+	                System.out.println("Failed: Title mismatch");
+	                extentTest.log(Status.FAIL, "Expected: " + expTitle + " Title not matches: " + actTitle);
+	                extentTest.addScreenCaptureFromPath(takeScreenShot("TitleMismatch"));
 
-			} else {
-				// invalid case
-				if (expTitle.equalsIgnoreCase(actTitle)) {
-					extentTest.log(Status.PASS, " Title Mismatch for: " + type);
-					extentTest.log(Status.PASS, "Expected: " + expTitle + " Title Match Actual: " + actTitle
-							+ " And User stayed on Same Page");
+	                Assert.fail("Title mismatch. Expected: " + expTitle + " Actual: " + actTitle);
+	            }
 
-				} else {
-					extentTest.log(Status.FAIL,
-							"Expected: " + expTitle + " Title matches:and user redirected " + actTitle);
-					extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidCaseFailure"));
-				}
-			}
+	        } else {
+	            // invalid case
+	            if (expTitle.equalsIgnoreCase(actTitle)) {
+	                extentTest.log(Status.PASS, " Title Mismatch for: " + type);
+	                extentTest.log(Status.PASS, "Expected: " + expTitle + " Title Match Actual: " + actTitle
+	                        + " And User stayed on Same Page");
 
-		} catch (Exception e) {
-			extentTest.log(Status.FAIL, "Exception in validateGetTitle: " + e.getMessage());
-			e.printStackTrace();
-		}
+	            } else {
+	                extentTest.log(Status.FAIL,
+	                        "Expected: " + expTitle + " Title matches:and user redirected " + actTitle);
+	                extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidCaseFailure"));
+
+	                Assert.fail("Invalid credential validation failed. User redirected to: " + actTitle);
+	            }
+	        }
+
+	    } catch (Exception e) {
+	        extentTest.log(Status.FAIL, "Exception in validateGetTitle: " + e.getMessage());
+	        e.printStackTrace();
+
+	        Assert.fail("Exception in validateGetTitle: " + e.getMessage());
+	    }
 	}
 
 	// validation of get title with valid ... Ex- For All Page

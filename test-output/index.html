@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="login_testcase.LoginTestCase" class="method navigator-link" hash-for-method="validateUserAlreadyLoggedIn">validateUserAlreadyLoggedIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,17 +103,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="login_testcase.LoginTestCase" class="method navigator-link" hash-for-method="validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential)">validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="login_testcase.LoginTestCase" class="method navigator-link" hash-for-method="validateLoginPageWith_Title(abc, 123, iCaffe, InValid Credential)">validateLoginPageWith_Title(abc, 123, iCaffe, InValid Credential)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="login_testcase.LoginTestCase" class="method navigator-link" hash-for-method="validateLoginPageWith_Title(akash12, akash@123, Login Branch Division, Valid Credential)">validateLoginPageWith_Title(akash12, akash@123, Login Branch Division, Valid Credential)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="login_testcase.LoginTestCase" class="method navigator-link" hash-for-method="validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential)">validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="login_testcase.LoginTestCase" class="method navigator-link" hash-for-method="validateUserAlreadyLoggedIn(org.testng.TestRunner@4dfdfe7d)">validateUserAlreadyLoggedIn(org.testng.TestRunner@4dfdfe7d)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -142,76 +133,12 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">login_testcase.LoginTestCase</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateUserAlreadyLoggedIn">
-                  </a> <!-- validateUserAlreadyLoggedIn -->
-                  <span class="method-name">validateUserAlreadyLoggedIn</span>
-                  <div class="stack-trace">java.lang.RuntimeException: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.96)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
-    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3
-	at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:32)
-	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getFullHeight(ViewportPastingDecorator.java:67)
-	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:41)
-	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
-	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:145)
-	at webutil.WebUtil.takeScreenShot(WebUtil.java:524)
-	at webutil.WebUtil.alertTextValidation(WebUtil.java:495)
-	at login_testcase.LoginTestCase.validateUserAlreadyLoggedIn(LoginTestCase.java:87)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=148.0.3967.96)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
-    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
-	at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:30)
-	... 33 more
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">login_testcase.LoginTestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential)">
-                  </a> <!-- validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential) -->
-                  <span class="method-name">validateLoginPageWith_Title</span>
-                  <span class="parameters">(Akash,Varun,iCaffe,InValid Credential)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="validateLoginPageWith_Title(abc, 123, iCaffe, InValid Credential)">
@@ -226,6 +153,22 @@ Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3
                   </a> <!-- validateLoginPageWith_Title(akash12, akash@123, Login Branch Division, Valid Credential) -->
                   <span class="method-name">validateLoginPageWith_Title</span>
                   <span class="parameters">(akash12,akash@123,Login Branch Division,Valid Credential)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential)">
+                  </a> <!-- validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential) -->
+                  <span class="method-name">validateLoginPageWith_Title</span>
+                  <span class="parameters">(Akash,Varun,iCaffe,InValid Credential)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateUserAlreadyLoggedIn(org.testng.TestRunner@4dfdfe7d)">
+                  </a> <!-- validateUserAlreadyLoggedIn(org.testng.TestRunner@4dfdfe7d) -->
+                  <span class="method-name">validateUserAlreadyLoggedIn</span>
+                  <span class="parameters">(org.testng.TestRunner@4dfdfe7d)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -286,26 +229,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateLoginPageWith_Title')
+data.setCell(0, 1, 'validateUserAlreadyLoggedIn')
 data.setCell(0, 2, 'login_testcase.LoginTestCase')
-data.setCell(0, 3, 1026);
+data.setCell(0, 3, 10486);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'validateLoginPageWith_Title')
 data.setCell(1, 2, 'login_testcase.LoginTestCase')
-data.setCell(1, 3, 1026);
+data.setCell(1, 3, 1720);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'validateLoginPageWith_Title')
 data.setCell(2, 2, 'login_testcase.LoginTestCase')
-data.setCell(2, 3, 877);
+data.setCell(2, 3, 1078);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validateUserAlreadyLoggedIn')
+data.setCell(3, 1, 'validateLoginPageWith_Title')
 data.setCell(3, 2, 'login_testcase.LoginTestCase')
-data.setCell(3, 3, 821);
+data.setCell(3, 3, 955);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -338,56 +281,56 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">login(public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">1990 ms</span>
+                <span class="method-start">2071 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validateLoginPageWith_Title(Akash, Varun, iCaffe, InValid Credential)</span>
-                <span class="method-start">5444 ms</span>
+                <span class="method-start">7074 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">takeScreenShot([TestResult name=validateLoginPageWith_Title status=SUCCESS method=LoginTestCase.validateLoginPageWi...)</span>
-                <span class="method-start">6475 ms</span>
+                <span class="method-start">8803 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">login(public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">8187 ms</span>
+                <span class="method-start">10533 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validateLoginPageWith_Title(abc, 123, iCaffe, InValid Credential)</span>
-                <span class="method-start">10658 ms</span>
+                <span class="method-start">13082 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">takeScreenShot([TestResult name=validateLoginPageWith_Title status=SUCCESS method=LoginTestCase.validateLoginPageWi...)</span>
-                <span class="method-start">11539 ms</span>
+                <span class="method-start">14044 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">login(public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">12842 ms</span>
+                <span class="method-start">15334 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validateLoginPageWith_Title(akash12, akash@123, Login Branch Division, Valid Credential)</span>
-                <span class="method-start">15501 ms</span>
+                <span class="method-start">17901 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">takeScreenShot([TestResult name=validateLoginPageWith_Title status=SUCCESS method=LoginTestCase.validateLoginPageWi...)</span>
-                <span class="method-start">16539 ms</span>
+                <span class="method-start">18981 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">login(public void login_testcase.LoginTestCase.validateUserAlreadyLoggedIn())</span>
-                <span class="method-start">17867 ms</span>
+                <span class="method-name">login(public void login_testcase.LoginTestCase.validateUserAlreadyLoggedIn(org.testng.ITestContext))</span>
+                <span class="method-start">20310 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">validateUserAlreadyLoggedIn</span>
-                <span class="method-start">20534 ms</span>
+                <span class="method-name">validateUserAlreadyLoggedIn(org.testng.TestRunner@4dfdfe7d)</span>
+                <span class="method-start">25825 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">takeScreenShot([TestResult name=validateUserAlreadyLoggedIn status=FAILURE method=LoginTestCase.validateUserAlready...)</span>
-                <span class="method-start">21365 ms</span>
+                <span class="method-name">takeScreenShot([TestResult name=validateUserAlreadyLoggedIn status=SUCCESS method=LoginTestCase.validateUserAlready...)</span>
+                <span class="method-start">36313 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">37759 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

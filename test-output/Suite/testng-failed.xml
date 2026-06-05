@@ -8,10 +8,11 @@
       <class name="login_testcase.LoginTestCase">
         <methods>
           <include name="generatReport"/>
-          <include name="validateUserAlreadyLoggedIn"/>
+          <include name="validateUserAlreadyLoggedIn" invocation-numbers="0"/>
           <include name="login"/>
           <include name="closeBrowser"/>
           <include name="takeScreenShot"/>
+          <include name="validateLoginPageWith_Title" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- login_testcase.LoginTestCase -->
     </classes>
