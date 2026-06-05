@@ -195,8 +195,35 @@ public class Party_Exporter_TestCase extends BaseTest {
 		expShipperObj.logShipperPartySearchTableData();
 
 	}
-
+	
+	
 	@Test(priority = 9)
+
+	public void verifyShipperPartyEnteredDetailsAreClear(ITestContext context) {
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyExporter();
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ExporterTestData data = new ExporterTestData(testData);
+
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
+		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
+				data.getClassDropDownOption(), data.getMercManufDropDownOption());
+		expShipperObj.enterShipperAddressMandatoryFields(data.getSerialNumber(), data.getPartyAddress(),
+				data.getEntCountry(), data.getCountry(), data.getEntState(), data.getState(), data.getRegNumber(),
+				data.getCtxState());
+		expShipperObj.clickOnAddButton();
+
+		expShipperObj.goToOtherTab();
+
+		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
+		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
+		expShipperObj.clickOnClearButton();
+		
+
+	}
+
+	@Test(priority = 10)
 	public void verifyGovernmentShipperPartyDeletion(ITestContext context) {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
@@ -213,7 +240,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void verifyDuplicateGovernmentShipperPartyDeletion(ITestContext context) {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);
@@ -229,8 +256,10 @@ public class Party_Exporter_TestCase extends BaseTest {
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
 
 	}
+	
+	
 
-	@Test(priority = 11)
+	@Test(priority = 12)
 	public void verifyPrivateShipperPartyDeletion(ITestContext context) {
 		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
 		ExporterTestData data = new ExporterTestData(testData);

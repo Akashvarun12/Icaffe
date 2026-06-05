@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [icaffe]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(failed)">
+  <test thread-count="5" name="verifyShipperPartyEnteredDetailsAreClear(failed)">
     <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
     <parameter name="sheetName" value="MastersPartyExporter"/>
-    <parameter name="action" value="PrivateShipperPartyCreation"/>
+    <parameter name="action" value="verifyShipperPartyEnteredDetailsAreClear"/>
     <classes>
       <class name="masterstestcase.Party_Exporter_TestCase">
         <methods>
-          <include name="generatReport"/>
+          <include name="verifyShipperPartyDisplayedInSearchGrid"/>
           <include name="takeScreenShot"/>
+          <include name="generatReport"/>
           <include name="login"/>
-          <include name="verifyPrivateShipperPartyCreationWithMandatoryFieldsTest" invocation-numbers="0"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- masterstestcase.Party_Exporter_TestCase -->
     </classes>
-  </test> <!-- verifyPrivateShipperPartyCreationWithMandatoryFieldsTest(failed) -->
+  </test> <!-- verifyShipperPartyEnteredDetailsAreClear(failed) -->
 </suite> <!-- Failed suite [icaffe] -->

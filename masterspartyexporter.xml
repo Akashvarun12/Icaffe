@@ -134,6 +134,24 @@
 		</classes>
 
 	</test>
+	
+		<test name="verifyShipperPartyEnteredDetailsAreClear">
+
+	<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="verifyShipperPartyEnteredDetailsAreClear" />
+
+	
+
+		<classes>
+			<class name="masterstestcase.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyShipperPartyEnteredDetailsAreClear" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
 
 	<test name="verifyGovernmentShipperPartyDeletion">
 		<parameter name="sheetName" value="MastersPartyExporter" />

@@ -84,6 +84,9 @@ public class Exporter_Shipper {
 
 	@FindBy(xpath = "//button[@id='btnDelete']")
 	WebElement clickOnDeleteBT;
+	
+	@FindBy(xpath = "//button[@id='btnClear']")
+	WebElement clickOnClearBT;
 
 	// Enter Mandatory details in shipper details section
 	public void enterShipperDetailsMandatoryFields(String partyName, String IECNumber, String classDropDownOption,
@@ -219,6 +222,13 @@ public class Exporter_Shipper {
 	public void clickOnSaveButton() {
 
 		utilobj.click(clickOnSaveBT, "Save Button");
+
+	}
+	
+	// Click on clear Button
+	public void clickOnClearButton() {
+
+		utilobj.click(clickOnClearBT, "Clear Button");
 
 	}
 

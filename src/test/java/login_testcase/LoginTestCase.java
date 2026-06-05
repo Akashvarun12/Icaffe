@@ -1,8 +1,10 @@
 package login_testcase;
 
 import java.lang.reflect.Method;
+import java.util.Map;
 import java.util.Properties;
 
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -12,6 +14,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import icaffe_loginpage.IcaffeLogin;
+import pojo.ExporterTestData;
 import webutil.ExcelDataSuplier;
 import webutil.WebUtil;
 
@@ -31,7 +34,7 @@ public class LoginTestCase {
 	public void login(Method testName) {
 		utilObj = new WebUtil();
 		String reportType = this.getClass().getSimpleName();
-		utilObj.generateExtentTest(testName.getName(),reportType);
+		utilObj.generateExtentTest(testName.getName(), reportType);
 
 		Properties proObj = WebUtil.propertiFile("Akash_CommonSelection_Login_BranchDivisionYear.properties");
 		String browsername = proObj.getProperty("browser");
@@ -63,17 +66,34 @@ public class LoginTestCase {
 
 	// Validate Login Page with Title....
 
-	@Test(dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
-	public void validateLoginPageWith_Title(String username, String password, String expectedTitle,String expType) {
+	@Test(priority = 1,  dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
+	public void validateLoginPageWith_Title(String username, String password, String expectedTitle, String expType) {
 
 		IcaffeLogin logObj = new IcaffeLogin(utilObj);
-		logObj.enterLoginCreadential(username, password, "UserName", "Password");
+		logObj.enterLoginCreadentialwithDataProvider(username, password, "UserName", "Password");
 
 		logObj.clickOnLoginBT();
-		utilObj.validateTitleForLoginPages(expectedTitle,expType  );
+		utilObj.validateTitleForLoginPages(expectedTitle, expType);
 
 	}
 
-	// li[contains(text(),'User Already Login.')]
+	// Validate User Already Login ....
+
+	@Test(priority = 2)
+	public void validateUserAlreadyLoggedIn(ITestContext context) {
+		
+//		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+//		ExporterTestData data = new ExporterTestData(testData);
+
+		IcaffeLogin logObj = new IcaffeLogin(utilObj);
+		logObj.enterLoginCreadential();
+
+		logObj.clickOnLoginBT();
+		
+	
+
+		utilObj.alertTextValidation("User Already Login.");
+
+	}
 
 }

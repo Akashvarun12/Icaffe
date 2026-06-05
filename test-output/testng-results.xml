@@ -1,59 +1,377 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-25T14:45:48 IST" name="Suite" finished-at="2026-05-25T14:46:15 IST" duration-ms="26980">
+  <suite started-at="2026-06-04T14:44:58 IST" name="Suite" finished-at="2026-06-04T14:45:19 IST" duration-ms="20996">
     <groups>
     </groups>
-    <test started-at="2026-05-25T14:45:48 IST" name="verifyConsigneePartyCreationWithMandatoryFieldsTest" finished-at="2026-05-25T14:46:15 IST" duration-ms="26980">
-      <class name="masterstestcase.Party_Consignee_TestCase">
-        <test-method is-config="true" signature="generatReport()[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:45:48 IST" name="generatReport" finished-at="2026-05-25T14:45:48 IST" duration-ms="371" status="PASS">
+    <test started-at="2026-06-04T14:44:58 IST" name="Login Test" finished-at="2026-06-04T14:45:19 IST" duration-ms="20996">
+      <class name="login_testcase.LoginTestCase">
+        <test-method is-config="true" signature="generatReport()[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:44:58 IST" name="generatReport" finished-at="2026-06-04T14:44:58 IST" duration-ms="387" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generatReport -->
-        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:45:49 IST" name="login" finished-at="2026-05-25T14:46:08 IST" duration-ms="19303" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:00 IST" name="login" finished-at="2026-06-04T14:45:03 IST" duration-ms="3452" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void masterstestcase.Party_Consignee_TestCase.verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
+                <![CDATA[public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:2, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:46:08 IST" name="verifyConsigneePartyCreationWithMandatoryFieldsTest" finished-at="2026-05-25T14:46:13 IST" duration-ms="4791" status="PASS">
+        <test-method signature="validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:03 IST" name="validateLoginPageWith_Title" data-provider="ReadDataFromExcel" finished-at="2026-06-04T14:45:04 IST" duration-ms="1026" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@415156bf]]>
+                <![CDATA[Akash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Varun]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[iCaffe]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[InValid Credential]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyConsigneePartyCreationWithMandatoryFieldsTest -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:46:13 IST" name="takeScreenShot" finished-at="2026-05-25T14:46:15 IST" duration-ms="2840" status="PASS">
+        </test-method> <!-- validateLoginPageWith_Title -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:04 IST" name="takeScreenShot" finished-at="2026-06-04T14:45:06 IST" duration-ms="1711" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyConsigneePartyCreationWithMandatoryFieldsTest status=SUCCESS method=Party_Consignee_TestCase.verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)[pri:2, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c] output={null}]]]>
+                <![CDATA[[TestResult name=validateLoginPageWith_Title status=SUCCESS method=LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:login_testcase.LoginTestCase@8297b3a] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void masterstestcase.Party_Consignee_TestCase.verifyConsigneePartyCreationWithMandatoryFieldsTest(org.testng.ITestContext)]]>
+                <![CDATA[public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:masterstestcase.Party_Consignee_TestCase@b2c9a9c]" started-at="2026-05-25T14:46:16 IST" name="closeBrowser" finished-at="2026-05-25T14:46:16 IST" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:06 IST" name="login" finished-at="2026-06-04T14:45:09 IST" duration-ms="2471" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:09 IST" name="validateLoginPageWith_Title" data-provider="ReadDataFromExcel" finished-at="2026-06-04T14:45:09 IST" duration-ms="877" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[iCaffe]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[InValid Credential]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginPageWith_Title -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:09 IST" name="takeScreenShot" finished-at="2026-06-04T14:45:11 IST" duration-ms="1302" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateLoginPageWith_Title status=SUCCESS method=LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:login_testcase.LoginTestCase@8297b3a] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:11 IST" name="login" finished-at="2026-06-04T14:45:13 IST" duration-ms="2659" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:13 IST" name="validateLoginPageWith_Title" data-provider="ReadDataFromExcel" finished-at="2026-06-04T14:45:14 IST" duration-ms="1026" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[akash12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[akash@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Login Branch Division]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Valid Credential]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginPageWith_Title -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:14 IST" name="takeScreenShot" finished-at="2026-06-04T14:45:16 IST" duration-ms="1326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateLoginPageWith_Title status=SUCCESS method=LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:login_testcase.LoginTestCase@8297b3a] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void login_testcase.LoginTestCase.validateLoginPageWith_Title(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method is-config="true" signature="login(java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:16 IST" name="login" finished-at="2026-06-04T14:45:18 IST" duration-ms="2667" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void login_testcase.LoginTestCase.validateUserAlreadyLoggedIn()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="validateUserAlreadyLoggedIn()[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:18 IST" name="validateUserAlreadyLoggedIn" finished-at="2026-06-04T14:45:19 IST" duration-ms="821" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.96)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
+    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.96)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
+    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3
+at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:32)
+at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getFullHeight(ViewportPastingDecorator.java:67)
+at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:41)
+at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:145)
+at webutil.WebUtil.takeScreenShot(WebUtil.java:524)
+at webutil.WebUtil.alertTextValidation(WebUtil.java:495)
+at login_testcase.LoginTestCase.validateUserAlreadyLoggedIn(LoginTestCase.java:87)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.96)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
+    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
+at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:30)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateUserAlreadyLoggedIn -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:19 IST" name="takeScreenShot" finished-at="2026-06-04T14:45:19 IST" duration-ms="9" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateUserAlreadyLoggedIn status=FAILURE method=LoginTestCase.validateUserAlreadyLoggedIn()[pri:0, instance:login_testcase.LoginTestCase@8297b3a] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void login_testcase.LoginTestCase.validateUserAlreadyLoggedIn()]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.96)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
+    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.96)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
+    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3
+at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:32)
+at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getFullHeight(ViewportPastingDecorator.java:67)
+at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:41)
+at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:145)
+at webutil.WebUtil.takeScreenShot(WebUtil.java:524)
+at login_testcase.LoginTestCase.takeScreenShot(LoginTestCase.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.96)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a3ecfcb7388a3eaa745478b7a0226f3, executeScript {args=[], script=return Math.max(document.body.scrollHeight, document.body.offsetHeight,
+    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 148.0.3967.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:61247}, msedge: {msedgedriverVersion: 148.0.3967.96 (9df8cc82dba1..., userDataDir: C:\Users\user\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61247/devtoo..., se:cdpVersion: 148.0.3967.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3ecfcb7388a3eaa745478b7a0226f3
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
+at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:30)
+... 37 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:login_testcase.LoginTestCase@8297b3a]" started-at="2026-06-04T14:45:19 IST" name="closeBrowser" finished-at="2026-06-04T14:45:19 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- masterstestcase.Party_Consignee_TestCase -->
-    </test> <!-- verifyConsigneePartyCreationWithMandatoryFieldsTest -->
+      </class> <!-- login_testcase.LoginTestCase -->
+    </test> <!-- Login Test -->
   </suite> <!-- Suite -->
 </testng-results>
