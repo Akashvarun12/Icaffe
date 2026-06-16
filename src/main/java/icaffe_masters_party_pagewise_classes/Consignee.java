@@ -87,16 +87,16 @@ public class Consignee {
 
 	}
 
-	// Modify Mandatory details in consignee details section
-	public void modifyConsigneePartyrDetailsMandatoryFields( String selectconsigneeType_InSearch,
-			String selectPartyName_InSearchGrid,String modConsignee, String modExtendedName) {
-		selectSearchConsigneeParty(selectconsigneeType_InSearch,selectPartyName_InSearchGrid);
-		utilobj.clear(consigneeName, "Consignee Name Textbox");
-		utilobj.sendKeys(consigneeName, modConsignee, "Consignee Name Textbox");
-		utilobj.clear(extendedName, "Extended Name Textbox");
-		utilobj.sendKeys(extendedName, modExtendedName, "Extended Name Textbox");
-
-	}
+//	// Modify Mandatory details in consignee details section
+//	public void modifyConsigneePartyrDetailsMandatoryFields( String selectconsigneeType_InSearch,
+//			String selectPartyName_InSearchGrid,String modConsignee, String modExtendedName) {
+//		selectSearchConsigneeParty(selectconsigneeType_InSearch,selectPartyName_InSearchGrid);
+//		utilobj.clear(consigneeName, "Consignee Name Textbox");
+//		utilobj.sendKeys(consigneeName, modConsignee, "Consignee Name Textbox");
+//		utilobj.clear(extendedName, "Extended Name Textbox");
+//		utilobj.sendKeys(extendedName, modExtendedName, "Extended Name Textbox");
+//
+//	}
 
 	// Enter Mandatory details in consignee address section
 	public void enterConsigneePartyAddressMandatoryFields(String entAddress, String entContactPerson, String entCountry,
