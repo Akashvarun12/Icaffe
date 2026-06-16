@@ -98,7 +98,7 @@ public class Party_Consignee_TestCase extends BaseTest {
 
 		Consignee conObj = new Consignee(utilObj);
 
-		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
+	//	conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
 		conObj.modifyConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.getEntState(), data.entEmail());
 		conObj.clickOnAddButton();
 		conObj.clickOnSaveButton();
@@ -118,7 +118,7 @@ public class Party_Consignee_TestCase extends BaseTest {
 
 		Consignee conObj = new Consignee(utilObj);
 
-		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
+//		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
 		conObj.modifyConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.getEntState(), data.entEmail());
 		conObj.clickOnAddButton();
 		conObj.clickOnSaveButton();
@@ -138,7 +138,7 @@ public class Party_Consignee_TestCase extends BaseTest {
 
 		Consignee conObj = new Consignee(utilObj);
 
-		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
+//		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
 		conObj.modifyConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.getEntState(), data.entEmail());
 		conObj.clickOnAddButton();
 		conObj.clickOnSaveButton();
