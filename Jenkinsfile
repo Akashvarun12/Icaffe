@@ -32,51 +32,148 @@ pipeline {
 
         always {
 
-            // ✅ JUnit Report (NO manual parsing needed)
+            // ✅ JUnit Report (current build)
             junit 'target/surefire-reports/*.xml'
 
-            // ✅ HTML Extent Report
+            // ✅ HTML Extent Report (current build only)
             publishHTML(target: [
                 allowMissing: false,
-                alwaysLinkToLastBuild: true,
+                alwaysLinkToLastBuild: false,
                 keepAll: false,
                 reportDir: 'ExtentReport',
-                reportFiles: '*.html',
+                reportFiles: 'index.html',
                 reportName: 'ICaffe Project Report'
             ])
 
-            // ✅ Email (Simple + Stable)
-            emailext(
-                to: 'akash.varun@hanssupport.com',
-                subject: "iCaffe Automation Result : ${currentBuild.currentResult}",
-                mimeType: 'text/html',
+            // ✅ Test Result Fetch
+            script {
+                def testResult = currentBuild.rawBuild.getAction(hudson.tasks.junit.TestResultAction.class)
 
-                body: """
-                <html>
-                <body>
+                def totalTests = testResult?.totalCount ?: 0
+                def failedTests = testResult?.failCount ?: 0
+                def skippedTests = testResult?.skipCount ?: 0
+                def passedTests = totalTests - failedTests - skippedTests
 
-                <h2>Automation Execution Summary</h2>
+                // ✅ Email
+                emailext(
+                    to: 'akash.varun@hanssupport.com',
 
-                <p><b>Project:</b> iCaffe</p>
-                <p><b>Status:</b> ${currentBuild.currentResult}</p>
-                <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                    subject: "iCaffe Automation Execution Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
 
-                <br>
+                    mimeType: 'text/html',
 
-                <h3>Reports</h3>
+                    body: """
+                    <html>
+                    <body style="font-family: Arial, Helvetica, sans-serif;">
 
-                <p>
-                    <a href="${env.BUILD_URL}testReport">JUnit Test Report</a>
-                </p>
+                    <div style="width: 700px; border:1px solid #ddd; padding:20px;">
 
-                <p>
-                    <a href="${env.BUILD_URL}ICaffe_20Project_20Report">Extent Report</a>
-                </p>
+                        <h2 style="color:#2E86C1;">
+                            iCaffe Automation Test Execution Report
+                        </h2>
 
-                </body>
-                </html>
-                """
-            )
+                        <hr>
+
+                        <table style="border-collapse:collapse;" cellpadding="8">
+
+                            <tr>
+                                <td><b>Project</b></td>
+                                <td>iCaffe</td>
+                            </tr>
+
+                            <tr>
+                                <td><b>Build Number</b></td>
+                                <td>${env.BUILD_NUMBER}</td>
+                            </tr>
+
+                            <tr>
+                                <td><b>Build URL</b></td>
+                                <td>
+                                    <a href="${env.BUILD_URL}">
+                                        Open Jenkins Build
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><b>Status</b></td>
+                                <td>
+                                    <span style="
+                                        padding:5px 10px;
+                                        color:white;
+                                        background-color:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#dc3545'};
+                                        border-radius:4px;">
+                                        ${currentBuild.currentResult}
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><b>Test Summary</b></td>
+                                <td>
+                                    Total: ${totalTests} |
+                                    Passed: ${passedTests} |
+                                    Failed: ${failedTests} |
+                                    <span style="
+                                        padding:3px 8px;
+                                        color:black;
+                                        background-color:#ffc107;
+                                        border-radius:4px;">
+                                        Skipped: ${skippedTests}
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <br>
+
+                        <h3>Reports</h3>
+
+                        <table border="1"
+                               cellpadding="10"
+                               cellspacing="0"
+                               style="border-collapse:collapse;">
+
+                            <tr style="background-color:#f2f2f2;">
+                                <th>Report Name</th>
+                                <th>Link</th>
+                            </tr>
+
+                            <tr>
+                                <td>JUnit Test Report</td>
+                                <td>
+                                    <a href="${env.BUILD_URL}testReport">
+                                        View Report
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Extent Report</td>
+                                <td>
+                                    <a href="${env.BUILD_URL}ICaffe_20Project_20Report">
+                                        View Report
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <br>
+
+                        <p>
+                            Regards,<br>
+                            Jenkins Automation Server
+                        </p>
+
+                    </div>
+
+                    </body>
+                    </html>
+                    """
+                )
+            }
         }
 
         cleanup {

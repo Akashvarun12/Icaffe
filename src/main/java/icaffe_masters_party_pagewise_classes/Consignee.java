@@ -43,6 +43,9 @@ public class Consignee {
 
 	@FindBy(xpath = "//input[@name='Email1']")
 	WebElement clickEmail;
+	
+	@FindBy(xpath = "//input[@id='txtListConsigneeName']")
+	WebElement searchPartyNameTB;
 
 	@FindBy(xpath = "//button[@onclick='InsertAddress();']")
 	WebElement clickOnAddBT;
@@ -50,12 +53,8 @@ public class Consignee {
 	@FindBy(xpath = "//button[@id='btnAdd']")
 	WebElement clickOnSaveBT;
 
-
-	@FindBy(xpath = "//select[@id='ddlQueryClassType']")
-	WebElement selectDropDown_ClassOptionInSearchField;
-
 	@FindBy(xpath = "//select[@id='ddlSearchType']")
-	WebElement search_WithShipperName_or_ID;
+	WebElement consigneeType_InSearch;
 
 	@FindBy(xpath = "//img[@src='../../CSImages/edit.png']")
 	WebElement clickEditIconOnPrtyAddressGrid;
@@ -66,44 +65,57 @@ public class Consignee {
 	@FindBy(xpath = "//button[@id='btnDelete']")
 	WebElement clickOnDeleteBT;
 
+	// Select Consignee type Supplier/Buyer/Notify Radio button...
+	public void selectConsigneeTypeRadiobutton(String selRaidioBT) {
+		if (selRaidioBT.equals("rdoConsignee")) {
+			utilobj.selectRadioButton(selRaidioBT, "Supplier Radio Button Selected");
+		} else if (selRaidioBT.equals("rdoConsignee")) {
+			utilobj.selectRadioButton(selRaidioBT, "Buyer Radio Button Selected");
+		} else if (selRaidioBT.equals("rdoConsignee")) {
+			utilobj.selectRadioButton(selRaidioBT, "Notify Radio Button Selected");
+		}
+	}
+
 	// Enter Mandatory details in consignee details section
-	public void enterConsigneePartyDetailsMandatoryFields(String entConsignee,String entExtendedName) {
-		utilobj.selectRadioButton("rdoConsignee","Consignee Party details Radio Button" );
+	public void enterConsigneePartyDetailsMandatoryFields(String selRaidioBT, String entConsignee,
+			String entExtendedName) {
+		selectConsigneeTypeRadiobutton(selRaidioBT);
 		utilobj.clear(consigneeName, "Consignee Name Textbox");
 		utilobj.sendKeys(consigneeName, entConsignee, "Consignee Name Textbox");
 		utilobj.clear(extendedName, "Extended Name Textbox");
 		utilobj.sendKeys(extendedName, entExtendedName, "Extended Name Textbox");
-	
 
 	}
 
 	// Modify Mandatory details in consignee details section
-	public void modifyConsigneePartyrDetailsMandatoryFields(String modConsignee,String modExtendedName) {
-		utilobj.clear(consigneeName, "Shipper Name Textbox");
-		utilobj.sendKeys(consigneeName, modConsignee, "Shipper Name Textbox");
+	public void modifyConsigneePartyrDetailsMandatoryFields( String selectconsigneeType_InSearch,
+			String selectPartyName_InSearchGrid,String modConsignee, String modExtendedName) {
+		selectSearchConsigneeParty(selectconsigneeType_InSearch,selectPartyName_InSearchGrid);
+		utilobj.clear(consigneeName, "Consignee Name Textbox");
+		utilobj.sendKeys(consigneeName, modConsignee, "Consignee Name Textbox");
 		utilobj.clear(extendedName, "Extended Name Textbox");
 		utilobj.sendKeys(extendedName, modExtendedName, "Extended Name Textbox");
-	
 
 	}
 
 	// Enter Mandatory details in consignee address section
-	public void enterConsigneePartyAddressMandatoryFields(String entAddress,String entContactPerson,String entCountry,String selCountry,String entState,String selState,String entEmail) {
+	public void enterConsigneePartyAddressMandatoryFields(String entAddress, String entContactPerson, String entCountry,
+			String selCountry, String entState, String entEmail) {
 		utilobj.clear(address, "address1 Textbox");
 		utilobj.sendKeys(address, entAddress, "address1 Textbox");
 		utilobj.clear(contactPerson, "contactPerson Textbox");
 		utilobj.sendKeys(contactPerson, entContactPerson, "contactPerson Textbox");
 		utilobj.clear(clikOnCountry, "Country");
-		utilobj.selectAutoSuggestOption(listOfCountrytext, clikOnCountry, entCountry, "Country Textbox",selCountry);
+		utilobj.selectAutoSuggestOption(listOfCountrytext, clikOnCountry, entCountry, "Country Textbox", selCountry);
 		utilobj.clear(clickState, "State Textbox");
 		utilobj.sendKeys(clickState, entState, "State Textbox");
-		utilobj.clear(clickState, "Email Textbox");
+		utilobj.clear(clickEmail, "Email Textbox");
 		utilobj.sendKeys(clickEmail, entEmail, "Email Textbox");
 
 	}
 
-	// Modify Mandatory details in shipper address section
-	public void modifyConsigneePartyAddressMandatoryFields(String entAddress,String entState,String entEmail) {
+	// Modify Mandatory details in consignee address section
+	public void modifyConsigneePartyAddressMandatoryFields(String entAddress, String entState, String entEmail) {
 
 		utilobj.clear(address, "address Textbox");
 		utilobj.sendKeys(address, entAddress, "address Textbox");
@@ -112,49 +124,47 @@ public class Consignee {
 		utilobj.clear(clickState, "Email Textbox");
 		utilobj.sendKeys(clickEmail, entEmail, "Email Textbox");
 
-
-
 	}
 
 	// Select created shipper party in search grid
-	public void selectSearchShipperParty(ITestContext context, String selectclassDropDownOption_InSearch,
+	public void selectSearchConsigneeParty(ITestContext context, String selectconsigneeType_InSearch,
 			String selectname_or_ID_InSearch) {
 
-		utilobj.selectDropDownByText(selectDropDown_ClassOptionInSearchField, selectclassDropDownOption_InSearch);
-		utilobj.selectDropDownByText(search_WithShipperName_or_ID, selectname_or_ID_InSearch);
+		utilobj.selectDropDownByText(consigneeType_InSearch, selectconsigneeType_InSearch);
 
 	}
 
 	// Log or Print all created shipper Name and Status from Search Grid
-	public void logShipperPartySearchTableData() {
+	public void logConsigneePartySearchTableData() {
 
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		utilobj.sendKeys(searchPartyNameTB, "Consignee", "Search Party Name");
 		utilobj.printTableData();
 
 	}
 
-
 	// Modify shipper party mandatory details partially
-	public void modifyShipperPartyWithPartialData(ITestContext context, String selectclassDropDownOption_InSearch,
-			String selectname_or_ID_InSearch,String entConsignee,String entExtendedName,String selectpartyName_InSearchGrid,String entAddress,String entState,String entEmail) {
-
-		selectSearchShipperParty(context, selectclassDropDownOption_InSearch, selectname_or_ID_InSearch);
-
-		utilobj.selectOptionFromSearch("Search Grid", selectpartyName_InSearchGrid);
-		modifyConsigneePartyrDetailsMandatoryFields(entConsignee,entExtendedName);
-		clickOnPartyAddressGrid();
-		modifyConsigneePartyAddressMandatoryFields(entAddress,entState,entEmail);
-
-	}
+//	public void modifyConsigneePartyWithPartialData(ITestContext context, String selectconsigneeType_InSearch,
+//			String selectname_or_ID_InSearch, String entConsignee, String entExtendedName,
+//			String selectpartyName_InSearchGrid, String entAddress, String entState, String entEmail) {
+//
+//		selectSearchConsigneeParty(context, selectconsigneeType_InSearch, selectname_or_ID_InSearch);
+//
+//		utilobj.selectOptionFromSearch("Search Grid", selectpartyName_InSearchGrid);
+//		modifyConsigneePartyrDetailsMandatoryFields(entConsignee, entExtendedName);
+//		clickOnPartyAddressGridEditBT();
+//		modifyConsigneePartyAddressMandatoryFields(entAddress, entState, entEmail);
+//
+//	}
 
 	// Deleting shipper party
-	public void deleteShipperParty(ITestContext context, String selectclassDropDownOption_InSearch,
+	public void deleteConsigneeParty(ITestContext context, String selectconsigneeType_InSearch,
 			String selectname_or_ID_InSearch, String selectpartyName_InSearchGrid) {
-		selectSearchShipperParty(context, selectclassDropDownOption_InSearch, selectname_or_ID_InSearch);
+		selectSearchConsigneeParty(context, selectconsigneeType_InSearch, selectname_or_ID_InSearch);
 		utilobj.selectOptionFromSearch("Search Grid", selectpartyName_InSearchGrid);
 		utilobj.scrollByAction(clickOnDeleteBT);
 
@@ -167,7 +177,7 @@ public class Consignee {
 	}
 
 	// Click on Party Address Grid Edit Icon
-	public void clickOnPartyAddressGrid() {
+	public void clickOnPartyAddressGridEditBT() {
 		utilobj.click(clickEditIconOnPrtyAddressGrid, "Grid Edit Button");
 
 	}
@@ -192,7 +202,4 @@ public class Consignee {
 
 	}
 
-
-	
-	
 }

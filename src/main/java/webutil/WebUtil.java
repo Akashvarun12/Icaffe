@@ -34,6 +34,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -82,7 +83,6 @@ public class WebUtil {
 				setDriver(new ChromeDriver());
 			} else if (browser.equalsIgnoreCase("edgebrowser")) {
 
-
 				setDriver(new EdgeDriver());
 			} else if (browser.equalsIgnoreCase("firefoxbrowser")) {
 				setDriver(new FirefoxDriver());
@@ -102,45 +102,40 @@ public class WebUtil {
 		maxmize();
 
 	}
-	
+
 	public static ExtentReports genrateExtentReport(String reportType) {
 
-	    try {
-	        extReport = new ExtentReports();
+		try {
+			extReport = new ExtentReports();
 
-	        SimpleDateFormat simpDateFormat =
-	                new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
+			SimpleDateFormat simpDateFormat = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
 
-	        String timeStamp = simpDateFormat.format(new Date());
+			String timeStamp = simpDateFormat.format(new Date());
 
-	        File folderObj = new File("ExtentReport");
+			File folderObj = new File("ExtentReport");
 
-	        if (!folderObj.exists()) {
-	            folderObj.mkdir();
-	        }
+			if (!folderObj.exists()) {
+				folderObj.mkdir();
+			}
 
-	        String reportPath = "ExtentReport\\"
-	                + reportType + "_"
-	                + timeStamp + ".html";
+			String reportPath = "ExtentReport\\" + reportType + "_" + timeStamp + ".html";
 
-	        ExtentSparkReporter extSparkReport =
-	                new ExtentSparkReporter(reportPath);
+			ExtentSparkReporter extSparkReport = new ExtentSparkReporter(reportPath);
 
-	        extSparkReport.config().setTheme(Theme.DARK);
-	        extSparkReport.config().setReportName("Akash varun");
+			extSparkReport.config().setTheme(Theme.DARK);
+			extSparkReport.config().setReportName("Akash varun");
 
-	        extReport.attachReporter(extSparkReport);
+			extReport.attachReporter(extSparkReport);
 
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-	    return extReport;
+		return extReport;
 	}
 
-
 	// Creates ExtentTest for logging test execution
-	public ExtentTest generateExtentTest(String testName,String reportType) {
+	public ExtentTest generateExtentTest(String testName, String reportType) {
 		try {
 			if (extReport == null) {
 				genrateExtentReport(reportType);
@@ -266,53 +261,67 @@ public class WebUtil {
 		return elementText;
 	}
 
-	
 	// Validates page title for login scenarios (Valid/Invalid credentials)
 	public void validateTitleForLoginPages(String expTitle, String type) {
 
-	    try {
-	        String actTitle = getDriver().getTitle();
+		SoftAssert softAssert = new SoftAssert();
 
-	        if (type.equalsIgnoreCase("Valid Credential")) {
-	            // valid case
-	            if (expTitle.equalsIgnoreCase(actTitle)) {
-	                extentTest.log(Status.PASS, "Title matches for: " + type);
-	                extentTest.log(Status.PASS, "Expected: " + expTitle + " Title matches Actual: " + actTitle);
-	            } else {
-	                System.out.println("Failed: Title mismatch");
-	                extentTest.log(Status.FAIL, "Expected: " + expTitle + " Title not matches: " + actTitle);
-	                extentTest.addScreenCaptureFromPath(takeScreenShot("TitleMismatch"));
+		try {
 
-	                Assert.fail("Title mismatch. Expected: " + expTitle + " Actual: " + actTitle);
-	            }
+			String actTitle = getDriver().getTitle();
 
-	        } else {
-	            // invalid case
-	            if (expTitle.equalsIgnoreCase(actTitle)) {
-	                extentTest.log(Status.PASS, " Title Mismatch for: " + type);
-	                extentTest.log(Status.PASS, "Expected: " + expTitle + " Title Match Actual: " + actTitle
-	                        + " And User stayed on Same Page");
+			if (type.equalsIgnoreCase("Valid Credential")) {
 
-	            } else {
-	                extentTest.log(Status.FAIL,
-	                        "Expected: " + expTitle + " Title matches:and user redirected " + actTitle);
-	                extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidCaseFailure"));
+				if (expTitle.equalsIgnoreCase(actTitle)) {
 
-	                Assert.fail("Invalid credential validation failed. User redirected to: " + actTitle);
-	            }
-	        }
+					extentTest.log(Status.PASS, "Title matches for: " + type);
 
-	    } catch (Exception e) {
-	        extentTest.log(Status.FAIL, "Exception in validateGetTitle: " + e.getMessage());
-	        e.printStackTrace();
+					extentTest.log(Status.PASS, "Expected: " + expTitle + " Title matches Actual: " + actTitle);
 
-	        Assert.fail("Exception in validateGetTitle: " + e.getMessage());
-	    }
+				} else {
+
+					extentTest.log(Status.FAIL, "Expected: " + expTitle + " Title not matches: " + actTitle);
+
+					extentTest.addScreenCaptureFromPath(takeScreenShot("TitleMismatch"));
+
+					softAssert.fail("Title mismatch. Expected: " + expTitle + " Actual: " + actTitle);
+				}
+
+			} else {
+
+				if (expTitle.equalsIgnoreCase(actTitle)) {
+
+					extentTest.log(Status.PASS, "Title validation passed for: " + type);
+
+					extentTest.log(Status.PASS, "Expected: " + expTitle + " Title Match Actual: " + actTitle
+							+ " And User stayed on Same Page");
+
+				} else {
+
+					extentTest.log(Status.FAIL, "Expected: " + expTitle + " but user redirected to: " + actTitle);
+
+					extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidCaseFailure"));
+
+					softAssert.fail("Invalid credential validation failed. User redirected to: " + actTitle);
+				}
+			}
+
+		} catch (Exception e) {
+
+			extentTest.log(Status.FAIL, "Exception in validateGetTitle: " + e.getMessage());
+
+			softAssert.fail("Exception in validateGetTitle: " + e.getMessage());
+		}
+
 	}
 
 	// validation of get title with valid ... Ex- For All Page
 	public void validateTitleForAllPages(ITestContext context) {
+
+		SoftAssert softAssert = new SoftAssert();
+
 		String expTitle = context.getCurrentXmlTest().getParameter("expTitle");
+
 		try {
 
 			String actTitle = getDriver().getTitle();
@@ -330,66 +339,85 @@ public class WebUtil {
 				extentTest.log(Status.FAIL, "Expected Title: " + expTitle + " | Actual Title: " + actTitle);
 
 				extentTest.addScreenCaptureFromPath(takeScreenShot("PageValidationFail"));
+
+				softAssert.fail("Title mismatch. Expected: " + expTitle + " Actual: " + actTitle);
 			}
 
 		} catch (Exception e) {
 
 			extentTest.log(Status.FAIL, "Exception in validatePage: " + e.getMessage());
 
-			e.printStackTrace();
+			softAssert.fail("Exception in validatePage: " + e.getMessage());
 		}
+
 	}
 
 	// Validates current page URL
 	public void validateCurrentURL(ITestContext context) {
-		String expURL = context.getCurrentXmlTest().getParameter("expURL");
-		try {
-			String actURL = getDriver().getCurrentUrl();
-			if (expURL.equalsIgnoreCase(actURL)) {
-				System.out.println("Passed: URL matches");
-				extentTest.log(Status.PASS, expURL + " URL matches: " + actURL);
-			} else {
-				System.out.println("Failed: URL mismatch");
-				extentTest.log(Status.FAIL, expURL + " URL Not matches: " + actURL);
-				extentTest.addScreenCaptureFromPath(takeScreenShot("URLMismatch"));
-			}
-		} catch (Exception e) {
-			extentTest.log(Status.FAIL, "Exception in verifyCurrentURL");
-			e.printStackTrace();
-		}
-	}
 
-	// Fetches attribute value from web element
-	public String getAttribute(WebElement we, String attributeValue) {
-		String value = "";
+		SoftAssert softAssert = new SoftAssert();
+
+		String expURL = context.getCurrentXmlTest().getParameter("expURL");
+
 		try {
-			value = we.getAttribute(attributeValue);
-			System.out.println("Attribute value fetched successfully");
-			extentTest.log(Status.INFO, "Fetched attribute: " + attributeValue);
+
+			String actURL = getDriver().getCurrentUrl();
+
+			if (expURL.equalsIgnoreCase(actURL)) {
+
+				extentTest.log(Status.PASS, expURL + " URL matches: " + actURL);
+
+			} else {
+
+				System.out.println("Failed: URL mismatch");
+
+				extentTest.log(Status.FAIL, expURL + " URL Not matches: " + actURL);
+
+				extentTest.addScreenCaptureFromPath(takeScreenShot("URLMismatch"));
+
+				softAssert.fail("URL mismatch. Expected: " + expURL + " Actual: " + actURL);
+			}
+
 		} catch (Exception e) {
-			extentTest.log(Status.FAIL, "Failed to get attribute: " + attributeValue);
-			e.printStackTrace();
+
+			extentTest.log(Status.FAIL, "Exception in verifyCurrentURL: " + e.getMessage());
+
+			softAssert.fail("Exception in verifyCurrentURL: " + e.getMessage());
 		}
-		return value;
+
 	}
 
 	// Validates expected text with actual web element text
 	public void validateTextValue(WebElement we, String expText) {
 
-		String actText = getText(we);
+		SoftAssert softAssert = new SoftAssert();
+
 		try {
+
+			String actText = getText(we);
+
 			if (expText.equalsIgnoreCase(actText)) {
-				System.out.println("Passed: Text matches");
-				extentTest.log(Status.PASS, expText + " Text matches: " + actText);
+
+				extentTest.log(Status.PASS, "Expected Text: " + expText + " | Actual Text: " + actText);
+
 			} else {
+
 				System.out.println("Failed: Text mismatch");
-				extentTest.log(Status.FAIL, expText + " Text Not matches: " + actText);
+
+				extentTest.log(Status.FAIL, "Expected Text: " + expText + " | Actual Text: " + actText);
+
 				extentTest.addScreenCaptureFromPath(takeScreenShot("TextMismatch"));
+
+				softAssert.fail("Text mismatch. Expected: " + expText + " Actual: " + actText);
 			}
+
 		} catch (Exception e) {
-			extentTest.log(Status.FAIL, "Exception in verifyTextValue");
-			e.printStackTrace();
+
+			extentTest.log(Status.FAIL, "Exception in verifyTextValue: " + e.getMessage());
+
+			softAssert.fail("Exception in verifyTextValue: " + e.getMessage());
 		}
+
 	}
 
 	// Fetches first selected option from dropdown
@@ -473,74 +501,80 @@ public class WebUtil {
 	// Validates alert popup text and accepts alert
 	public void alertTextValidation(String expectedText) {
 
+		SoftAssert softAssert = new SoftAssert();
+
 		try {
-			// Wait until alert is present (prevents NoAlertPresentException)
+
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 
-			// Get actual alert text
 			String actualText = alert.getText().trim();
 
-			// Validate alert text
 			if (actualText.equalsIgnoreCase(expectedText.trim())) {
+
 				extentTest.log(Status.PASS,
 						"Alert text matched successfully. Expected: " + expectedText + " | Actual: " + actualText);
+
 			} else {
-				Thread.sleep(1000);
+
 				extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidAlertText"));
+
 				extentTest.log(Status.FAIL,
 						"Alert text mismatch. Expected: " + expectedText + " | Actual: " + actualText);
-				
+
+				softAssert.fail("Alert text mismatch. Expected: " + expectedText + " Actual: " + actualText);
 			}
 
-			// Optional: accept alert after validation (recommended)
 			alert.accept();
 
 		} catch (TimeoutException e) {
-			extentTest.log(Status.WARNING, "No alert appeared within timeout");
-		} catch (Exception e) {
-			extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidAlertText"));
-			extentTest.log(Status.FAIL, "Exception while handling alert: " + e.getMessage());
-		}
-	}
 
+			extentTest.log(Status.FAIL, "No alert appeared within timeout");
+
+			softAssert.fail("No alert appeared within timeout");
+
+		} catch (Exception e) {
+
+			extentTest.addScreenCaptureFromPath(takeScreenShot("InvalidAlertText"));
+
+			extentTest.log(Status.FAIL, "Exception while handling alert: " + e.getMessage());
+
+			softAssert.fail("Exception while handling alert: " + e.getMessage());
+		}
+
+	}
 
 	// Captures screenshot and returns screenshot path
 	public String takeScreenShot(String testCaseImageName) {
 
-	    String path = "";
+		String path = "";
 
-	    try {
+		try {
 
-	        DateFormat dFormat = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
-	        String timeStamp = dFormat.format(new Date());
+			DateFormat dFormat = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
+			String timeStamp = dFormat.format(new Date());
 
-	        File folderObj = new File("ExtentReport/screenshots");
+			File folderObj = new File("Snapshots");
 
-	        if (!folderObj.exists()) {
-	            folderObj.mkdirs();
-	        }
+			if (!folderObj.exists()) {
+				folderObj.mkdirs();
+			}
 
-	        File destinationFile = new File(
-	                folderObj,
-	                testCaseImageName + "_" + timeStamp + ".png"
-	        );
+			File destinationFile = new File(folderObj, testCaseImageName + "_" + timeStamp + ".png");
 
-	        Screenshot screenshot = new AShot()
-	                .shootingStrategy(ShootingStrategies.viewportPasting(1000))
-	                .takeScreenshot(driver);
+			Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+					.takeScreenshot(driver);
 
-	        ImageIO.write(screenshot.getImage(), "PNG", destinationFile);
+			ImageIO.write(screenshot.getImage(), "PNG", destinationFile);
 
-	        path = destinationFile.getAbsolutePath();
+			path = destinationFile.getAbsolutePath();
 
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-	    return path;
+		return path;
 	}
-
 
 	// Reads data from properties file
 	public static Properties propertiFile(String fileName) {
@@ -647,20 +681,43 @@ public class WebUtil {
 	// Validates actual list with expected list
 	public void validateListOfText(List<WebElement> weActualList, List<String> expectedList) {
 
-		List<String> actualList = getListOfText(weActualList);
+	    SoftAssert softAssert = new SoftAssert();
 
-		try {
-			Assert.assertEquals(actualList, expectedList);
-			extentTest.pass("List matched successfully");
-			extentTest.pass("Actual List: " + actualList + " ↓ ");
-			extentTest.pass(" Matches ↑ Expected List: " + expectedList);
-		} catch (AssertionError e) {
-			extentTest.fail("List mismatch");
-			extentTest.fail("Actual: " + actualList);
-			extentTest.fail("Expected: " + expectedList);
-			extentTest.addScreenCaptureFromPath(takeScreenShot("ListOfText"));
-			throw e;
-		}
+	    List<String> actualList = getListOfText(weActualList);
+
+	    try {
+
+	        if (actualList.equals(expectedList)) {
+
+	            extentTest.pass("List matched successfully");
+	            extentTest.pass("Actual List: " + actualList + " ↓ ");
+	            extentTest.pass("Matches ↑ Expected List: " + expectedList);
+
+	        } else {
+
+	            extentTest.fail("List mismatch");
+	            extentTest.fail("Actual: " + actualList);
+	            extentTest.fail("Expected: " + expectedList);
+
+	            extentTest.addScreenCaptureFromPath(
+	                    takeScreenShot("ListOfText"));
+
+	            softAssert.fail(
+	                    "List mismatch. Expected: " + expectedList +
+	                            " Actual: " + actualList);
+	        }
+
+	    } catch (Exception e) {
+
+	        extentTest.fail("Exception in validateListOfText: " + e.getMessage());
+
+	        extentTest.addScreenCaptureFromPath(
+	                takeScreenShot("ListOfText"));
+
+	        softAssert.fail(
+	                "Exception in validateListOfText: " + e.getMessage());
+	    }
+
 	}
 
 	// Selects option from auto-suggestion dropdown
@@ -784,29 +841,29 @@ public class WebUtil {
 			System.out.println("No data found.");
 		}
 	}
-	
+
 	public void selectRadioButton(String valueToSelect, String eleName) {
 
-	    try {
+		try {
 
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-	        WebElement radioBtn = wait.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//input[@id='"+valueToSelect+"']")));
+			WebElement radioBtn = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='" + valueToSelect + "']")));
 
-	        radioBtn.click();
+			radioBtn.click();
 
-	        extentTest.pass(valueToSelect + " selected successfully in: " + eleName);
+			extentTest.pass(valueToSelect + " selected successfully in: " + eleName);
 
-	    } catch (Exception e) {
+		} catch (Exception e) {
 
-	        extentTest.fail("Failed to select option: " + valueToSelect + " in " + eleName);
+			extentTest.fail("Failed to select option: " + valueToSelect + " in " + eleName);
 
-	        extentTest.addScreenCaptureFromPath(takeScreenShot("Radio_Button_Error"));
+			extentTest.addScreenCaptureFromPath(takeScreenShot("Radio_Button_Error"));
 
-	        extentTest.fail("Exception: " + e.getMessage());
-	    }
+			extentTest.fail("Exception: " + e.getMessage());
+		}
 	}
+
 	
-	//input[@name='ConType']
 }

@@ -8,15 +8,12 @@ import org.testng.annotations.Test;
 import basetest.BaseTest;
 import icaffe_homepage.Homepage;
 import icaffe_masters_party_pagewise_classes.Consignee;
-import icaffe_masters_party_pagewise_classes.Exporter_Other;
-import icaffe_masters_party_pagewise_classes.Exporter_Shipper;
-import pojo.ExporterTestData;
+import pojo.ConsigneeTestData;
 import webutil.ExcelDataSuplier;
 
-public class Party_Consignee_TestCase extends BaseTest{
+public class Party_Consignee_TestCase extends BaseTest {
 
-	
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void verifyConsigneeMasterURL(ITestContext context) {
 
 		Homepage homeObj = new Homepage(utilObj);
@@ -25,46 +22,127 @@ public class Party_Consignee_TestCase extends BaseTest{
 		utilObj.validateCurrentURL(context);
 
 	}
-//	
-//	@Test(priority = 2)
-//
-//	public void verifyConsigneePartyCreationWithMandatoryFieldsTest(ITestContext context) {
-//
-//		Homepage homeObj = new Homepage(utilObj);
-//		homeObj.Goto_Masters_PartyConsignee();
-//		
-//		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
-//		ExporterTestData data = new ExporterTestData(testData);
 
-	
-//		
-//		Consignee conObj=	new Consignee(utilObj);
-//		conObj.enterConsigneePartyDetailsMandatoryFields();
-//		conObj.enterConsigneePartyAddressMandatoryFields();
-//		conObj.clickOnAddButton();
-//		conObj.clickOnSaveButton();
-		
+	@Test(priority = 2)
 
-//		expShipperObj.enterShipperDetailsMandatoryFields(data.getPartyName(), data.getIECNumber(),
-//				data.getClassDropDownOption(), data.getMercManufDropDownOption());
-//		expShipperObj.enterShipperAddressMandatoryFields(data.getSerialNumber(), data.getPartyAddress(),
-//				data.getEntCountry(), data.getCountry(), data.getEntState(), data.getState(), data.getRegNumber(),
-//				data.getCtxState());
-//		expShipperObj.clickOnAddButton();
-//
-//		expShipperObj.goToOtherTab();
-//
-//		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
-//		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
-//		expShipperObj.clickOnSaveButton();
-//		utilObj.alertTextValidation(data.getExpConfirmationMsg());
-//		try {
-//			Thread.sleep(5000);
-//		} catch (InterruptedException e) {
-//			
-//			e.printStackTrace();
-//		}
-//	}
+	public void verifySupplierPartyCreationWithMandatoryFieldsTest(ITestContext context) {
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyConsignee();
+
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ConsigneeTestData data = new ConsigneeTestData(testData);
+
+		Consignee conObj = new Consignee(utilObj);
+		conObj.enterConsigneePartyDetailsMandatoryFields(data.selSubTypeRaidioBT(), data.getPartyName(),
+				data.entExtendedName());
+		conObj.enterConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.entContactPerson(),
+				data.getEntCountry(), data.getCountry(), data.getEntState(), data.entEmail());
+		conObj.clickOnAddButton();
+		conObj.clickOnSaveButton();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+	}
+
+	@Test(priority = 3)
+
+	public void verifyBuyerPartyCreationWithMandatoryFieldsTest(ITestContext context) {
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyConsignee();
+
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ConsigneeTestData data = new ConsigneeTestData(testData);
+
+		Consignee conObj = new Consignee(utilObj);
+		conObj.enterConsigneePartyDetailsMandatoryFields(data.selSubTypeRaidioBT(), data.getPartyName(),
+				data.entExtendedName());
+		conObj.enterConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.entContactPerson(),
+				data.getEntCountry(), data.getCountry(), data.getEntState(), data.entEmail());
+		conObj.clickOnAddButton();
+		conObj.clickOnSaveButton();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+	}
+
+	@Test(priority = 4)
+
+	public void verifyNotifyPartyCreationWithMandatoryFieldsTest(ITestContext context) {
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyConsignee();
+
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ConsigneeTestData data = new ConsigneeTestData(testData);
+
+		Consignee conObj = new Consignee(utilObj);
+		conObj.enterConsigneePartyDetailsMandatoryFields(data.selSubTypeRaidioBT(), data.getPartyName(),
+				data.entExtendedName());
+		conObj.enterConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.entContactPerson(),
+				data.getEntCountry(), data.getCountry(), data.getEntState(), data.entEmail());
+		conObj.clickOnAddButton();
+		conObj.clickOnSaveButton();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+	}
+
+	@Test(priority = 5)
+
+	public void verifySupplierPartyModificationWithMandatoryFieldsTest(ITestContext context) {
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyConsignee();
+
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ConsigneeTestData data = new ConsigneeTestData(testData);
+
+		Consignee conObj = new Consignee(utilObj);
+
+		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
+		conObj.modifyConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.getEntState(), data.entEmail());
+		conObj.clickOnAddButton();
+		conObj.clickOnSaveButton();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+	}
+
+	@Test(priority = 6)
+
+	public void verifyBuyerPartyModificationWithMandatoryFieldsTest(ITestContext context) {
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyConsignee();
+
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ConsigneeTestData data = new ConsigneeTestData(testData);
+
+		Consignee conObj = new Consignee(utilObj);
+
+		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
+		conObj.modifyConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.getEntState(), data.entEmail());
+		conObj.clickOnAddButton();
+		conObj.clickOnSaveButton();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+	}
 	
-	
+	@Test(priority = 7)
+
+	public void verifyNotifyPartyModificationWithMandatoryFieldsTest(ITestContext context) {
+
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyConsignee();
+
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ConsigneeTestData data = new ConsigneeTestData(testData);
+
+		Consignee conObj = new Consignee(utilObj);
+
+		conObj.modifyConsigneePartyrDetailsMandatoryFields(data.getPartyName(), data.entExtendedName());
+		conObj.modifyConsigneePartyAddressMandatoryFields(data.getPartyAddress(), data.getEntState(), data.entEmail());
+		conObj.clickOnAddButton();
+		conObj.clickOnSaveButton();
+
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+	}
 }

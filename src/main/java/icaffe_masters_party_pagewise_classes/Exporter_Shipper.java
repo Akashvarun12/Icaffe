@@ -157,11 +157,7 @@ public class Exporter_Shipper {
 	// Log or Print all created shipper Name and Status from Search Grid
 	public void logShipperPartySearchTableData() {
 
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	
 		utilobj.printTableData();
 
 	}

@@ -56,7 +56,7 @@ public class BranchDivisionFinYear_Page {
 
 		} catch (Exception e) {
 			extObj.log(Status.FAIL, "Failed to select division: " + division);
-			extObj.log(Status.FAIL, "Exception: " + e.getMessage());
+			
 		}
 	}
 	

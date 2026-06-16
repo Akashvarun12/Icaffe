@@ -200,6 +200,22 @@
 		</classes>
 
 	</test>
+	
+				<test name="verifyUserCannotCreateShipperPartyWithoutMandatoryFields">
+		<parameter name="sheetName" value="MastersPartyExporter" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+
+		<parameter name="action" value="CreateShipperPartyWithoutMandatoryFields" />
+
+		<classes>
+			<class name="masterstestcase.Party_Exporter_TestCase">
+				<methods>
+					<include name="verifyUserCannotCreateShipperPartyWithoutMandatoryFields" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
 
 
 

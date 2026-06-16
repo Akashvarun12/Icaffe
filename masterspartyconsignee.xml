@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  
-	<test name="verifyConsigneeMasterURL">
+
+	<!--	<test name="verifyConsigneeMasterURL">
 
 		<parameter name="expURL"
-			value="https://idp.icaffe.co.in/forms/Master/ConsigneeMaster.aspx?mnuid=mnuMasterConsignee" />
+	value="https://idp.icaffe.co.in/forms/Master/ConsigneeMaster.aspx?mnuid=mnuMasterConsignee"
+	/>
 
 		<classes>
 			<class name="masterstestcase.Party_Consignee_TestCase">
@@ -15,18 +16,74 @@
 			</class>
 		</classes>
 
-	</test>
-	
-		<test name="verifyConsigneePartyCreationWithMandatoryFieldsTest">
+	</test>-->
+
+	<test name="verifySupplierPartyCreationWithMandatoryFieldsTest">
+
+		<parameter name="sheetName" value="MastersPartyConsignee" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="ConsigneeSupplierPartyCreation" />
 
 		<classes>
 			<class name="masterstestcase.Party_Consignee_TestCase">
 				<methods>
-					<include name="verifyConsigneePartyCreationWithMandatoryFieldsTest" />
+					<include
+						name="verifySupplierPartyCreationWithMandatoryFieldsTest" />
 				</methods>
 			</class>
 		</classes>
 
 	</test>
 	
-</suite> <!-- Suite -->
+		<test name="verifyBuyerPartyCreationWithMandatoryFieldsTest">
+
+		<parameter name="sheetName" value="MastersPartyConsignee" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="ConsigneeBuyerPartyCreation" />
+
+		<classes>
+			<class name="masterstestcase.Party_Consignee_TestCase">
+				<methods>
+					<include
+						name="verifyBuyerPartyCreationWithMandatoryFieldsTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+			<test name="verifyNotifyPartyCreationWithMandatoryFieldsTest">
+
+		<parameter name="sheetName" value="MastersPartyConsignee" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="ConsigneeNotifyPartyCreation" />
+
+		<classes>
+			<class name="masterstestcase.Party_Consignee_TestCase">
+				<methods>
+					<include
+						name="verifyNotifyPartyCreationWithMandatoryFieldsTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+				<test name="verifyNotifyPartyCreationWithMandatoryFieldsTest">
+
+		<parameter name="sheetName" value="MastersPartyConsignee" />
+		<parameter name="excelFile" value="Akash_TestByDataprovider.xlsx" />
+		<parameter name="action" value="ConsigneeSupplierPartyModification" />
+
+		<classes>
+			<class name="masterstestcase.Party_Consignee_TestCase">
+				<methods>
+					<include
+						name="verifyNotifyPartyCreationWithMandatoryFieldsTest" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+</suite> 

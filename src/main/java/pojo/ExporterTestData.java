@@ -20,6 +20,9 @@ public class ExporterTestData {
 	private String ctxState;
 	private String ADCode;
 	private String expConfirmationMsg;
+	private String entExtendedName;
+	private String entContactPerson;
+	private String entEmail;
 
 	// Constructor
 	public ExporterTestData(Map<String, String> testData) {
@@ -40,14 +43,17 @@ public class ExporterTestData {
 		this.ctxState = testData.get("ctxState");
 		this.ADCode = testData.get("ADCode");
 		this.expConfirmationMsg = testData.get("expConfirmationMsg");
+		this.entExtendedName = testData.get("entExtendedName");
+		this.entContactPerson = testData.get("entContactPerson");
+		this.entEmail = testData.get("entEmail");
 	}
 
 	// Getters
-	
+
 	public String getSelectclassDropDownOption_InSearch() {
 		return selectclassDropDownOption_InSearch;
 	}
-	
+
 	public String getSelectname_or_ID_InSearch() {
 		return selectname_or_ID_InSearch;
 	}
@@ -55,7 +61,7 @@ public class ExporterTestData {
 	public String getselectpartyName_InSearchGrid() {
 		return selectpartyName_InSearchGrid;
 	}
-	
+
 	public String getPartyName() {
 		return partyName;
 	}
@@ -110,5 +116,17 @@ public class ExporterTestData {
 
 	public String getExpConfirmationMsg() {
 		return expConfirmationMsg;
+	}
+
+	public String entExtendedName() {
+		return entExtendedName;
+	}
+
+	public String entContactPerson() {
+		return entContactPerson;
+	}
+
+	public String entEmail() {
+		return entEmail;
 	}
 }

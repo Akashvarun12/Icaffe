@@ -50,12 +50,6 @@ public class Party_Exporter_TestCase extends BaseTest {
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnSaveButton();
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-
-			e.printStackTrace();
-		}
 	}
 
 	@Test(priority = 3)
@@ -195,8 +189,7 @@ public class Party_Exporter_TestCase extends BaseTest {
 		expShipperObj.logShipperPartySearchTableData();
 
 	}
-	
-	
+
 	@Test(priority = 9)
 
 	public void verifyShipperPartyEnteredDetailsAreClear(ITestContext context) {
@@ -219,7 +212,6 @@ public class Party_Exporter_TestCase extends BaseTest {
 		Exporter_Other expOtherObj = new Exporter_Other(utilObj);
 		expOtherObj.enterShipperOtherTabMandatoryFields(data.getADCode());
 		expShipperObj.clickOnClearButton();
-		
 
 	}
 
@@ -256,8 +248,6 @@ public class Party_Exporter_TestCase extends BaseTest {
 		utilObj.alertTextValidation(data.getExpConfirmationMsg());
 
 	}
-	
-	
 
 	@Test(priority = 12)
 	public void verifyPrivateShipperPartyDeletion(ITestContext context) {
@@ -276,26 +266,17 @@ public class Party_Exporter_TestCase extends BaseTest {
 
 	}
 
-//	@Test(priority = 2, dataProvider = "ReadDataFromExcel", dataProviderClass = ExcelDataSuplier.class)
-//
-//	public void verifyShipperAccountCreationWithMandatoryFieldsDataProvider(String partyName, String IECNumber,
-//			String classDropDownOption, String mercManufDropDownOption, String serialNumber, String partyAddress,
-//			String entCountry, String country, String entState, String state, String regNumber, String ctxState,String ADCode,
-//			String expConfirmationMsg) {
-//
-//		Homepage homeObj = new Homepage(utilObj);
-//		homeObj.Goto_Masters_PartyExporter();
-//		Exporter_ShipperTab expShipperObj = new Exporter_ShipperTab(utilObj);
-//		expShipperObj.enterShipperDetailsMandatoryFields(partyName, IECNumber, classDropDownOption,
-//				mercManufDropDownOption);
-//		expShipperObj.enterShipperAddressMandatoryFields(serialNumber, partyAddress, entCountry, country, entState,
-//				state, regNumber, ctxState);
-//		expShipperObj.clickOnAddButton();
-//		expShipperObj.goToOtherTab();
-//		Exporter_OtherTab expOtherObj = new Exporter_OtherTab(utilObj);
-//		expOtherObj.enterShipperOtherTabMandatoryFields(ADCode);
-//		expShipperObj.clickOnSaveButton();
-//		utilObj.alertTextValidation(expConfirmationMsg);
-//	}
+	@Test(priority = 13)
+	public void verifyUserCannotCreateShipperPartyWithoutMandatoryFields(ITestContext context) {
+		Homepage homeObj = new Homepage(utilObj);
+		homeObj.Goto_Masters_PartyExporter();
+		Map<String, String> testData = ExcelDataSuplier.readDynamicDataFromExcel(context);
+		ExporterTestData data = new ExporterTestData(testData);
+
+		Exporter_Shipper expShipperObj = new Exporter_Shipper(utilObj);
+		expShipperObj.clickOnSaveButton();
+		utilObj.alertTextValidation(data.getExpConfirmationMsg());
+
+	}
 
 }

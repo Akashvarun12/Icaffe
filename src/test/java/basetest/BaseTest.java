@@ -49,7 +49,7 @@ public class BaseTest {
 		utilObj.launchBrowser(browsername);
 		utilObj.openURL(urlName);
 
-		logObj = new IcaffeLogin(utilObj);
+		logObj = new IcaffeLogin(utilObj,extObj);
 		logObj.enterLoginCreadential();
 		logObj.clickOnLoginBT();
 

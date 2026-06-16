@@ -54,7 +54,7 @@ public class Branch_Division_FinancialYear_TestCase {
 		utilObj.launchBrowser(browsername);
 		utilObj.openURL(urlName);
 
-		IcaffeLogin logObj = new IcaffeLogin(utilObj);
+		IcaffeLogin logObj = new IcaffeLogin(utilObj,extObj);
 		logObj.enterLoginCreadential();
 		logObj.clickOnLoginBT();
 	}

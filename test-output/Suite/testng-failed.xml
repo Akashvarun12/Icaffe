@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Login Test(failed)">
+  <test thread-count="5" name="verifySupplierPartyCreationWithMandatoryFieldsTest(failed)">
     <parameter name="excelFile" value="Akash_TestByDataprovider.xlsx"/>
-    <parameter name="sheetName" value="LoginSheet"/>
+    <parameter name="sheetName" value="MastersPartyConsignee"/>
+    <parameter name="action" value="ConsigneeSupplierPartyCreation"/>
     <classes>
-      <class name="login_testcase.LoginTestCase">
+      <class name="masterstestcase.Party_Consignee_TestCase">
         <methods>
+          <include name="verifySupplierPartyCreationWithMandatoryFieldsTest" invocation-numbers="0"/>
+          <include name="takeScreenShot"/>
           <include name="generatReport"/>
-          <include name="validateUserAlreadyLoggedIn" invocation-numbers="0"/>
           <include name="login"/>
           <include name="closeBrowser"/>
-          <include name="takeScreenShot"/>
-          <include name="validateLoginPageWith_Title" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- login_testcase.LoginTestCase -->
+      </class> <!-- masterstestcase.Party_Consignee_TestCase -->
     </classes>
-  </test> <!-- Login Test(failed) -->
+  </test> <!-- verifySupplierPartyCreationWithMandatoryFieldsTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
