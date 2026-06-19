@@ -55,10 +55,7 @@ post {
 
             <div style="width:700px;border:1px solid #ddd;padding:20px;">
 
-                <h2 style="color:#2E86C1;">
-                    iCaffe Automation Test Execution Report
-                </h2>
-
+                <h2 style="color:#2E86C1;">iCaffe Automation Test Execution Report</h2>
                 <hr>
 
                 <table cellpadding="8">
@@ -81,9 +78,7 @@ post {
                     <tr>
                         <td><b>Build URL</b></td>
                         <td>
-                            <a href="${env.BUILD_URL}">
-                                Open Jenkins Build
-                            </a>
+                            <a href="${env.BUILD_URL}">Open Jenkins Build</a>
                         </td>
                     </tr>
 
@@ -95,15 +90,11 @@ post {
 
                 <ul>
                     <li>
-                        <a href="${env.BUILD_URL}testReport">
-                            JUnit Report
-                        </a>
+                        <a href="${env.BUILD_URL}testReport">JUnit Report</a>
                     </li>
 
                     <li>
-                        <a href="${env.BUILD_URL}ICaffe_20Project_20Report">
-                            Extent Report
-                        </a>
+                        <a href="${env.BUILD_URL}ICaffe_20Project_20Report">Extent Report</a>
                     </li>
                 </ul>
 
