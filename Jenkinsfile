@@ -4,6 +4,7 @@ pipeline {
 
     options {
         buildDiscarder(logRotator(numToKeepStr: '1'))
+        disableConcurrentBuilds()
     }
 
     stages {
@@ -32,148 +33,97 @@ pipeline {
 
         always {
 
-            // ✅ JUnit Report (NO manual parsing needed)
+            // ✅ JUnit Report
             junit 'target/surefire-reports/*.xml'
 
-            // ✅ HTML Extent Report
+            // ✅ HTML Report FIXED
             publishHTML(target: [
-                allowMissing: false,
-                alwaysLinkToLastBuild: false,
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
                 keepAll: false,
                 reportDir: 'ExtentReport',
-                reportFiles: '*.html',
+                reportFiles: 'index.html',
                 reportName: 'ICaffe Project Report'
-                attachmentsPattern: 'Snapshots/**/*.png'
             ])
 
-            // ✅ Email (Simple + Stable)
-       emailext(
-def testResult = currentBuild.rawBuild.getAction(hudson.tasks.junit.TestResultAction.class)
+            // ✅ SAFE EMAIL (NO rawBuild / no script security issue)
+            emailext(
+                to: 'akash.varun@hanssupport.com',
 
-def totalTests = testResult?.totalCount ?: 0
-def failedTests = testResult?.failCount ?: 0
-def skippedTests = testResult?.skipCount ?: 0
-def passedTests = totalTests - failedTests - skippedTests
+                subject: "iCaffe Automation Execution Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
 
+                mimeType: 'text/html',
 
-emailext(
-    to: 'akash.varun@hanssupport.com',
+                body: """
+                <html>
+                <body style="font-family: Arial, Helvetica, sans-serif;">
 
-    subject: "iCaffe Automation Execution Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
+                <div style="width:700px;border:1px solid #ddd;padding:20px;">
 
-    mimeType: 'text/html',
+                    <h2 style="color:#2E86C1;">
+                        iCaffe Automation Test Execution Report
+                    </h2>
 
-    body: """
-    <html>
-    <body style="font-family: Arial, Helvetica, sans-serif;">
+                    <hr>
 
-    <div style="width: 700px; border:1px solid #ddd; padding:20px;">
+                    <table style="border-collapse:collapse;" cellpadding="8">
 
-        <h2 style="color:#2E86C1;">
-            iCaffe Automation Test Execution Report
-        </h2>
+                        <tr>
+                            <td><b>Project</b></td>
+                            <td>iCaffe</td>
+                        </tr>
 
-        <hr>
+                        <tr>
+                            <td><b>Build Number</b></td>
+                            <td>${env.BUILD_NUMBER}</td>
+                        </tr>
 
-        <table style="border-collapse:collapse;" cellpadding="8">
+                        <tr>
+                            <td><b>Status</b></td>
+                            <td>${currentBuild.currentResult}</td>
+                        </tr>
 
-            <tr>
-                <td><b>Project</b></td>
-                <td>iCaffe</td>
-            </tr>
+                        <tr>
+                            <td><b>Build URL</b></td>
+                            <td>
+                                <a href="${env.BUILD_URL}">
+                                    Open Jenkins Build
+                                </a>
+                            </td>
+                        </tr>
 
-            <tr>
-                <td><b>Build Number</b></td>
-                <td>${env.BUILD_NUMBER}</td>
-            </tr>
+                    </table>
 
-            <tr>
-                <td><b>Build URL</b></td>
-                <td>
-                    <a href="${env.BUILD_URL}">
-                        Open Jenkins Build
-                    </a>
-                </td>
-            </tr>
+                    <br>
 
-            <tr>
-                <td><b>Status</b></td>
-                <td>
-                    <span style="
-                        padding:5px 10px;
-                        color:white;
-                        background-color:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#dc3545'};
-                        border-radius:4px;">
-                        ${currentBuild.currentResult}
-                    </span>
-                </td>
-            </tr>
+                    <h3>Reports</h3>
 
-            <tr>
-                <td><b>Test Summary</b></td>
-                <td>
-                    Total: ${totalTests} |
-                    Passed: ${passedTests} |
-                    Failed: ${failedTests} |
-                    <span style="
-                        padding:3px 8px;
-                        color:black;
-                        background-color:#ffc107;
-                        border-radius:4px;">
-                        Skipped: ${skippedTests}
-                    </span>
-                </td>
-            </tr>
+                    <ul>
+                        <li>
+                            <a href="${env.BUILD_URL}testReport">
+                                JUnit Report
+                            </a>
+                        </li>
 
-        </table>
+                        <li>
+                            <a href="${env.BUILD_URL}ICaffe_20Project_20Report">
+                                Extent Report
+                            </a>
+                        </li>
+                    </ul>
 
-        <br>
+                    <br>
 
-        <h3>Reports</h3>
+                    <p>Regards,<br>Jenkins Automation Server</p>
 
-        <table border="1"
-               cellpadding="10"
-               cellspacing="0"
-               style="border-collapse:collapse;">
+                </div>
 
-            <tr style="background-color:#f2f2f2;">
-                <th>Report Name</th>
-                <th>Link</th>
-            </tr>
+                </body>
+                </html>
+                """
+            )
+        }
 
-            <tr>
-                <td>JUnit Test Report</td>
-                <td>
-                    <a href="${env.BUILD_URL}testReport">
-                        View Report
-                    </a>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Extent Report</td>
-                <td>
-                    <a href="${env.BUILD_URL}ICaffe_20Project_20Report">
-                        View Report
-                    </a>
-                </td>
-            </tr>
-
-        </table>
-
-        <br>
-
-        <p>
-            Regards,<br>
-            Jenkins Automation Server
-        </p>
-
-    </div>
-
-    </body>
-    </html>
-    """
-)
         cleanup {
             cleanWs(deleteDirs: true, disableDeferredWipeout: true)
         }
