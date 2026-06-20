@@ -50,7 +50,7 @@ pipeline {
                 alwaysLinkToLastBuild: true,
                 keepAll: false,
                 reportDir: 'ExtentReport',
-                reportFiles: 'index.html',
+                reportFiles: '*.html',
                 reportName: "ICaffe Project Report #${env.BUILD_NUMBER}"
             ])
 
