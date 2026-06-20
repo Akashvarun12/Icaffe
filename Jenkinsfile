@@ -46,7 +46,7 @@ pipeline {
                 keepAll: false,
                 reportDir: 'ExtentReport',
                 reportFiles: '*.html',
-                reportName: "ICaffe_Project_Report #${env.BUILD_NUMBER}"
+                reportName: "ICaffe_Project_Report"
             ])
 
             emailext(
