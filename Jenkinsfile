@@ -46,7 +46,7 @@ pipeline {
                 keepAll: false,
                 reportDir: 'ExtentReport',
                 reportFiles: '*.html',
-                reportName: "ICaffe Project Report #${env.BUILD_NUMBER}"
+                reportName: "ICaffe_Project_Report #${env.BUILD_NUMBER}"
             ])
 
             emailext(
@@ -106,7 +106,7 @@ pipeline {
                             </a>
 
                             <!-- 🔥 FIXED EXTENT LINK -->
-                            <a href="${env.BUILD_URL}ICaffe_20Project_20Report/"
+                            <a href="${env.BUILD_URL}ICaffe_Project_Report/"
                                style="background:#28a745;color:white;padding:10px 15px;
                                       text-decoration:none;border-radius:5px;">
                                 View Extent Report
