@@ -34,101 +34,100 @@ pipeline {
 
         always {
 
-            // JUnit Report
             junit 'target/surefire-reports/*.xml'
 
-            // Small wait to ensure reports are generated
             script {
                 sleep(time: 2, unit: 'SECONDS')
             }
 
-            // Publish HTML report
             publishHTML(target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: false,
                 reportDir: 'ExtentReport',
-                reportFiles: 'index.html',
+                reportFiles: '*.html',
                 reportName: "ICaffe_Project_Report"
             ])
 
-            // Email Notification (Dashboard Style)
             emailext(
                 to: 'akash.varun@hanssupport.com',
                 subject: "iCaffe Automation Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
                 mimeType: 'text/html',
                 body: """
-<html>
-<body style="font-family:Arial;background:#f5f7fa;padding:20px;">
+                <html>
+                <body style="font-family: Arial, sans-serif; background-color:#f4f6f7; padding:20px;">
 
-<div style="max-width:800px;margin:auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,0.1);">
+                <div style="max-width:750px;margin:auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
-<!-- HEADER -->
-<div style="background:linear-gradient(90deg,#2E86C1,#1B4F72);color:white;text-align:center;padding:18px;">
-    <h2 style="margin:0;">🚀 iCaffe Automation Dashboard</h2>
-</div>
+                    <div style="background:#2E86C1;color:white;padding:15px;text-align:center;">
+                        <h2 style="margin:0;">iCaffe Automation Execution Report</h2>
+                    </div>
 
-<!-- BODY -->
-<div style="padding:20px;">
+                    <div style="padding:20px;">
 
-<table style="width:100%;border-collapse:collapse;font-size:14px;">
+                        <table style="width:100%;border-collapse:collapse;font-size:14px;">
 
-<tr>
-<td><b>Project</b></td>
-<td>iCaffe</td>
-</tr>
+                            <tr>
+                                <td><b>Project</b></td>
+                                <td>iCaffe</td>
+                            </tr>
 
-<tr>
-<td><b>Build No</b></td>
-<td>#${env.BUILD_NUMBER}</td>
-</tr>
+                            <tr>
+                                <td><b>Build Number</b></td>
+                                <td>${env.BUILD_NUMBER}</td>
+                            </tr>
 
-<tr>
-<td><b>Status</b></td>
-<td>
-<span style="
-    padding:6px 14px;
-    border-radius:6px;
-    color:white;
-    background:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#e74c3c'};
-">
-${currentBuild.currentResult ?: 'SUCCESS'}
-</span>
-</td>
-</tr>
+                            <tr>
+                                <td><b>Status</b></td>
+                                <td>
+                                    <span style="
+                                        padding:5px 12px;
+                                        border-radius:5px;
+                                        color:white;
+                                        background-color:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#dc3545'};
+                                    ">
+                                    ${currentBuild.currentResult}
+                                    </span>
+                                </td>
+                            </tr>
 
-</table>
+                        </table>
 
-<br>
+                        <br>
 
-<h3>📊 Reports Dashboard</h3>
+                        <h3>📊 Reports</h3>
 
-<div style="display:flex;gap:12px;flex-wrap:wrap;">
+                        <div style="display:flex;gap:10px;flex-wrap:wrap;">
 
-<a href="${env.BUILD_URL}testReport/"
-   style="background:#17a2b8;color:white;padding:10px 14px;border-radius:6px;text-decoration:none;">
-   📄 JUnit Report
-</a>
+                            <a href="${env.BUILD_URL}testReport"
+                               style="background:#17a2b8;color:white;padding:10px 15px;
+                                      text-decoration:none;border-radius:5px;">
+                                View JUnit Report
+                            </a>
 
-<a href="${env.BUILD_URL}ExtentReport/index.html"
-   style="background:#28a745;color:white;padding:10px 14px;border-radius:6px;text-decoration:none;">
-   📈 Extent Report
-</a>
+                            <!-- 🔥 FIXED EXTENT LINK -->
+                            <a href="${env.BUILD_URL}job/iCaffe/job/Akash-varun/"
+                               style="background:#28a745;color:white;padding:10px 15px;
+                                      text-decoration:none;border-radius:5px;">
+                                View Extent Report
+                            </a>
 
-</div>
+                        </div>
 
-<br>
+                        <br><br>
 
-<div style="text-align:center;color:#888;font-size:12px;margin-top:20px;">
-Regards,<br>
-Jenkins CI Server
-</div>
+                        <div style="text-align:center;color:#777;font-size:12px;">
+                            Regards,<br>
+                            Jenkins Automation Server
+                        </div>
 
-</div>
+                    </div>
 
-</body>
-</html>
-"""
+                </div>
+
+                </body>
+                </html>
+                """
             )
         }
 
