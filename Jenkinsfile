@@ -25,8 +25,6 @@ pipeline {
         stage('Build & Test') {
             steps {
                 bat 'mvn clean test'
-
-                // 🔥 IMPORTANT: check report generated or not
                 bat 'dir ExtentReport'
             }
         }
@@ -36,15 +34,12 @@ pipeline {
 
         always {
 
-            // ✅ JUnit Report
             junit 'target/surefire-reports/*.xml'
 
-            // 🔥 FIX: wait ensures report is ready before publish
             script {
                 sleep(time: 3, unit: 'SECONDS')
             }
 
-            // ✅ HTML Extent Report (CURRENT BUILD ONLY)
             publishHTML(target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
@@ -54,85 +49,86 @@ pipeline {
                 reportName: "ICaffe Project Report #${env.BUILD_NUMBER}"
             ])
 
-        emailext(
-    to: 'akash.varun@hanssupport.com',
-    subject: "iCaffe Automation Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
-    mimeType: 'text/html',
-    body: """
-    <html>
-    <body style="font-family: Arial, sans-serif; background-color:#f4f6f7; padding:20px;">
+            emailext(
+                to: 'akash.varun@hanssupport.com',
+                subject: "iCaffe Automation Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
+                mimeType: 'text/html',
+                body: """
+                <html>
+                <body style="font-family: Arial, sans-serif; background-color:#f4f6f7; padding:20px;">
 
-    <div style="max-width:750px;margin:auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <div style="max-width:750px;margin:auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
-        <div style="background:#2E86C1;color:white;padding:15px;text-align:center;">
-            <h2 style="margin:0;">iCaffe Automation Execution Report</h2>
-        </div>
+                    <div style="background:#2E86C1;color:white;padding:15px;text-align:center;">
+                        <h2 style="margin:0;">iCaffe Automation Execution Report</h2>
+                    </div>
 
-        <div style="padding:20px;">
+                    <div style="padding:20px;">
 
-            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+                        <table style="width:100%;border-collapse:collapse;font-size:14px;">
 
-                <tr>
-                    <td><b>Project</b></td>
-                    <td>iCaffe</td>
-                </tr>
+                            <tr>
+                                <td><b>Project</b></td>
+                                <td>iCaffe</td>
+                            </tr>
 
-                <tr>
-                    <td><b>Build Number</b></td>
-                    <td>${env.BUILD_NUMBER}</td>
-                </tr>
+                            <tr>
+                                <td><b>Build Number</b></td>
+                                <td>${env.BUILD_NUMBER}</td>
+                            </tr>
 
-                <tr>
-                    <td><b>Status</b></td>
-                    <td>
-                        <span style="
-                            padding:5px 12px;
-                            border-radius:5px;
-                            color:white;
-                            background-color:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#dc3545'};
-                        ">
-                        ${currentBuild.currentResult}
-                        </span>
-                    </td>
-                </tr>
+                            <tr>
+                                <td><b>Status</b></td>
+                                <td>
+                                    <span style="
+                                        padding:5px 12px;
+                                        border-radius:5px;
+                                        color:white;
+                                        background-color:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#dc3545'};
+                                    ">
+                                    ${currentBuild.currentResult}
+                                    </span>
+                                </td>
+                            </tr>
 
-            </table>
+                        </table>
 
-            <br>
+                        <br>
 
-            <h3>📊 Reports</h3>
+                        <h3>📊 Reports</h3>
 
-            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                        <div style="display:flex;gap:10px;flex-wrap:wrap;">
 
-                <a href="${env.BUILD_URL}testReport"
-                   style="background:#17a2b8;color:white;padding:10px 15px;
-                          text-decoration:none;border-radius:5px;">
-                    View JUnit Report
-                </a>
+                            <a href="${env.BUILD_URL}testReport"
+                               style="background:#17a2b8;color:white;padding:10px 15px;
+                                      text-decoration:none;border-radius:5px;">
+                                View JUnit Report
+                            </a>
 
-                <a href="${env.BUILD_URL}artifact/ExtentReport/index.html"
-                   style="background:#28a745;color:white;padding:10px 15px;
-                          text-decoration:none;border-radius:5px;">
-                    View Extent Report
-                </a>
+                            <a href="${env.BUILD_URL}artifact/ExtentReport/index.html"
+                               style="background:#28a745;color:white;padding:10px 15px;
+                                      text-decoration:none;border-radius:5px;">
+                                View Extent Report
+                            </a>
 
-            </div>
+                        </div>
 
-            <br><br>
+                        <br><br>
 
-            <div style="text-align:center;color:#777;font-size:12px;">
-                Regards,<br>
-                Jenkins Automation Server
-            </div>
+                        <div style="text-align:center;color:#777;font-size:12px;">
+                            Regards,<br>
+                            Jenkins Automation Server
+                        </div>
 
-        </div>
+                    </div>
 
-    </div>
+                </div>
 
-    </body>
-    </html>
-    """
-)
+                </body>
+                </html>
+                """
+            )
+        }
 
         cleanup {
             cleanWs(deleteDirs: true, disableDeferredWipeout: true)
