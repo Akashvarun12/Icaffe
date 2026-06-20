@@ -25,6 +25,9 @@ pipeline {
         stage('Build & Test') {
             steps {
                 bat 'mvn clean test'
+
+                // 🔥 IMPORTANT: check report generated or not
+                bat 'dir ExtentReport'
             }
         }
     }
@@ -36,24 +39,26 @@ pipeline {
             // ✅ JUnit Report
             junit 'target/surefire-reports/*.xml'
 
-            // ✅ HTML Report FIXED
+            // 🔥 FIX: wait ensures report is ready before publish
+            script {
+                sleep(time: 3, unit: 'SECONDS')
+            }
+
+            // ✅ HTML Extent Report (CURRENT BUILD ONLY)
             publishHTML(target: [
-                allowMissing: true,
+                allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: false,
                 reportDir: 'ExtentReport',
                 reportFiles: 'index.html',
-                reportName: 'ICaffe Project Report'
+                reportName: "ICaffe Project Report #${env.BUILD_NUMBER}"
             ])
 
-            // ✅ SAFE EMAIL (NO rawBuild / no script security issue)
+            // ✅ Email
             emailext(
                 to: 'akash.varun@hanssupport.com',
-
                 subject: "iCaffe Automation Execution Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
-
                 mimeType: 'text/html',
-
                 body: """
                 <html>
                 <body style="font-family: Arial, Helvetica, sans-serif;">
