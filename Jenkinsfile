@@ -1,138 +1,71 @@
-pipeline {
+<html>
+<body style="font-family:Arial;background:#f5f7fa;padding:20px;">
 
-    agent any
+<div style="max-width:800px;margin:auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,0.1);">
 
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '1'))
-        disableConcurrentBuilds()
-    }
+<!-- HEADER -->
+<div style="background:linear-gradient(90deg,#2E86C1,#1B4F72);color:white;text-align:center;padding:18px;">
+    <h2 style="margin:0;">🚀 iCaffe Automation Dashboard</h2>
+</div>
 
-    stages {
+<!-- BODY -->
+<div style="padding:20px;">
 
-        stage('Clean Workspace') {
-            steps {
-                cleanWs(deleteDirs: true, disableDeferredWipeout: true)
-            }
-        }
+<table style="width:100%;border-collapse:collapse;font-size:14px;">
 
-        stage('Checkout') {
-            steps {
-                git branch: 'Akash-varun',
-                url: 'https://github.com/Akashvarun12/project_iCaffe.git'
-            }
-        }
+<tr>
+<td><b>Project</b></td>
+<td>iCaffe</td>
+</tr>
 
-        stage('Build & Test') {
-            steps {
-                bat 'mvn clean test'
-                bat 'dir ExtentReport'
-            }
-        }
-    }
+<tr>
+<td><b>Build No</b></td>
+<td>#${env.BUILD_NUMBER}</td>
+</tr>
 
-    post {
+<tr>
+<td><b>Status</b></td>
+<td>
+<span style="
+    padding:6px 14px;
+    border-radius:6px;
+    color:white;
+    background:${currentBuild.result == 'SUCCESS' ? '#28a745' : '#e74c3c'};
+">
+${currentBuild.result ?: 'SUCCESS'}
+</span>
+</td>
+</tr>
 
-        always {
+</table>
 
-            junit 'target/surefire-reports/*.xml'
+<br>
 
-            script {
-                sleep(time: 2, unit: 'SECONDS')
-            }
+<!-- REPORT SECTION -->
+<h3>📊 Reports Dashboard</h3>
 
-            publishHTML(target: [
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: false,
-                reportDir: 'ExtentReport',
-                reportFiles: '*.html',
-                reportName: "ICaffe_Project_Report"
-            ])
+<div style="display:flex;gap:12px;flex-wrap:wrap;">
 
-            emailext(
-                to: 'akash.varun@hanssupport.com',
-                subject: "iCaffe Automation Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
-                mimeType: 'text/html',
-                body: """
-                <html>
-                <body style="font-family: Arial, sans-serif; background-color:#f4f6f7; padding:20px;">
+<a href="${env.BUILD_URL}testReport/"
+   style="background:#17a2b8;color:white;padding:10px 14px;border-radius:6px;text-decoration:none;">
+   📄 JUnit Report
+</a>
 
-                <div style="max-width:750px;margin:auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<a href="${env.BUILD_URL}ExtentReport/index.html"
+   style="background:#28a745;color:white;padding:10px 14px;border-radius:6px;text-decoration:none;">
+   📈 Extent Report
+</a>
 
-                    <div style="background:#2E86C1;color:white;padding:15px;text-align:center;">
-                        <h2 style="margin:0;">iCaffe Automation Execution Report</h2>
-                    </div>
+</div>
 
-                    <div style="padding:20px;">
+<br>
 
-                        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+<!-- FOOTER -->
+<div style="text-align:center;color:#888;font-size:12px;margin-top:20px;">
+Regards,<br>
+Jenkins CI Server
+</div>
 
-                            <tr>
-                                <td><b>Project</b></td>
-                                <td>iCaffe</td>
-                            </tr>
-
-                            <tr>
-                                <td><b>Build Number</b></td>
-                                <td>${env.BUILD_NUMBER}</td>
-                            </tr>
-
-                            <tr>
-                                <td><b>Status</b></td>
-                                <td>
-                                    <span style="
-                                        padding:5px 12px;
-                                        border-radius:5px;
-                                        color:white;
-                                        background-color:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#dc3545'};
-                                    ">
-                                    ${currentBuild.currentResult}
-                                    </span>
-                                </td>
-                            </tr>
-
-                        </table>
-
-                        <br>
-
-                        <h3>📊 Reports</h3>
-
-                        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-
-                            <a href="${env.BUILD_URL}testReport"
-                               style="background:#17a2b8;color:white;padding:10px 15px;
-                                      text-decoration:none;border-radius:5px;">
-                                View JUnit Report
-                            </a>
-
-                            <!-- 🔥 FIXED EXTENT LINK -->
-                            <a href="${env.BUILD_URL}job/iCaffe/job/Akash-varun/"
-                               style="background:#28a745;color:white;padding:10px 15px;
-                                      text-decoration:none;border-radius:5px;">
-                                View Extent Report
-                            </a>
-
-                        </div>
-
-                        <br><br>
-
-                        <div style="text-align:center;color:#777;font-size:12px;">
-                            Regards,<br>
-                            Jenkins Automation Server
-                        </div>
-
-                    </div>
-
-                </div>
-
-                </body>
-                </html>
-                """
-            )
-        }
-
-        cleanup {
-            cleanWs(deleteDirs: true, disableDeferredWipeout: true)
-        }
-    }
-}
+</div>
+</body>
+</html>
