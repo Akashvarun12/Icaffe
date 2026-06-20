@@ -54,80 +54,85 @@ pipeline {
                 reportName: "ICaffe Project Report #${env.BUILD_NUMBER}"
             ])
 
-            // ✅ Email
-            emailext(
-                to: 'akash.varun@hanssupport.com',
-                subject: "iCaffe Automation Execution Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
-                mimeType: 'text/html',
-                body: """
-                <html>
-                <body style="font-family: Arial, Helvetica, sans-serif;">
+        emailext(
+    to: 'akash.varun@hanssupport.com',
+    subject: "iCaffe Automation Report | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
+    mimeType: 'text/html',
+    body: """
+    <html>
+    <body style="font-family: Arial, sans-serif; background-color:#f4f6f7; padding:20px;">
 
-                <div style="width:700px;border:1px solid #ddd;padding:20px;">
+    <div style="max-width:750px;margin:auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
-                    <h2 style="color:#2E86C1;">
-                        iCaffe Automation Test Execution Report
-                    </h2>
+        <div style="background:#2E86C1;color:white;padding:15px;text-align:center;">
+            <h2 style="margin:0;">iCaffe Automation Execution Report</h2>
+        </div>
 
-                    <hr>
+        <div style="padding:20px;">
 
-                    <table style="border-collapse:collapse;" cellpadding="8">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
 
-                        <tr>
-                            <td><b>Project</b></td>
-                            <td>iCaffe</td>
-                        </tr>
+                <tr>
+                    <td><b>Project</b></td>
+                    <td>iCaffe</td>
+                </tr>
 
-                        <tr>
-                            <td><b>Build Number</b></td>
-                            <td>${env.BUILD_NUMBER}</td>
-                        </tr>
+                <tr>
+                    <td><b>Build Number</b></td>
+                    <td>${env.BUILD_NUMBER}</td>
+                </tr>
 
-                        <tr>
-                            <td><b>Status</b></td>
-                            <td>${currentBuild.currentResult}</td>
-                        </tr>
+                <tr>
+                    <td><b>Status</b></td>
+                    <td>
+                        <span style="
+                            padding:5px 12px;
+                            border-radius:5px;
+                            color:white;
+                            background-color:${currentBuild.currentResult == 'SUCCESS' ? '#28a745' : '#dc3545'};
+                        ">
+                        ${currentBuild.currentResult}
+                        </span>
+                    </td>
+                </tr>
 
-                        <tr>
-                            <td><b>Build URL</b></td>
-                            <td>
-                                <a href="${env.BUILD_URL}">
-                                    Open Jenkins Build
-                                </a>
-                            </td>
-                        </tr>
+            </table>
 
-                    </table>
+            <br>
 
-                    <br>
+            <h3>📊 Reports</h3>
 
-                    <h3>Reports</h3>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
 
-                    <ul>
-                        <li>
-                            <a href="${env.BUILD_URL}testReport">
-                                JUnit Report
-                            </a>
-                        </li>
+                <a href="${env.BUILD_URL}testReport"
+                   style="background:#17a2b8;color:white;padding:10px 15px;
+                          text-decoration:none;border-radius:5px;">
+                    View JUnit Report
+                </a>
 
-                        <li>
-                            <a href="${env.BUILD_URL}ICaffe_20Project_20Report">
-                                Extent Report
-                            </a>
-                        </li>
-                    </ul>
+                <a href="${env.BUILD_URL}artifact/ExtentReport/index.html"
+                   style="background:#28a745;color:white;padding:10px 15px;
+                          text-decoration:none;border-radius:5px;">
+                    View Extent Report
+                </a>
 
-                    <br>
+            </div>
 
-                    <p>Regards,<br>Jenkins Automation Server</p>
+            <br><br>
 
-                </div>
+            <div style="text-align:center;color:#777;font-size:12px;">
+                Regards,<br>
+                Jenkins Automation Server
+            </div>
 
-                </body>
-                </html>
-                """
-            )
-        }
+        </div>
+
+    </div>
+
+    </body>
+    </html>
+    """
+)
 
         cleanup {
             cleanWs(deleteDirs: true, disableDeferredWipeout: true)
