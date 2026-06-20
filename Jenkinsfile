@@ -14,6 +14,16 @@ stages {
         }
     }
 
+    stage('Delete Old Reports') {
+        steps {
+            bat '''
+            if exist ExtentReport rmdir /s /q ExtentReport
+            if exist test-output rmdir /s /q test-output
+            if exist target rmdir /s /q target
+            '''
+        }
+    }
+
     stage('Checkout') {
         steps {
             git branch: 'Akash-varun',
@@ -37,7 +47,7 @@ post {
         publishHTML(target: [
             allowMissing: true,
             alwaysLinkToLastBuild: true,
-            keepAll: true,
+            keepAll: false,
             reportDir: 'ExtentReport',
             reportFiles: '*.html',
             reportName: 'ICaffe Project Report'
