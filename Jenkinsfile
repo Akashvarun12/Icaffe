@@ -106,7 +106,7 @@ pipeline {
                             </a>
 
                             <!-- 🔥 FIXED EXTENT LINK -->
-                            <a href="${env.BUILD_URL}job/iCaffe/job/Akash-varun/ICaffe_5fProject_5fReport/"
+                            <a href="${env.BUILD_URL}job/iCaffe/job/Akash-varun/"
                                style="background:#28a745;color:white;padding:10px 15px;
                                       text-decoration:none;border-radius:5px;">
                                 View Extent Report
