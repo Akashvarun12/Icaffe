@@ -37,7 +37,7 @@ pipeline {
             junit 'target/surefire-reports/*.xml'
 
             script {
-                sleep(time: 3, unit: 'SECONDS')
+                sleep(time: 2, unit: 'SECONDS')
             }
 
             publishHTML(target: [
@@ -105,7 +105,8 @@ pipeline {
                                 View JUnit Report
                             </a>
 
-                            <a href="${env.BUILD_URL}artifact/ExtentReport/index.html"
+                            <!-- 🔥 FIXED EXTENT LINK -->
+                            <a href="${env.BUILD_URL}artifact/ExtentReport/"
                                style="background:#28a745;color:white;padding:10px 15px;
                                       text-decoration:none;border-radius:5px;">
                                 View Extent Report
