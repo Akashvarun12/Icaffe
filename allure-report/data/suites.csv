@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1351","Verify login with blank username and password","Google Chrome","2026-08-19","passed","2026-08-19","iCaffe Login Test Suite","icaffeLoginTestCase.spec.ts","",""
+"","1481","Verify login with blank username","Google Chrome","2026-08-19","passed","2026-08-19","iCaffe Login Test Suite","icaffeLoginTestCase.spec.ts","",""
+"","1350","Verify login with blank password","Google Chrome","2026-08-19","passed","2026-08-19","iCaffe Login Test Suite","icaffeLoginTestCase.spec.ts","",""
+"","1273","has title","Google Chrome","2026-08-18","passed","2026-08-18","","example.spec.ts","",""
+"","1385","get started link","Google Chrome","2026-08-18","passed","2026-08-18","","example.spec.ts","",""
+"","16850","Verify login with valid credentials","Google Chrome","2026-08-19","passed","2026-08-19","iCaffe Login Test Suite","icaffeLoginTestCase.spec.ts","",""
+"","16677","Verify login with invalid password","Google Chrome","2026-08-19","passed","2026-08-19","iCaffe Login Test Suite","icaffeLoginTestCase.spec.ts","",""
