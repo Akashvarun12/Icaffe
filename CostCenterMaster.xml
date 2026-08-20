@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <!-- Modification Record -->
+  <test name="Cost Center Record Modification 01">
+  
+  <parameter name="search" value="JOHN_DOE"/>
+  <parameter name="searchGridResultM" value="JOHN_DOE"/>
+  <parameter name="codeM" value="125"/>
+  <parameter name="nameM" value="JOHN_DOE M XML"/>
+  <parameter name="displayStatusM" value="Hidden"/>
+  
+    <classes>
+      <class name="regionalMasterTestCase.CostCenterMasterTestCase">
+      <methods>
+      <include name = "modifyCostCenter"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <!-- Modification Record-->
+  <test name="Cost Center Record Modification 02">
+  
+  <parameter name="search" value="SRK"/>
+  <parameter name="searchGridResultM" value="SRK"/>
+  <parameter name="codeM" value="422"/>
+  <parameter name="nameM" value="SRK M XML"/>
+  <parameter name="displayStatusM" value="Hidden"/>
+  
+    <classes>
+      <class name="regionalMasterTestCase.CostCenterMasterTestCase">
+      <methods>
+      <include name = "modifyCostCenter"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+</suite> <!-- Suite -->

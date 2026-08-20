@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="displayStatusM" value="Y"/>
+    <parameter name="search" value="North Region"/>
+    <parameter name="regionM" value="Asia"/>
+    <parameter name="nameM" value="North Region Updated"/>
+    <parameter name="noteM" value="Updated through TestNG XML"/>
+    <parameter name="searchResultM" value="North Region"/>
+    <classes>
+      <class name="regionalMasterTestCase.RegionMasterTestCase">
+        <methods>
+          <include name="takeScreenShot"/>
+          <include name="generatReport"/>
+          <include name="clearRegionMaster"/>
+          <include name="pageTitleRegionMaster"/>
+          <include name="login"/>
+          <include name="createRegionMaster"/>
+          <include name="modifyRegionMaster"/>
+          <include name="modifyRegionMasterTest"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- regionalMasterTestCase.RegionMasterTestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

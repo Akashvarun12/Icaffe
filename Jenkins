@@ -1,0 +1,117 @@
+pipeline {
+
+    agent any
+
+    tools {
+        jdk 'JDK21'
+        maven 'Maven3'
+    }
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git branch: 'Shivam-Singh',
+                    url: 'https://github.com/Akashvarun12/project_iCaffe.git'
+            }
+        }
+
+        stage('Delete Old Reports') {
+            steps {
+                bat 'if exist ExtentReport rmdir /s /q ExtentReport'
+                bat 'if exist target rmdir /s /q target'
+            }
+        }
+
+        stage('Run Test Cases') {
+            steps {
+                bat 'mvn clean test -Dmaven.test.failure.ignore=true'
+            }
+        }
+    }
+
+    post {
+
+        always {
+
+            junit 'target/surefire-reports/*.xml'
+
+            publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'ExtentReport',
+                reportFiles: '*.html',
+                reportName: 'ICaffe Project Report'
+            ])
+
+            emailext(
+                to: 'shivam@hanssupport.com',
+                subject: "${currentBuild.currentResult}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                mimeType: 'text/html',
+                body: """
+                <html>
+                <body style="font-family: Arial, sans-serif;">
+
+                <h2>Automation Test Execution Summary</h2>
+
+                <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
+                    <tr>
+                        <td><b>Project Name</b></td>
+                        <td>${env.JOB_NAME}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Build Number</b></td>
+                        <td>${env.BUILD_NUMBER}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Build Status</b></td>
+                        <td>${currentBuild.currentResult}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Execution Time</b></td>
+                        <td>${currentBuild.durationString}</td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <h3>Reports & Links</h3>
+
+                <p>
+                    <b>Build Details:</b><br>
+                    <a href="${env.BUILD_URL}">
+                        Open Build Details
+                    </a>
+                </p>
+
+                <p>
+                    <b>Test Report:</b><br>
+                    <a href="${env.BUILD_URL}testReport/">
+                        Open Test Status
+                    </a>
+                </p>
+
+                <p>
+                    <b>Extent Report:</b><br>
+                    <a href="${env.BUILD_URL}ICaffe_20Project_20Report/">
+                       Open Test Report                   
+                    </a>
+                </p>
+
+                <br>
+
+                <p>
+                    Regards,<br>
+                    Shivam Singh
+                </p>
+
+                </body>
+                </html>
+                """
+            )
+
+            echo 'Execution Completed'
+        }
+    }
+}

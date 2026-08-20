@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+
+    <!-- Record 1 -->
+    <test name="Modify AFRICA">
+        <parameter name="search" value="AFRICA"/>
+        <parameter name="searchResultM" value="AFRICA"/>
+        <parameter name="nameM" value="AFRICA M XML 1"/>
+        <parameter name="regionM" value="abhishek"/>
+        <parameter name="displayStatusM" value="Hide"/>
+        <parameter name="noteM" value="Updated through TestNG XML 1"/>
+
+        <classes>
+            <class name="regionalMasterTestCase.RegionMasterTestCase">
+                <methods>
+                    <include name="modifyRegionMasterByXML"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Record 2 -->
+    <test name="Modify ASIA">
+        <parameter name="search" value="ASIA"/>
+        <parameter name="searchResultM" value="ASIA"/>
+        <parameter name="nameM" value="ASIA M XML 2"/>
+        <parameter name="regionM" value="abhishek"/>
+        <parameter name="displayStatusM" value="Display"/>
+        <parameter name="noteM" value="Updated through TestNG XML 2"/>
+
+        <classes>
+            <class name="regionalMasterTestCase.RegionMasterTestCase">
+                <methods>
+                    <include name="modifyRegionMasterByXML"/>
+                </methods>
+            </class>
+        </classes>
+    </test>   
+
+</suite>
